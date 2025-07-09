@@ -1,0 +1,316 @@
+.more-resources{
+  display: flex;
+  gap: $size-8;
+  align-items: center;
+
+  @include responsive(mobile) {
+    flex-direction: column;
+  }
+
+  .text-content{
+    width: 33%;
+
+    @include responsive(mobile) {
+      width: 100%;
+      margin-bottom: $size-6;
+    }
+
+    .desc{
+      @extend .body-4;
+      line-height: 140%;
+      margin-top: $size-7;
+    }
+  }
+
+  .swiper{
+    width: 67%;
+    padding: 30px;
+    display: block;
+
+    @include responsive(mobile) {
+      display: none;
+    }
+
+    .padding-icon{
+      padding: 3.75rem;
+    }
+
+    .padding-img{
+      padding: 5rem 3.75rem 4rem 3.75rem;
+    }
+
+    .content-slide{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: $size-8;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      border: 1px solid $secondary-50;
+      background: $color-white;
+      height: auto;
+      min-height: 25.75rem;
+
+      .img-card{
+        aspect-ratio: 3 / 0;
+        -o-object-fit: contain;
+        object-fit: contain;
+        max-height: 38px;
+        max-width: 10.6875rem;
+        height: 2.625rem;
+        display: flex;
+        justify-content: flex-start;
+        width: fit-content;
+      }
+
+      .icon{
+        width: $size-13;
+        height: $size-13;
+        display: flex;
+        justify-content:center;
+        align-items: center;
+        background: $secondary-50;
+        border-radius: 50%;
+      }
+
+      .text{
+
+        .desc{
+          margin-top: $size-4;
+          color: $secondary-600;
+        }
+      }
+
+      .second-button-small{
+        width: fit-content;
+      }
+    } 
+
+    .swiper-button-prev::after{
+      display: flex;
+      font-family: 'Material Symbols Outlined';
+      content: 'chevron_left';
+      width: $size-11;
+      height: $size-11;
+      font-size: $size-6;
+      border-radius: $size-19;
+      background: $color-white;
+      box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .swiper-button-next::after{
+      display: flex;
+      font-family: 'Material Symbols Outlined';
+      content: 'chevron_right';
+      width: $size-11;
+      height: $size-11;
+      font-size: $size-6;
+      border-radius: $size-19;
+      background: $color-white;
+      box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+      align-items: center;
+      justify-content: center;
+    }
+
+    .swiper-button-prev, .swiper-button-next{
+      overflow: visible;
+      width: $size-11;
+      height: $size-11;
+      color: $secondary-600;
+      display: inline-block;
+    }
+
+    .swiper-button-next{
+
+    }
+  }
+
+  .none-slide{
+    width: 100%;
+    display: none;
+    gap: $size-4;
+
+    @include responsive(mobile) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-slide{
+      position: relative;
+      padding: 1.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: $size-4;
+      box-sizing: border-box;
+
+      border-radius: 1.25rem;
+      border: 1px solid $secondary-50;
+      background: $color-white;
+      height: auto;
+
+      .img-card{
+        aspect-ratio: 3 / 0;
+        -o-object-fit: contain;
+        object-fit: contain;
+        max-width: 7.6875rem;
+        height: 1.125rem;
+        width: fit-content;
+      }
+
+      .text{
+        .desc{
+          margin-top: $size-3;
+        }
+      }
+
+      button {
+
+        @include responsive(mobile) {
+          color: $info-700;
+          font-size: 0.6875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%; 
+          text-decoration-line: underline;
+          padding: 0 !important;
+          border: 0;
+          text-align: left;
+        }
+      }
+
+      .link-4 {
+        width: fit-content;
+        color: $info-700;
+      }
+    } 
+  }
+}
+
+.more-resources.with-icons{
+  gap: 2rem;
+
+  @include responsive(laptop) {
+      flex-direction: column;
+  }
+
+  .text-content {
+      width: 34%;
+
+      @include responsive(laptop) {
+          width: 100%;
+          text-align: center;
+      }
+      @include responsive(tablet) {
+          width: 100%;
+          text-align: left;
+      }
+  }
+  .swiper {
+      padding: 20px;
+
+      @include responsive(tablet) {
+          display: block;
+          width: 100%;
+      }
+
+      @include responsive(mobile) {
+          // width: 180%;
+          padding: 0;
+      }
+
+      .swiper-slide-next {
+          @include responsive(mobile) {
+              opacity: 0.5;
+          }
+      }
+
+      .content-slide {
+          padding: 3.5rem 3rem 3.5rem 3rem;
+
+          @include responsive(mobile) {
+              padding: 2rem 1.5rem;
+              gap: $size-4;
+              min-height: 20rem;
+          }
+      }
+  }
+  .swiper-button-prev{
+      left: 0px;
+
+      @include responsive(laptop) {
+        
+      }
+
+      &::after{
+          display: flex;
+          font-family: 'Material Symbols Outlined';
+          content: 'chevron_left';
+          width: $size-11;
+          height: $size-11;
+          font-size: $size-6;
+          border-radius: $size-19;
+          background: $color-white;
+          box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+          align-items: center;
+          justify-content: center;
+
+          @include responsive(laptop) {
+            width: 2.75rem;
+            height: 2.75rem;
+          }
+      }
+  }
+  .swiper-button-next{
+      left: initial !important;
+      right: 0px;
+
+      @include responsive(laptop) {
+        left: 25px !important;
+      }
+
+      &::after{
+          display: flex;
+          font-family: 'Material Symbols Outlined';
+          content: 'chevron_right';
+          width: $size-11;
+          height: $size-11;
+          font-size: $size-6;
+          border-radius: $size-19;
+          background: $color-white;
+          box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+          align-items: center;
+          justify-content: center;
+
+          @include responsive(laptop) {
+            width: 2.75rem;
+            height: 2.75rem;
+          }
+      }
+  }
+
+  .swiper-button-prev, .swiper-button-next{
+      overflow: visible;
+      width: $size-11;
+      height: $size-11;
+      color: $secondary-600;
+      display: inline-block;
+      margin-bottom: 10px;
+
+      @include responsive(laptop) {
+        position: relative;
+        right: initial;
+        margin-top: 30px;
+      }
+
+      @include responsive(mobile) {
+        // left: 0px;
+        
+      }
+  }
+
+  .none-slide{
+      display: none;
+  }
+}

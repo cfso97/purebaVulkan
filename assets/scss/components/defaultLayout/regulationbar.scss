@@ -1,0 +1,133 @@
+.regulation-container {
+  background: $gray-50;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding: $size-2 $size-7;
+  gap: 12px;
+  box-sizing: border-box;
+  a,
+  p {
+    text-decoration: none;
+    color: $secondary-600;
+  }
+  .bold {
+    font-weight: bold;
+  }
+  @include responsive(tablet) {
+    font-size: 1rem;
+  }
+  .modal-custom {
+    height: 100vh;
+    .modal-custom-content {
+      height: 85%;
+      .americas-regulation {
+        height: 85%;
+        .title-container {
+          margin-bottom: 2.5rem;
+        }
+        .americas-regulation-container {
+          overflow-y: scroll;
+          max-height: 100%;
+          .sub-title {
+            margin-bottom: $size-6;
+          }
+          .gray-box {
+            display: flex;
+            padding: $size-6 $size-8;
+            align-items: flex-start;
+            gap: $size-12;
+            align-self: stretch;
+            border-radius: $size-5;
+            background: $secondary-50;
+            justify-content: row;
+            margin-bottom: $size-4;
+            border: 1px solid $secondary-50;
+
+            .box {
+              display: flex;
+              flex-direction: column;
+              width: 50%;
+              .box-title {
+                color: $secondary-900;
+                margin-bottom: $size-4;
+              }
+              .box-description {
+                color: $secondary-600;
+                margin-bottom: $size-3;
+              }
+              .box-headquarters {
+                color: $secondary-600;
+                margin-bottom: $size-3;
+                span {
+                  color: $secondary-600;
+                  font-weight: bold;
+                }
+              }
+              .box-url {
+                .word {
+                  color: $secondary-600;
+                  font-weight: bold;
+                }
+                .url {
+                  color: $info-700 !important;
+                  color: $secondary-600;
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+          .box-titled {
+            width: 50%;
+            p {
+              margin-bottom: $size-6;
+              margin-top: $size-2;
+              color: $secondary-900;
+            }
+          }
+          .white-box {
+            display: flex;
+            flex-direction: row;
+            gap: $size-4;
+            margin-bottom: 10px;
+            .box {
+              padding: $size-6 $size-4;
+              border: 1px solid $secondary-50;
+              border-radius: $size-5;
+              .box-title {
+                color: $secondary-900;
+                margin-bottom: $size-4;
+              }
+              .box-description {
+                color: $secondary-600;
+                margin-bottom: $size-3;
+              }
+              .box-headquarters {
+                color: $secondary-600;
+                margin-bottom: $size-3;
+                span {
+                  color: $secondary-600;
+                  font-weight: bold;
+                }
+              }
+              .box-url {
+                .word {
+                  color: $secondary-600;
+                  font-weight: bold;
+                }
+                .url {
+                  color: $info-700 !important;
+                  color: $secondary-600;
+                  text-decoration: underline;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@include responsive(tablet) {
+
+}

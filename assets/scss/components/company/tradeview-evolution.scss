@@ -1,0 +1,446 @@
+.tradeview-evolution-content {
+  display: inline-flex;
+  padding: 5.5rem 6.375rem;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 1.1875rem;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: linear-gradient(
+    156deg,
+    rgba(255, 255, 255, 0.42) 10.28%,
+    rgba(255, 255, 255, 0) 106.66%
+  );
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+  // backdrop-filter: blur(20px);
+  position: relative;
+  gap: 1rem;
+
+  @include responsive(laptop) {
+    padding: 1.5rem 1.25rem;
+  }
+
+  @include responsive(mobile) {
+    padding: 1rem 1rem;
+  }
+
+  .tradeview-evolution-title {
+    text-align: center;
+
+    h2{
+      width: 100%;
+      margin: auto;
+    }
+  }
+  .timeline-container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .timeline {
+      padding: 0;
+      list-style: none;
+      max-height: 700px;
+      overflow-y: hidden;
+      position: relative;
+      scrollbar-width: none;
+      -webkit-scrollbar {
+        display: none;
+      }
+      -ms-overflow-style: none;
+      background: transparent;
+
+      @include responsive(mobile) {
+        max-height: 510px;
+      }
+
+      .swiper-slide:nth-child(1) {
+        opacity: 0;
+        height: 72px;
+
+        @include responsive(mobile) {
+           height: 0px;
+        }
+      }
+
+      .swiper-slide:nth-last-child(1) {
+        opacity: 0;
+        height: 100px;
+
+        // @include responsive(mobile) {
+        //   display: none;
+        // }
+      }
+
+      .swiper-button-prev::after{
+        display: flex;
+        font-family: "Material Symbols Outlined";
+        content: 'chevron_left';
+        width: $size-13;
+        height: $size-13;
+        font-size: $size-6;
+        border-radius: $size-19;
+        background: $color-white;
+        box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+        align-items: center;
+        justify-content: center;
+
+        @include responsive(laptop) {
+          width: 2.75rem;
+          height: 2.75rem;
+        }
+
+        @include responsive(mobile) {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+
+      .swiper-button-next::after{
+        display: flex;
+        font-family: "Material Symbols Outlined";
+        content: 'chevron_right';
+        width: $size-13;
+        height: $size-13;
+        font-size: $size-6;
+        border-radius: $size-19;
+        background: $color-white;
+        box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+        align-items: center;
+        justify-content: center;
+
+        @include responsive(laptop) {
+          width: 2.75rem;
+          height: 2.75rem;
+        }
+
+        @include responsive(mobile) {
+          width: 2.5rem;
+          height: 2.5rem;
+        }
+      }
+
+      .swiper-button-prev, .swiper-button-next{
+        overflow: visible;
+        width: $size-13;
+        height: $size-13;
+        color: $secondary-600;
+        display: inline-block;
+        left: 47%;
+        transform: translateX(-44%);
+        rotate: 92deg;
+        z-index: 1000;
+
+        @include responsive(laptop) {
+          left: 44%;
+          transform: translateX(-50%);
+        }
+
+        @include responsive(mobile) {
+          width: $size-10;
+          height: $size-10;
+        }
+
+        &.swiper-button-disabled{
+          display: none;
+        }
+      }
+
+      .swiper-button-next{
+        top: 674px;
+        @include responsive(laptop-l){
+          // right: 20%;
+        }
+
+        @include responsive(laptop) {
+          // position: relative;
+          // right: initial;
+          // margin-left: 1rem;
+        }
+
+        @include responsive(mobile) {
+          top: 500px;
+        }
+      }
+
+      .swiper-button-prev{
+        top: 70px;
+        @include responsive(laptop-l){
+          // right: 20%;
+        }
+
+        @include responsive(laptop) {
+          // position: relative;
+          // right: initial;
+          // margin-left: 1rem;
+        }
+
+        @include responsive(mobile) {
+          // margin-left: -6px;
+        }
+      }
+    }
+    .timeline::-webkit-scrollbar {
+      display: none; /* Oculta la barra de desplazamiento en navegadores WebKit */
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 73%;
+      height: 94px;
+      border-radius: 0 0 100px 100px;
+      backdrop-filter: blur(2px);
+      z-index: 50;
+      @include responsive(tablet) {
+        width: 100%;
+      }
+      @include responsive(mobile) {
+        width: 100%;
+        border-radius: 0;
+        height: 55px;
+      }
+    }
+
+    .timeline::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 73%;
+      height: 94px;
+      border-radius: 100px 100px 0 0;
+      z-index: 50;
+      backdrop-filter: blur(2px);
+      @include responsive(tablet) {
+        width: 100%;
+      }
+      @include responsive(mobile) {
+        width: 100%;
+        border-radius: 0;
+        height: 55px;
+      }
+    }
+    .timeline-item {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+      img {
+        position: absolute;
+        top: 35px;
+        left: 49.745%;
+        width: 5px;
+        height: 5px;
+      }
+      .year {
+        width: 50%;
+        padding: 1.5rem 1.5rem;
+        color: $secondary-300;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+      }
+      .body {
+        width: 50%;
+        padding: 0.5rem 1.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        .icon-box {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 3rem;
+          height: 3rem;
+          background: white;
+          border-radius: 50%;
+
+          @include responsive(mobile) {
+            width: $size-10;
+            height: $size-10;
+            font-size: $size-3;
+          }
+        }
+        .title {
+          color: $secondary-900;
+        }
+        .description {
+          width: 65%;
+          color: $secondary-600;
+        }
+      }
+      .vertical-line {
+        border-left: 1px solid #d4d4d4;
+        height: 242px;
+        position: absolute;
+        top: 37px;
+        left: 50%;
+        transform: translateX(-14%);
+        width: 2px;
+        z-index: -1;
+      }
+    }
+    .timeline-item-right {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      position: relative;
+      img {
+        position: absolute;
+        top: 35px;
+        left: 49.745%;
+        width: 5px;
+        height: 5px;
+      }
+      .year {
+        width: 50%;
+        padding: 1.5rem 1.5rem;
+        color: $secondary-300;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start !important;
+        order: 1;
+      }
+
+      .body {
+        width: 50%;
+        padding: 0.5rem 1.5rem;
+        display: grid;
+        flex-direction: column;
+        gap: 0.4rem;
+        text-align: flex;
+        text-align: end;
+        justify-items: end;
+
+        .icon-box {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          width: 3rem;
+          height: 3rem;
+          background: white;
+          border-radius: 50%;
+
+          @include responsive(mobile) {
+            width: $size-10;
+            height: $size-10;
+            font-size: $size-3;
+          }
+        }
+        .title {
+          color: $secondary-900;
+        }
+        .description {
+          width: 65%;
+          color: $secondary-600;
+        }
+      }
+    }
+    @include responsive(tablet) {
+      .timeline-item,
+      .timeline-item-right {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        position: relative;
+        img {
+          position: absolute;
+          top: 30px;
+          left: 85px;
+
+          @include responsive(mobile) {
+            top: 36px;
+            left: 65px;
+          }
+        }
+        .year {
+          width: 20%;
+          padding: 1.4rem 1rem;
+          color: $secondary-300;
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          order: 0;
+
+          @include responsive(mobile) {
+            padding-left: 0;
+            font-size: 0.75rem;
+          }
+        }
+
+        .vertical-line{
+          top: 26px;
+          left: 68px;
+          transform: translateX(56%);
+
+          @include responsive(mobile) {
+            top: 32px;
+            left: 50px;
+          }
+        }
+
+        .body {
+          width: 80%;
+          direction: ltr !important;
+          display: flex;
+          align-items: flex-start;
+          text-align: left;
+          .title{
+            @include responsive(mobile) {
+              font-size: 0.6875rem;
+              text-align: left;
+            }
+          }
+          .description {
+            width: 100%;
+
+            @include responsive(mobile) {
+              font-size: 0.625rem;
+              font-style: normal;
+              font-weight: 400;
+              text-align: left;
+            }
+          }
+        }
+      }
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 150px; /* Altura del efecto de desvanecimiento */
+      // background: linear-gradient(
+      //   to bottom,
+      //   rgba(255, 255, 255, 0),
+      //   rgba(249, 249, 249, 1)
+      // );
+      @include responsive(tablet) {
+        height: 70px;
+        bottom: -5px;
+      }
+    }
+  }
+  .load-more-btn {
+    width: $size-11;
+    height: $size-11;
+    background: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    @include responsive(tablet) {
+      // display: none;
+    }
+  }
+}
+
+[lang="es"] .team-experts .cont-cards .card {
+min-height: 25rem;
+}

@@ -1,0 +1,139 @@
+.discover_ {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    row-gap: $size-8;
+
+    & .img_ {
+        background-image: url(/images/Markets-Img.png);
+        padding-top: 97%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        width: 100%;
+        grid-column: span 1;
+        grid-row: span 3;
+
+        @include responsive(laptop) {
+            padding-top: 70%;
+        }
+    
+        @include responsive(mobile) {
+            padding-top: 115%;
+        }
+    }
+
+    & .title {
+        display: flex;
+        gap: $size-6;
+        flex-direction: column;
+
+        @include responsive(laptop) {
+            align-items: center;
+            grid-row: span1;
+    
+            h3 {
+                text-align: center;
+            }
+        }
+    
+        @include responsive(tablet) {
+    
+            h3 {
+                font-size: $size-10;
+            }
+        }
+    
+        @include responsive(mobile) {
+            display: flex;
+            gap: $size-4;
+            align-items: flex-start;
+    
+            h3 {
+                font-size: 1.375rem;
+                text-align: left;
+            }  
+
+            p {
+                font-size: 0.75rem;
+            }
+        }
+    }
+
+    & .items-cont {
+        display: flex;
+        padding: $size-12;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.8125rem;
+        border-radius: $size-5;
+        background: $secondary-50;  
+        
+        span {
+            max-width: $size-13;
+            height: $size-13;
+            font-size: $size-6;
+            background: white;
+            border-radius: 50%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: $secondary-900;
+        }
+        
+        .item {
+            display: flex;
+            padding: $size-1;
+            align-items: flex-start;
+            gap: $size-6;
+            color: $secondary-900;
+            align-items: center;
+
+            p.body-3 {
+                margin-bottom: $size-4;
+                font-size: 1.0625rem;
+                line-height: 140%;
+                color: $secondary-900;
+            }
+
+            p.body-4 {
+                color: $secondary-600;
+            }
+        }
+        @include responsive(mobile) {
+            padding: $size-8 $size-7;
+            gap: $size-7;
+
+            span {
+                max-width: $size-12;
+                height: $size-12;
+            }
+
+            .item {
+                gap: $size-3;
+                align-items: flex-start;
+                display: grid;
+                grid-template-columns: 3rem auto;
+
+                p {
+                    font-size: 0.6875rem;
+                }
+
+                p.body-3 {
+                    font-size: 0.875rem;
+                    margin-bottom: $size-2;
+                }
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+        max-width: fit-content;
+    }
+
+    @include responsive(laptop) {
+        grid-template-columns: 1fr;
+    }
+}

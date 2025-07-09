@@ -1,0 +1,273 @@
+.team-experts {
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+
+    @include responsive(tablet)  {
+        gap: 1rem;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+        gap: 1.5rem;
+
+        p {
+            color: $secondary-600;
+        }
+
+        @include responsive(tablet) {
+            gap: 1rem;
+            text-align: left;
+        }
+    }
+
+    .cont-cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        padding: 1.5rem;
+        justify-content: center;
+        opacity: 1;
+
+        @include responsive(tablet) {
+            flex-direction: column;
+            width: 100%;
+            padding: 0;
+            max-width: 460px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            max-width: 14.8rem;
+            width: -webkit-fill-available;
+            padding: 1rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            background: linear-gradient(156deg, rgba(255, 255, 255, 0.5) 10.28%, rgba(255, 255, 255, 0) 106.66%);
+            box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            min-height: 23.2rem;
+
+            @include responsive(tablet) {
+                min-height: fit-content !important;
+                max-width: 100%;
+                display: grid;
+                grid-template-columns: 4.675rem 1fr;
+                width: -webkit-fill-available;
+                align-items: center;
+                gap: 0.75rem;
+                row-gap: 0;
+                transition: 0.5s;
+                background: white;
+                border-radius: 0.75rem;
+            }
+
+            @include responsive(mobile) {
+                padding: 0.5rem;
+            }
+
+            .img-big {
+                transition: all 0.8s;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .name {
+                display: flex;
+                gap: 0.5rem;
+                width: 100%;
+                justify-content: space-between;
+                align-items: flex-start;
+                transition: all 0.8s;
+
+                @include responsive(tablet) {
+                    align-items: center;
+                    gap: 0.3rem;
+
+                    p.body-6-bold {
+                        font-size: 0.875rem;
+                    }
+                    p.caption-1 {
+                        font-size: 0.6875rem;
+                    }
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                    @include responsive(mobile) {
+                        gap: 0.2rem;
+                    }
+
+                    .caption-1 {
+                        color: $secondary-700;
+                    }
+                }
+
+
+                @include responsive(tablet) {
+                    padding: 0;
+                }
+
+                span {
+                    transition: all 0.5s;
+                    display: flex;
+                    color: $secondary-300;
+                }
+            }
+
+            .descript {
+                display: flex;
+                gap: 1rem;
+                flex-direction: column;
+                padding: 1rem;
+                border-radius: 1rem;
+                background: white;
+                backdrop-filter: blur(20px);
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: -webkit-fill-available;
+                z-index: -1;
+                opacity: 0;
+                transition: all 0.8s;
+
+                @include responsive(tablet) {
+                    position: relative;
+                    z-index: 1;
+                    opacity: 1;
+                    grid-column: 1 / 3;
+                    padding: 0;
+                    background: transparent;
+                    backdrop-filter: none;
+                    box-shadow: none;
+                    gap: 0;
+                    transition: all 0.5s;
+                    opacity: 0;
+                    height: -webkit-fit-content;
+                }
+        
+                .top {
+                    display: flex;
+                    gap: 0.75rem;
+                    align-items: center;
+
+                    @include responsive(tablet) {
+                        display: none;
+                    }
+        
+                    .caption-1 {
+                        color: $secondary-700;
+                    }
+        
+                    img {
+                        width: 4.3125rem;
+                        height: 4.3125rem;
+                    }
+                }
+        
+                .half {
+                    p {
+                        font-size: 0.7rem;
+                        color: $secondary-500;
+                        font-weight: 400;  
+                        transition: all 0.2s;
+                        
+                        @include responsive(tablet) {
+                            font-size: 0;
+                            opacity: 0;
+                            transition: opacity 0.5s;
+                        }
+                    }
+                }
+        
+                .bottom {
+                    display: flex;
+                    gap: 0.75rem;
+                    height: 0px;
+                    transition: all 0.2s;
+
+                    @include responsive(tablet) {
+                        opacity: 0;
+                    }
+                }
+            }
+
+            &:hover {
+                .name {
+                    opacity: 0;
+                }
+
+                .img-big {
+                    opacity: 0;
+                }
+
+                .descript {
+                    opacity: 1;
+                    z-index: 1;
+                }
+
+                @include responsive(tablet) {
+                    .name {
+                        opacity: 1;
+                    }
+    
+                    .img-big {
+                        opacity: 1;
+                    }
+
+                    .descript {
+                        opacity: 0;
+                        z-index: 1;
+                    }
+                }
+            }
+
+            &.toggle {
+                row-gap: 0.75rem;
+
+                .name span {
+                    color: $secondary-600;
+                    transform: rotate(180deg);
+                }
+
+                .descript {
+                    opacity: 1;
+    
+                    @include responsive(tablet) {
+                        gap: 1rem;
+                    }
+            
+                    .half {
+                        p {
+                            @include responsive(tablet) {
+                                font-size: 0.6875rem;
+                                opacity: 1;
+                            }
+                        }
+                    }
+            
+                    .bottom {
+
+                        @include responsive(tablet) {
+                            height: 36px;
+                            opacity: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

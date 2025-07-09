@@ -1,0 +1,181 @@
+.find-us {
+
+    & .container {
+        display: flex;
+        gap: 1.5rem;
+        flex-direction: column;
+
+        .title {
+            display: flex;
+            gap: 1.25rem;
+            flex-direction: column;
+            text-align: center;
+
+            @include responsive(mobile) {
+                gap: 0.75rem;
+            }
+    
+            h3 {
+                line-height: 100%;
+                color: $secondary-900;
+                margin: 0;
+                line-height: 100%;
+            }
+    
+            p {
+                color: $secondary-600;
+                line-height: 140%;
+            }
+        }
+
+        .cont-card {
+            align-content: flex-start;
+            align-items: flex-start;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.4rem;
+            justify-content: center;
+    
+            .card-find {
+                padding: $size-11;
+                border-radius: $size-5;
+                border: 1px solid $secondary-50;
+                background: white;
+                display: flex;
+                gap: $size-6;
+                width: 100%;
+                max-width: 55rem;
+
+                .text-cont {
+                    display: flex;
+                    width: 100%;
+                    max-width: 18rem;
+                    min-height: 12.5rem;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 0.8rem;
+
+                    @include responsive(laptop) {
+                        max-width: 100%;
+                    }
+
+                    @include responsive(tablet) {
+                        min-height: auto;
+                    }
+                }
+
+                .cont-location {
+                    aspect-ratio: 2.5;
+                    border-radius: 1rem;
+                    overflow: hidden;
+                    width: 100%;
+
+                    @include responsive(laptop) {
+                        max-width: 100%;
+                        aspect-ratio: 2;
+                    }
+
+                    @media (max-width: 991px) {
+                        aspect-ratio: 2;
+                        width: 100%;
+                    }
+
+                    @include responsive(mobile) {
+                        aspect-ratio: 2;
+                        width: 100%;
+                    }
+
+                    @media (max-width: 375px) {
+                        aspect-ratio: auto;
+                    }
+                }
+
+                p.body-6-bold {
+                    color: $secondary-900;
+                    line-height: 140%;
+                }
+
+                p.body-4 {
+                    color: $secondary-600;
+                    line-height: 140%;
+                    
+                    strong {
+                        font-weight: 600;
+                    }   
+                }
+
+                a {
+                    color: $info-700;
+                    word-break: break-word;
+                }
+
+                &.has-iframe {
+                    .text-cont {
+                        justify-content: center;
+
+                        @include responsive(laptop) {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+
+            @include responsive(tablet) {
+
+                & .card-find {
+                    max-width: -webkit-fill-available ;
+                    flex-direction: column;
+                }
+            }
+
+            @include responsive(tablet) {
+                grid-template-columns: 1fr;
+
+                & .card-find {
+                    padding: $size-8 $size-6;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: $size-4;
+                    align-self: stretch;
+                    min-height: fit-content;
+                    border-radius: 1.25rem;
+                }
+            }
+
+            @include responsive(mobile) {
+                display: flex;
+            }
+            
+        }
+
+        .links {
+            p {
+                text-align: center;
+                color: $secondary-900;
+
+                @include responsive(mobile) {
+                    font-size: 0.75rem;
+                }
+            }
+        }
+
+        @include responsive(tablet) {
+            & h3 {
+                font-size: $size-10;
+            }
+        }
+
+        @include responsive(mobile) {
+            
+            & h3 {
+                font-size: 1.375rem;
+            }
+    
+        }
+    }
+
+    @include responsive(mobile) {
+        margin-bottom: 7.25rem;
+    }
+
+}

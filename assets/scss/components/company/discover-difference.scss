@@ -1,0 +1,73 @@
+.discover-difference-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  // align-items: center;
+  @include responsive(tablet) {
+    flex-direction: column;
+  }
+  .discover-difference-title {
+    width: 31%;
+    @include responsive(tablet) {
+      width: 100%;
+    }
+
+    h2 {
+      @include responsive(tablet) {
+        margin-bottom: $size-6;
+      }
+    }
+    .title {
+      @include responsive(tablet) {
+        font-size: 1.375rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+        margin-bottom: $size-6;
+      }
+    }
+  }
+  .discover-difference-text {
+    width: 39%;
+    display: flex;
+    flex-direction: column;
+    gap: $size-8;
+    @include responsive(tablet) {
+      gap: $size-6;
+      width: 100%;
+    }
+    .sub-title {
+      color: $secondary-600;
+      line-height: 140%;
+      span {
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 600;
+        color: $secondary-800;
+      }
+    }
+    .sub-title:last-child {
+      color: $secondary-800;
+    }
+  }
+}
+
+[lang="ja"] .company-page .discover-difference-content {
+  gap: 2rem;
+
+  .discover-difference-title {
+    width: 40%;
+
+    @include responsive(tablet) {
+      width: 100%;
+    }
+  }
+
+  .discover-difference-text {
+    width: 45%;
+
+    @include responsive(tablet) {
+      width: 100%;
+    }
+  }
+}

@@ -1,0 +1,108 @@
+.find-us {
+    margin-bottom: $size-25;
+
+    & .container {
+        display: flex;
+        gap: $size-8;
+        flex-direction: column;
+
+        .title {
+            display: flex;
+            gap: $size-6;
+            flex-direction: column;
+    
+            h3 {
+                line-height: 100%;
+                color: $secondary-900;
+                margin: 0;
+                line-height: 100%;
+            }
+    
+            p {
+                color: $secondary-600;
+                line-height: 140%;
+            }
+        }
+
+        .cont-card {
+            display: flex;
+            align-items: flex-start;
+            align-content: flex-start;
+            gap: $size-6;
+            flex-wrap: wrap;
+    
+            .card-find {
+                display: flex;
+                width: 100%;
+                max-width: 18rem;
+                min-height: 12.125rem;
+                padding: $size-11;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 0.8rem;
+                border-radius: $size-5;
+                border: 1px solid $secondary-50;
+                background: white;
+
+                p.body-6-bold {
+                    color: $secondary-900;
+                    line-height: 140%;
+                }
+
+                p.body-4 {
+                    color: $secondary-600;
+                    line-height: 140%;
+                    
+                    strong {
+                        font-weight: 600;
+                    }   
+                }
+            }
+
+            @include responsive(laptop) {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+
+                & .card-find {
+                    max-width: -webkit-fill-available ;
+                }
+            }
+
+            @include responsive(tablet) {
+                display: flex;
+            }
+
+            @include responsive(mobile) {
+                display: flex;
+
+                & .card-find {
+                    padding: $size-8 $size-6;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: $size-4;
+                    align-self: stretch;
+                    min-height: fit-content;
+                }
+            }
+            
+        }
+        @include responsive(tablet) {
+            & h3 {
+                font-size: $size-10;
+            }
+        }
+
+        @include responsive(mobile) {
+            
+            & h3 {
+                font-size: 1.375rem;
+            }
+    
+        }
+    }
+
+    @include responsive(mobile) {
+        margin-bottom: 7.25rem;
+    }
+
+}

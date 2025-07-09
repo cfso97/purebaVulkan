@@ -1,0 +1,398 @@
+.stocks-page {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16.5rem;
+  overflow: hidden;
+
+  @include responsive(tablet) {
+    gap: 8rem;
+  }
+
+  .banner-big {
+    @include responsive(mobile) {
+      padding: 5rem 0 1rem;
+    }
+    
+    .margin-general {
+      .content {
+        .text_ {
+          .group-1 {
+            @include responsive(mobile) {
+              display: none !important;
+            }
+          }
+        }
+        .img_ {
+          display: flex;
+          justify-content: flex-end;
+          @include responsive(mobile) {
+            width: 100%;
+          }
+          img {
+          }
+          .group-2 {
+            display: none !important;
+            @include responsive(mobile) {
+              display: flex !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .banner-contact {
+    .img_ {
+      height: 11%;
+    }
+  }
+
+  .forex_tradeview {
+    margin-top: -140px;
+    margin-top: -140px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $size-10;
+
+    &::before {
+      content: " ";
+      position: absolute;
+      background-image: url(/images/Stocks-Gradient-1.png);
+      background-size: 100% 100%;
+      width: 100%;
+      height: 108.41719rem;
+      left: 0;
+      z-index: -1;
+    }
+
+    @include responsive(tablet) {
+      margin-top: 0;
+      grid-template-columns: 1fr;
+    }
+
+    .forex_tradeview_text {
+      .body-4 {
+        margin-top: $size-4;
+      }
+    }
+
+    @include responsive(mobile) {
+      &::before {
+        background-size: cover;
+        background-position: center;
+        height: 57.41719rem;
+        top: 17%;
+      }
+    }
+  }
+
+  .find_forex {
+    .text {
+      text-align: center;
+      width: 65%;
+      margin: auto;
+
+      @include responsive(tablet) {
+        width: 100%;
+      }
+
+      .desc1 {
+        margin-top: $size-8;
+      }
+
+      .desc2 {
+        margin-top: $size-5;
+      }
+
+      @include responsive(mobile) {
+        p.body-4 {
+          margin-top: $size-4;
+        }
+
+        padding: 0 $size-4;
+        width: fit-content;
+      }
+    }
+  }
+
+  .trading-Cond {
+    display: grid;
+    grid-template-columns: auto 60%;
+    gap: $size-8;
+    align-items: center;
+    width: 63%;
+    margin: auto;
+
+    @include responsive(laptop) {
+      grid-template-columns: 100%;
+      width: 100%;
+      justify-items: center;
+    }
+
+    @include responsive(tablet) {
+      grid-template-columns: 1fr;
+      width: 100%;
+      gap: $size-5;
+    }
+
+    .titleCond {
+      @include responsive(laptop) {
+        text-align: center;
+      }
+    }
+
+    .body-4 {
+      margin-top: $size-4;
+      width: 80%;
+
+      @include responsive(laptop) {
+        text-align: center;
+        margin: auto;
+        margin-top: $size-4;
+      }
+
+      @include responsive(tablet) {
+        margin: auto;
+        margin-top: $size-4;
+      }
+    }
+
+    .flex {
+      display: flex;
+      padding: $size-11 4.5rem;
+      justify-content: space-around;
+      border-radius: $size-5;
+      border: 1px solid $color-white;
+      background: $secondary-50;
+      gap: 10px;
+      width: 85%;
+
+      @include responsive(tablet) {
+        display: flex;
+        padding: 0;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $size-7;
+        align-self: stretch;
+        border-radius: 0;
+        border: none;
+        width: 100%;
+        padding: $size-6 0;
+      }
+
+      .card {
+        width: 50%;
+
+        @include responsive(tablet) {
+          display: flex;
+          width: 100%;
+          gap: $size-3;
+          align-items: flex-start;
+          padding: 0 $size-6;
+        }
+      }
+
+      .icon {
+        max-width: $size-13;
+        width: 100%;
+        height: $size-13;
+        background-color: $color-white;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include responsive(tablet) {
+          max-width: $size-10;
+          width: 100%;
+          height: $size-10;
+        }
+
+        span {
+          @include responsive(tablet) {
+            font-size: 1rem;
+          }
+        }
+      }
+
+      .title {
+        font-size: 1.0625rem;
+        margin-top: $size-4;
+
+        @include responsive(tablet) {
+          font-size: 0.75rem;
+          margin: 0;
+        }
+      }
+
+      .subtitle {
+        font-size: 0.875rem;
+        margin-top: $size-4;
+        margin-bottom: $size-8;
+        width: 80%;
+
+        @include responsive(tablet) {
+          font-size: 0.625rem;
+          margin-top: $size-2;
+          margin-bottom: $size-4;
+          width: 100%;
+        }
+      }
+
+      a {
+        font-size: 0.875rem;
+        color: $info-700;
+
+        @include responsive(tablet) {
+          font-size: 0.6875rem;
+        }
+      }
+    }
+  }
+
+  .pathMarket {
+    &::before {
+      content: " ";
+      position: absolute;
+      background-image: url(/images/Stocks-Gradient-2.png);
+      background-size: 100% 100%;
+      width: 100%;
+      height: 119.41719rem;
+      left: 0;
+      z-index: -1;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .desc1 {
+      margin-top: $size-8;
+      margin-bottom: $size-8;
+      text-align: center;
+      color: $secondary-600;
+      font-size: 0.875rem;
+
+      @include responsive(tablet) {
+        font-size: 0.75rem;
+        width: 80%;
+        margin: auto;
+      }
+
+    }
+
+    .notes {
+      margin-top: $size-4;
+      text-align: center;
+      font-size: 0.75rem;
+      color: $secondary-300;
+
+      p {
+        color: $secondary-300;
+      }
+
+      a {
+        color: $info-700;
+      }
+
+      @include responsive(tablet) {
+        font-size: 0.5rem;
+      }
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: $size-8;
+    }
+
+    @include responsive(mobile) {
+      &::before {
+        background-size: cover;
+        background-position: left;
+        margin-top: 93%;
+      }
+
+      h2 {
+        margin-bottom: $size-4;
+      }
+
+      .desc1 {
+        margin-bottom: $size-5;
+      }
+    }
+  }
+
+  @include responsive(mobile) {
+    .find_forex {
+      display: flex;
+      flex-direction: column;
+      gap: $size-5;
+      margin: 0;
+      max-width: 100% !important;
+    }
+
+    .select-custom {
+      label {
+        display: none;
+      }
+
+      .select-content {
+        .select-toggle {
+          padding: $size-4;
+          align-items: center;
+          gap: $size-1;
+          align-self: stretch;
+        }
+      }
+    }
+
+    .tabsPlatform-content {
+      max-width: 100% !important;
+    }
+  }
+
+  .plat-sliders {
+    .content {
+      grid-template-columns: repeat(12, 1fr);
+      .portafolio-items {
+        grid-column: span 4;
+      }
+      .carousel-container {
+        grid-column: span 8;
+        .swiper {
+          .swiper-slide {
+            ul {
+              li {
+                font-size: 0.875rem;
+
+                @include responsive(mobile) {
+                  font-size: 0.625rem;
+                }
+              }
+            }
+          }
+          .swiper-slide {
+            .icon {
+              img {
+                height: 8rem;
+
+                @include responsive(mobile) {
+                  height: 6rem;
+                }
+              }
+            }
+          }
+        }
+      }
+      @include responsive(laptop) {
+        grid-template-columns: repeat(1, 1fr);
+        
+      }
+    }
+  } 
+}
+
+

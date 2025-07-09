@@ -1,0 +1,261 @@
+.regulation {
+  &-other {
+    display: flex;
+    max-width: 560px;
+    width: auto;
+    padding: $size-10;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: $size-13;
+    border-radius: $size-5;
+    border: 1px solid $secondary-50;
+    height: 300px;
+
+    @include responsive(tablet) {
+      width: 100%;
+      padding: $size-9;
+      gap: $size-9;
+      border-radius: $size-4;
+      border-width: 0;
+      height: auto;
+    }
+
+    @include responsive(mobile) {
+      width: 100%;
+      padding: $size-8;
+      gap: $size-7;
+      border-radius: $size-4;
+      border-width: 0;
+      height: auto;
+    }
+
+    &-cards {
+      display: flex;
+      align-items: flex-start;
+      align-content: flex-start;
+      gap: $size-15 $size-10;
+      align-self: stretch;
+      flex-wrap: wrap;
+
+      @include responsive(tablet) {
+        gap: $size-8 $size-7;
+      }
+
+      @include responsive(mobile) {
+        gap: $size-6 $size-5;
+      }
+    }
+
+    &-frame {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $size-10;
+      flex: 1 0 0;
+
+      @include responsive(tablet) {
+        gap: $size-7;
+      }
+
+      @include responsive(mobile) {
+        gap: $size-6;
+      }
+    }
+
+    &-space {
+      height: $size-10;
+    }
+  }
+
+  &-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 80%;
+    margin-top: 52px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $size-10;
+    flex-shrink: 0;
+    background: $color-white;
+    z-index: 3;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+      width: 8px;
+      background: $gray-200;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background-color: $gray-400;
+      border-radius: 100px;
+    }
+
+    &-content {
+      @extend .margin-general;
+      margin-top: 40px;
+      margin-bottom: 100px;
+
+      @include responsive(laptop-l) {
+        margin: $size-10;
+      }
+
+      @include responsive(tablet) {
+        margin: $size-8;
+      }
+
+      @include responsive(mobile) {
+        margin: $size-6;
+      }
+    }
+
+    &-title {
+      margin: auto 0;
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      margin-bottom: $size-10;
+
+      @include responsive(tablet) {
+        // flex-direction: column;
+        align-items: center;
+        gap: $size-2;
+      }
+
+      @include responsive(mobile) {
+        // flex-direction: column;
+        align-items: center;
+        gap: $size-1;
+      }
+
+      h2 {
+        margin: 0;
+      }
+    }
+
+    &-caption {
+      @extend .caption;
+      text-decoration: none;
+    }
+
+    &-container {
+      display: flex;
+      padding: $size-10;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      gap: $size-8;
+      align-self: stretch;
+      border-radius: $size-5;
+      background: $secondary-50;
+
+      @include responsive(tablet) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      @include responsive(mobile) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+
+    &-card {
+      display: flex;
+      align-items: flex-start;
+      align-content: flex-start;
+      gap: $size-12;
+      align-self: stretch;
+      flex-wrap: wrap;
+
+      @include responsive(tablet) {
+        flex-direction: column;
+        gap: $size-4;
+      }
+
+      @include responsive(mobile) {
+        flex-direction: column;
+        gap: $size-4;
+      }
+    }
+
+    &-cards {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $size-4;
+      flex: 1 0 0;
+
+      @include responsive(tablet) {
+        gap: $size-3;
+      }
+
+      @include responsive(mobile) {
+        gap: $size-2;
+      }
+    }
+
+    &-frame {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $size-4;
+      align-self: stretch;
+
+      @include responsive(tablet) {
+        gap: $size-3;
+      }
+
+      @include responsive(mobile) {
+        gap: $size-2;
+      }
+
+      & p {
+        margin: 0;
+        padding: 0;
+      }
+    }
+
+    &-web {
+      display: flex;
+      align-items: center;
+      gap: $size-1;
+      align-self: stretch;
+    }
+  }
+}
+
+.material-symbols-outlined {
+  cursor: pointer;
+}
+
+.close-modal {
+  display: flex;
+  padding: $size-4;
+  align-items: center;
+  border-radius: $size-3;
+  margin-left: auto;
+}
+
+.scrollbar {
+  display: flex;
+  width: 8px;
+  height: 884px;
+  padding-bottom: 0px;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  right: 40px;
+  bottom: 41px;
+  border-radius: 100px;
+  background: $gray-200;
+}
+
+//body.modal-open {
+//    overflow: hidden;
+//}

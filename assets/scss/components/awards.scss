@@ -1,0 +1,317 @@
+.awards-component {
+  width: -webkit-fill-available;
+  z-index: 1;
+  
+  .cont-items {
+    & h2 {
+      line-height: 100%;
+      color: $secondary-900;
+      text-align: center;
+      margin: 0 auto $size-6;
+      max-width: 952px;
+
+      @include responsive(mobile) {
+        text-align: left;
+        margin: 0 auto $size-4;
+      }
+    }
+
+    .cont-items {
+      & h2 {
+        line-height: 100%;
+        color: $secondary-900;
+        text-align: center;
+        margin: 0 auto $size-6;
+        max-width: 848px;
+
+        @include responsive(mobile) {
+          font-size: 1.375rem;
+          line-height: 120%;
+          margin: 0 0 $size-4;
+          text-align: left;
+        }
+      }
+      & .desc {
+        font-size: 14px;
+        color: $secondary-600;
+        line-height: 140%;
+        font-weight: 400;
+        text-align: center;
+        max-width: 794px;
+        margin: 0 auto $size-8;
+
+        @include responsive(mobile) {
+          font-size: $size-3;
+          line-height: 140%;
+          margin: 0 0 $size-6;
+          text-align: left;
+        }
+      }
+      @include responsive(mobile) {
+        font-size: 1.375rem;
+        line-height: 120%;
+        text-align: left;
+      }
+    }
+    & p {
+      font-size: 14px;
+      color: $secondary-600;
+      line-height: 140%;
+      font-weight: 400;
+      text-align: center;
+      max-width: 794px;
+      margin: 0 auto $size-8;
+
+      @include responsive(laptop) {
+        gap: 30px 50px;
+        justify-content: center;
+      }
+
+      @include responsive(mobile) {
+        // gap: 0;
+        // padding: 1.5rem 1.5rem;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // justify-items: center;
+
+        .card_ h2 {
+          font-size: $size-3 !important;
+          font-weight: 700 !important;
+        }
+      }
+
+      & .card_ {
+        max-width: 7.688rem;
+        width: 100%;
+        img {
+          width: $size-15;
+          height: $size-15;
+          margin-bottom: $size-5;
+        }
+
+        @include responsive(mobile) {
+          width: 108px;
+          .card_ h2 {
+            font-size: $size-3 !important;
+            font-weight: 700 !important;
+          }
+          nuxt-img,
+          img {
+            width: $size-14;
+            height: $size-14;
+            margin-bottom: $size-4;
+          }
+        }
+      }
+
+      & .card_ h2 {
+        @extend .body-4-bold;
+        color: $secondary-900;
+        line-height: 140%;
+        margin: 0 0 $size-3;
+      }
+      & .card_ h3 {
+        @extend .caption-1;
+        line-height: 16.8px;
+        color: $secondary-900;
+        margin: 0 0 $size-1;
+      }
+      & .card_ p {
+        font-size: 0.625rem;
+        font-weight: 400;
+        line-height: 120%;
+        margin: 0;
+        color: $secondary-500;
+      }
+      @include responsive(mobile) {
+        font-size: $size-3;
+        line-height: 140%;
+        margin: 0 0 $size-6;
+        text-align: left;
+      }
+    }
+  }
+
+  .cont-acordeon {
+    padding: 0 1rem;
+    position: relative;
+
+    @include responsive(mobile) {
+      padding: 0;
+    }
+
+    .navigation-buttons {
+      button {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        transform: translateY(-50%);
+        left: -12px;
+        display: flex;
+        width: $size-13;
+        height: $size-13;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        border-radius: $size-9;
+        background: white;
+        box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+        border: none;
+        transition: all 0.5s;
+        opacity: 1;
+
+        &:nth-child(2) {
+          right: -12px;
+          left: auto;
+        }
+
+        @include responsive(mobile) {
+          position: relative;
+          top: auto;
+          transform: none;
+          left: auto;
+          width: $size-10;
+          height: $size-10;
+        }
+      }
+
+      button.disabled {
+        opacity: 0; 
+        cursor: not-allowed;
+
+        @include responsive(mobile) {
+          opacity: 0.5;
+        }
+      }
+
+      @include responsive(mobile) {
+        display: flex;
+        margin-top: 1rem;
+      }
+    }
+
+    .swiper-slide {
+      transition: all 0.5s;
+
+      @include responsive(mobile) {
+        transform: translate3d(0, 15px, 0);
+        opacity: 0;
+      }
+
+      &.swiper-slide-active, &.swiper-slide-next {
+        @include responsive(mobile) {
+          opacity: 1;
+          transform: translate3d(0, 0px, 0);
+        }
+      }
+
+      &.swiper-slide-next + .swiper-slide {
+        @include responsive(mobile) {
+          opacity: 0.5;
+          transform: translate3d(0, 0px, 0);
+        }
+        @media (max-width: 375px) {
+          transform: translate3d(0, 15px, 0);
+        }
+      }
+    }
+  }
+
+  .cards-award {
+    display: flex;
+    justify-content: space-between;
+    padding: $size-10 0;
+    background: #fff;
+    border: 1px solid $secondary-50;
+    border-radius: $size-5;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    @include responsive(laptop) {
+      gap: 30px 50px;
+      justify-content: center;
+    }
+
+    @media (max-width: 991px) {
+      padding: 1.5rem 0;
+    }
+
+    @include responsive(mobile) {
+      padding: 2rem;
+      border-radius: 0.8rem;
+
+      .card_ h2 {
+        font-size: $size-3 !important;
+        font-weight: 700 !important;
+      }
+    }
+
+    @media (max-width: 425px) {
+      padding: 1rem;
+    }
+
+    & .card_ {
+      max-width: 7.688rem;
+      width: 100%;
+      padding: 0 $size-10;
+
+      @include responsive(laptop) {
+        padding: 0 1.5rem;
+      }
+
+      @media (max-width: 991px) {
+        padding: 0 2.5rem;
+      }
+
+      @include responsive(tablet) {
+        padding: 0 1.5rem;
+      }
+
+      img {
+        width: $size-15;
+        height: $size-15;
+        margin-bottom: $size-5;
+      }
+
+      @include responsive(mobile) {
+        padding: 0;
+        width: -webkit-fill-available;
+        max-width: 100%;
+
+        .card_ h2 {
+          font-size: $size-3 !important;
+          font-weight: 700 !important;
+        }
+        img,
+        img {
+          width: $size-14;
+          height: $size-14;
+          margin-bottom: $size-4;
+        }
+      }
+    }
+
+    & .card_ h2 {
+      @extend .body-4-bold;
+      color: $secondary-900;
+      line-height: 140%;
+      margin: 0 0 0.1rem;
+    }
+    & .card_ h3 {
+      @extend .caption-1;
+      line-height: 16.8px;
+      color: $secondary-900;
+    }
+    & .card_ p {
+      font-size: 0.625rem;
+      font-weight: 400;
+      line-height: 120%;
+      margin: 0;
+      color: $secondary-500;
+    }
+  }
+}
+
+[lang="ja"] .awards-component .cont-items p {
+  display: none;
+}

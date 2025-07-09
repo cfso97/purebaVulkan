@@ -1,0 +1,409 @@
+.tailored-solution-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: $size-6;
+  margin-bottom: 16.81rem;
+  z-index: 1;
+
+  @include responsive(tablet) {
+    flex-direction: column;
+    margin-bottom: 7.81rem;
+
+  }
+
+  @media (max-width: 991px) {
+    flex-direction: column;
+  }
+
+  .tailored-solution-text {
+    width: 24%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include responsive(tablet) {
+      width: 100%;
+    }
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+    .tailored-solution-text-content {
+      display: flex;
+      flex-direction: column;
+      gap: $size-8;
+      @include responsive(tablet) {
+        gap: $size-4;
+      }
+      h3 {
+        color: $vulkan_primary;
+      }
+      p {
+        color: $vulkan_secondary;
+        @include responsive(mobile) {
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+      button {
+        display: flex;
+        min-width: $size-15;
+        width: fit-content;
+        min-height: 3.5rem;
+        padding: $size-4 $size-6;
+        justify-content: center;
+        align-items: center;
+        border-radius: $size-2;
+        background: #1e1a2d;
+        border: none;
+        color: white;
+        font-size: 1.0625rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        @include responsive(tablet) {
+          display: none;
+        }
+      }
+    }
+  }
+  .tailored-solution-carousel {
+    width: 75%;
+    @include responsive(tablet) {
+      width: 100%;
+      // display: none;
+    }
+    @media (max-width: 991px) {
+      width: 100%;
+    }
+    @include responsive(mobile) {
+      width: 100%;
+    }
+
+    .swiper-wrapper {
+      width: 80%;
+    }
+    .swiper {
+      display: block;
+      padding: 0px;
+      width: 100% !important;
+
+      @media (max-width: 1771px) {
+        width: 100% !important;
+      }
+
+      @include responsive(laptop-l) {
+        width: 100% !important;        
+      }
+
+      @include responsive(laptop) {
+        width: 100% !important;        
+      }
+
+      @include responsive(mobile) {
+        padding: 3px;
+      }
+
+      .content-slide {
+        position: relative;
+        padding: 3.5rem 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: $size-4;
+        box-sizing: border-box;
+        border-radius: 1.25rem;
+        border: 1px solid $secondary-50;
+        background: $color-white;
+        height: auto;
+
+        @include responsive(mobile) {
+          padding: 1.25rem;
+          border: 1px solid rgba(112, 112, 112, 0.40);
+        }
+
+        .img-box {
+          max-width: 3rem;
+          max-height: 3rem;
+          min-width: 3rem;
+          min-height: 3rem;
+          background: $vulkan_primary;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+        }
+        .title {
+          color: $vulkan_primary;
+          font-size: 1.0625rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%;
+          @include responsive(mobile) {
+            font-size: 0.875rem;
+          }
+        }
+        .description {
+          color: $vulkan_secondary;
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+
+          @include responsive(mobile) {
+            font-size: 0.6875rem;
+          }
+        }
+        ul {
+          padding-left: 20px;
+
+          li {
+            color: $vulkan_secondary;
+            font-size: 0.75rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            @include responsive(mobile) {
+              font-size: 0.6875rem;
+            }
+          }
+        }
+
+        .second-button-small {
+          width: fit-content;
+        }
+
+        &.swiper-slide-next{
+          @include responsive(tablet) {
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .swiper-button-prev::after {
+        display: flex;
+        font-family: "Material Symbols Outlined";
+        content: "chevron_left";
+        width: $size-11;
+        height: $size-11;
+        font-size: $size-6;
+        border-radius: $size-19;
+        background: $color-white;
+        box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .swiper-button-next::after {
+        display: flex;
+        font-family: "Material Symbols Outlined";
+        content: "chevron_right";
+        width: $size-11;
+        height: $size-11;
+        font-size: $size-6;
+        border-radius: $size-19;
+        background: $color-white;
+        box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        overflow: visible;
+        width: $size-11;
+        height: $size-11;
+        color: $secondary-600;
+        display: none;
+        
+        @include responsive(tablet) {
+          display: block;
+        }
+      }
+
+      .swiper-slide-visible:nth-child(4) {
+        opacity: 0.6;
+      }
+      
+      &.with-icons{
+        gap: 0rem;
+
+        .swiper-pagination {
+          position: relative;
+          padding: 1rem 0;
+          top: 0; 
+          display: flex;
+          
+          .swiper-pagination-bullet {
+            width: 14px;
+            height: 14px;
+            background: $secondary-500;
+          }
+        }
+      
+        .swiper-button-prev{
+            left: 1px;
+      
+            &::after{
+                display: flex;
+                font-family: 'Material Symbols Outlined';
+                content: 'chevron_left';
+                width: $size-11;
+                height: $size-11;
+                font-size: $size-6;
+                border-radius: $size-19;
+                background: $color-white;
+                box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+                align-items: center;
+                justify-content: center;
+      
+                @include responsive(laptop) {
+                  width: 2.75rem;
+                  height: 2.75rem;
+                }
+            }
+        }
+        .swiper-button-next{
+            left: 16px !important;
+      
+            &::after{
+                display: flex;
+                font-family: 'Material Symbols Outlined';
+                content: 'chevron_right';
+                width: $size-11;
+                height: $size-11;
+                font-size: $size-6;
+                border-radius: $size-19;
+                background: $color-white;
+                box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+                align-items: center;
+                justify-content: center;
+      
+                @include responsive(laptop) {
+                  width: 2.75rem;
+                  height: 2.75rem;
+                }
+            }
+        }
+      
+        .swiper-button-prev, .swiper-button-next{
+            overflow: visible;
+            width: $size-11;
+            height: $size-11;
+            color: $secondary-600;
+            // display: inline-block;
+      
+            @include responsive(tablet) {
+              position: relative;
+              right: initial;
+              display: flex;
+              margin: 10px;
+              top: auto;
+              bottom: 0;
+              left: auto;
+              right: auto;
+              display: inline-block;
+              margin: 25px 0;
+            }
+      
+            @include responsive(mobile) {
+              left: 0px;
+            }
+        }
+
+        button {
+          display: none;
+          min-width: 5rem;
+          width: -moz-fit-content;
+          width: fit-content;
+          min-height: 3.5rem;
+          padding: 1rem 1.5rem;
+          justify-content: center;
+          align-items: center;
+          border-radius: 0.5rem;
+          background: #1e1a2d;
+          border: none;
+          color: white;
+          font-size: 1.0625rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%;
+
+          @include responsive(tablet) {
+            display: flex;
+          }
+          @include responsive(mobile) {
+            width: 100%;
+            min-height: fit-content;
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+  .none-slide {
+    width: 100%;
+    display: none;
+    gap: $size-4;
+
+    @include responsive(mobile) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-slide {
+      position: relative;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: $size-3;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      border: 1px solid $secondary-50;
+      background: $color-white;
+      height: auto;
+      .img-box {
+        max-width: 3rem;
+        max-height: 3rem;
+        min-width: 3rem;
+        min-height: 3rem;
+        background: $vulkan_primary;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+      .title {
+        color: $vulkan_primary;
+        font-size: 1.0625rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+      }
+      .description {
+        color: $vulkan_secondary;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+      }
+      ul {
+        li {
+          color: $vulkan_secondary;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+
+      .second-button-small {
+        width: fit-content;
+      }
+    }
+  }
+
+
+}

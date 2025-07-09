@@ -1,0 +1,23 @@
+version: 0.2
+
+phases:
+  install:
+    commands:
+      - echo Pre_build Phase
+      - npm cache clean --force
+      - npm install nuxt
+      - npm install @rollup/rollup-linux-x64-gnu
+      - npm install
+  build:
+    commands:
+      - echo Build Phase
+      - npm run build
+      - npm run generate
+
+  post_build:
+    commands:
+      - echo PostBuild Phase
+      - aws s3 sync ./dist $S3_BUCKET
+artifacts:
+  files:
+    - "**/*"

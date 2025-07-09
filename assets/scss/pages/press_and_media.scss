@@ -1,0 +1,449 @@
+.press-and-media {
+    display: flex;
+    flex-direction: column;
+    gap: 9.75rem;
+    justify-content: space-between;
+    overflow: hidden;
+    position: relative;
+    border-bottom: 0.8px solid $secondary-200;
+
+    @include responsive(mobile) {
+        gap: 4.94rem;
+    }
+
+    .banner-contact {
+        .img_ {
+            padding-top: 99%;
+        }
+
+        @include responsive(mobile) {
+            background-image: url(/images/PressAndMedia/01.png) !important;
+        }
+    }
+
+    .tabsPlatform-content {
+        max-width: 1078px;
+
+        .card-content {
+            padding: 0;
+
+            @include responsive(tablet) {
+                border-radius: $size-3;
+                margin-top: 1.25rem;
+            }
+        }
+
+        .cont_media {
+
+            &::before, &::after {
+                display: none;
+            }
+
+            .content_card {
+                padding: $size-8 3.375rem;
+                justify-content: center;
+                align-items: center;
+                gap: $size-9;
+                align-self: stretch;
+                display: grid;
+                grid-template-columns: 44% 52%;
+
+                @include responsive(laptop) {
+                    padding: 2rem 2.375rem;
+                    gap: 1.25rem;
+                }
+
+                @include responsive(tablet) {
+                    grid-template-columns: 1fr;
+                }
+
+                @include responsive(mobile) {
+                    padding: 1rem;
+                }
+
+                .img_ {
+
+                    @include responsive(mobile) {
+                        gap: $size-4;
+                    }
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                .cont_texts {
+                    gap: 1.3rem;
+
+                    .descript_texts {
+                        gap: 0.5rem;
+                        max-width: 460px;
+
+                        @include responsive(mobile) {
+                            gap: $size-4;
+                        }
+
+                        h4 {
+                            font-size: 1.375rem;
+
+                            @include responsive(tablet) {
+                                font-size: 1.0625rem;
+                            }
+                        }
+                    }
+                }
+            }
+
+            p {
+                font-size: 0.75rem;
+            }
+        }
+
+        .buttonsContainer {
+            margin-top: 0;
+
+            @include responsive(tablet) {
+                gap: 0.1rem;
+            }
+
+            .buttonItem {
+                height: $size-13;
+                padding: 0;
+                border-top: 2px solid white;
+            }
+        }
+
+        .alert {
+            margin: 4rem auto 0;
+
+            @include responsive(mobile) {
+                margin:2rem auto 0;
+            }
+        }
+    }
+
+    .pre-footer {
+        max-width: 1078px;
+        margin-bottom: 9.75rem;
+
+        @include responsive(mobile) {
+            max-width: 100% !important;
+            margin-bottom: 7.69rem;
+        }
+        
+        .content_prefoter {
+            display: flex;
+            border-radius: $size-4;
+            background-image: url(/images/PressAndMedia/GradientBG.png);
+            background-size: 100% 100%;
+            display: inline-flex;
+            align-items: center;
+            gap: $size-11;
+            padding: $size-15;
+
+            @include responsive(laptop) {
+                display: flex;
+                flex-direction: column;
+            }
+
+            @include responsive(mobile) {
+                background-image: url(/images/PressAndMedia/GradientBG-1.png);
+                padding: 2rem 1rem;
+                border-radius: 0;
+                gap: $size-8;
+            }
+        }
+
+        p, a {
+            color: white;
+
+            @include responsive(mobile) {
+                font-size: 0.75rem;
+            }
+        }
+
+        .body-2-bold {
+            @include responsive(mobile) {
+                font-size: 1.0625rem;
+            }
+        }
+
+        .body-4 {
+            font-weight: 200;
+        }
+
+        a {
+            text-decoration: none;
+            color: $info-200;
+        }
+
+        .dsecript-contact {
+            font-family: "Plus Jakarta Sans";
+            font-size: 28px;
+            font-weight: 600;
+            line-height: 110%;
+
+            @include responsive(mobile) {
+                font-size: 1.0625rem;
+            }
+        }
+
+        .contact {
+            -webkit-backdrop-filter: blur(20px);
+            backdrop-filter: blur(20px);
+            background: linear-gradient(156deg, hsla(0, 0%, 100%, 0.42) 10.28%, hsla(0, 0%, 100%, 0) 106.66%);
+            border-radius: 1.1875rem;
+            box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.08);
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            gap: $size-4;
+            padding: 35px 30px;
+
+            @include responsive(mobile) {
+                padding: 1.25rem 1.80rem;
+                justify-content: center;
+            }
+
+            img {
+                width: 84px;
+                height: 84px;
+            }
+
+            .text-cont {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+    } 
+    
+    .tabsPlatform-content {
+        .selectItem {
+            padding: 0;
+            margin-top: 2rem;
+        }
+    }
+
+    .select-custom {
+        label {
+            display: none;
+        }
+    }
+}
+
+.cont_media {
+
+    &:before {
+        background-image: url(/images/PressAndMedia/Press&Media-Gradient1.png);
+        background-size: 100% 100%;
+        content: " ";
+        height: 127.41719rem;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        top: 420px;
+
+        @include responsive(mobile) {
+            background-size: cover;
+            background-position: -540px center;
+            top: 700px;
+        }
+    }
+
+    &:after {
+        background-image: url(/images/PressAndMedia/Press&Media-Gradient2.png);
+        background-size: 100% 100%;
+        content: " ";
+        height: 127.41719rem;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        top: 2500px;
+
+        @include responsive(mobile) {
+            background-size: cover;
+            background-position: 700px center;
+            top: 3200px;
+        }
+    }
+
+    .margin-general {
+        display: flex;
+        gap: $size-6;
+        flex-direction: column;
+        padding: 4.80rem 4.80rem 1.80rem;
+        -webkit-backdrop-filter: blur(20px);
+        backdrop-filter: blur(20px);
+        background: linear-gradient(156deg, hsla(0, 0%, 100%, .42) 10.28%, hsla(0, 0%, 100%, 0) 106.66%);
+        border-radius: 1.1875rem;
+        box-shadow: 0 4px 24px 0 rgba(0,0,0,.08);
+        box-sizing: border-box;
+
+        @include responsive(tablet) {
+            padding: 0;
+            box-shadow: none;
+            background: transparent;
+            gap: $size-5;
+        }
+    }
+
+    h2 {
+        color: $secondary-900;
+    }
+
+    p {
+        color: $secondary-600;
+
+        a {
+            color: $info-700;
+        }
+    }
+
+    .title_descript {
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $size-6;
+        text-align: center;
+        max-width: 42.25rem;
+        margin: auto;
+
+        @include responsive(mobile) {
+            gap: $size-5;
+        }
+
+        p {
+            font-size: 0.75rem;
+        }
+    }
+
+    .content_card {
+        align-items: center;
+        gap: 2.25rem;
+        padding: 2.75rem 4rem;
+        border-radius: 1.25rem;
+        background: #FFF;
+        display: grid;
+        grid-template-columns: 52% 44%;
+
+        @include responsive(laptop) {
+            grid-template-columns: 1fr;
+        }
+
+        @include responsive(mobile) {
+            padding: 1.38rem;
+        }
+
+        .img_ {
+            display: flex;
+
+
+            @include responsive(laptop) {
+                max-width: 400px;
+                margin: auto;
+            }
+
+            @include responsive(mobile) {
+                flex-direction: column;
+                gap: $size-3;
+                max-width: 100%;
+            }
+
+            .crumbs {
+                display: none;
+
+                @include responsive(mobile) {
+                    display: flex;
+                }
+
+                span {
+                    @include responsive(mobile) {
+                        font-size: 0.6875rem;
+                    }
+                }
+            }
+
+            img {
+                width: 100%;
+            }
+        }
+
+        .cont_texts {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 1.4rem;
+
+            .crumbs {
+                @include responsive(mobile) {
+                    display: none;
+                }
+            }
+
+            .descript_texts {
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.1rem;
+
+                h4 {
+                    margin: 0;
+
+                    @include responsive(mobile) {
+                        font-size: 1.375rem;
+                    }
+                }
+
+                .paragraph {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1.1rem;
+                }
+
+                p {
+                    @include responsive(mobile) {
+                        font-size: 0.6875rem;
+                    }
+                }
+            }
+
+            .btn_article {
+                display: flex;
+
+                a {
+                    padding: 0.6rem;
+                    border-radius: $size-2;
+                    font-size: 0.75rem;
+                    font-weight: 700;
+                }
+            }
+        }
+
+        .crumbs {
+            display: flex;
+            gap: 1rem;
+
+            span {
+                color: $secondary-300;
+                position: relative;
+
+                &:first-child::before {
+                    top: 50%;
+                    content: "";
+                    height: 85%;
+                    position: absolute;
+                    width: 1px;
+                    right: -0.5rem;
+                    background: $secondary-300;
+                    transform: translateY(-50%);
+                }
+            }
+        }
+    }
+
+
+}

@@ -1,0 +1,169 @@
+/// Event wrapper
+/// @author Harry Roberts
+/// @param {Bool} $self [false] - Whether or not to include current selector
+/// @link https://twitter.com/csswizardry/status/478938530342006784 Original tweet from Harry Roberts
+@mixin on-event($self: false) {
+  @if $self {
+
+    &,
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+
+  @else {
+
+    &:hover,
+    &:active,
+    &:focus {
+      @content;
+    }
+  }
+}
+
+// body {
+//   margin: 0;
+// }
+
+/// Make a context based selector a little more friendly
+/// @author Hugo Giraudel
+/// @param {String} $context
+@mixin when-inside($context) {
+  #{$context} & {
+    @content;
+  }
+}
+
+@mixin define-color-hsl($color, $hue, $saturation, $lightness) {
+  #{$color}: unquote("hsl(#{$hue}, #{$saturation}, #{$lightness})");
+  #{$color}-h: #{$hue};
+  #{$color}-s: #{$saturation};
+  #{$color}-l: #{$lightness};
+}
+
+@mixin placeAtAbsoluteCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin placeAtVerticalCenter($horizontalPosition) {
+  position: absolute;
+  top: 50%;
+  left: $horizontalPosition;
+  transform: translate(-50%, -50%);
+}
+
+@mixin placeAtVerticalCenterFromRight($rightPosition) {
+  position: absolute;
+  top: 50%;
+  right: $rightPosition;
+  transform: translate(0, -50%);
+}
+
+@mixin placeAtBottomCenter {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+@mixin noSelect {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Old versions of Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome, Edge, Opera and Firefox */
+}
+
+@mixin makeWhite {
+  filter: brightness(0) invert(1);
+}
+
+
+/// MEDIA QUERIES
+/// Desktop-First
+@mixin responsive($breakpoint) {
+
+  @if $breakpoint == laptop-xl {
+    @media (min-width: 1441px) {
+      @content
+    }
+  }
+
+  @if $breakpoint == laptop-l {
+    @media (max-width: 1440px) {
+      @content
+    }
+  }
+
+  @if $breakpoint == laptop {
+    @media (max-width: 1200px) {
+      @content
+    }
+  }
+
+  @if $breakpoint == tablet {
+    @media (max-width: 768px) {
+      @content
+    }
+  }
+
+  @if $breakpoint == mobile {
+    @media (max-width: 570px) {
+      @content
+    }
+  }
+}
+
+@mixin absoluteCenter() {
+  display: grid;
+  place-items: center;
+}
+
+@mixin standardPadding($vertical-padding) {
+  padding: $vertical-padding $padding-stop-desktop;
+
+  @include responsive(laptop-l) {
+    padding: $vertical-padding $padding-stop-laptop-l;
+  }
+
+  @include responsive(laptop) {
+    padding: $vertical-padding $padding-stop-laptop;
+  }
+}
+
+@mixin standardPaddingRight($vertical-padding, $other) {
+  padding: $vertical-padding $padding-stop-desktop $vertical-padding $other;
+
+  @include responsive(laptop-l) {
+    padding: $vertical-padding $padding-stop-laptop-l $vertical-padding $other;
+  }
+
+  @include responsive(laptop) {
+    padding: $vertical-padding $padding-stop-laptop $vertical-padding $other;
+  }
+}
+
+@mixin standardPaddingLeft($vertical-padding, $other) {
+  padding: $vertical-padding $other $vertical-padding $padding-stop-desktop;
+
+  @include responsive(laptop-l) {
+    padding: $vertical-padding $other $vertical-padding $padding-stop-laptop-l;
+  }
+
+  @include responsive(laptop) {
+    padding: $vertical-padding $other $vertical-padding $padding-stop-laptop;
+  }
+}

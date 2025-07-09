@@ -1,0 +1,155 @@
+.build-portafolios-container {
+  width: 100%;
+  .items-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: $size-10;
+    @include responsive(tablet) {
+      gap: $size-6;
+    }
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      z-index: 1;
+      @include responsive(tablet) {
+        margin-bottom: 0px !important;
+      }
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: $size-8;
+        .sub-title {
+          color: $secondary-600;
+        }
+        @include responsive(tablet) {
+          gap: $size-4;
+          text-align: start;
+        }
+        button {
+          @include responsive(tablet) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .items-container-2 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: $size-9;
+      padding: $size-10 $size-12;
+      border-radius: 1.1875rem;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      background: linear-gradient(
+        156deg,
+        rgba(255, 255, 255, 0.29) 10.3%,
+        rgba(255, 255, 255, 0) 86.35%
+      );
+      box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(20px);
+
+      @include responsive(mobile) {
+        padding: $size-8 $size-4;
+      }
+      .build-portafolio {
+        display: flex;
+        flex-direction: row;
+        gap: $size-6;
+        align-items: center;
+
+        @include responsive(mobile) {
+          display: flex;
+          flex-direction: row;
+          gap: 0.75rem;
+          align-items: flex-start;
+        }
+
+        .image-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          .icon {
+            border-radius: 100%;
+            background: white;
+            padding: 1.25rem;
+            font-size: $size-6;
+            color: $secondary-900;
+
+            @include responsive(mobile) {
+              font-size: $size-5;
+              width: 3rem;
+              height: 3rem;
+              padding: 0;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+        .build-portafolio-text-item {
+          display: flex;
+          flex-direction: column;
+          gap: $size-4;
+          .title {
+            color: $secondary-900;
+          }
+          .description {
+            color: $secondary-600;
+          }
+        }
+      }
+    }
+    .second-button-extrasmall{
+      z-index: 1;
+      display: none;
+
+      @include responsive(mobile) {
+        display: flex;
+      }
+    }
+    button {
+      z-index: 1;
+      @include responsive(tablet) {
+        display: flex;
+      }
+    }
+  }
+}
+@include responsive(tablet) {
+  .build-portafolios-container {
+    .items-container {
+      flex-direction: column;
+      .title-container {
+        width: 100%;
+        text-align: center;
+        margin-bottom: $size-6;
+      }
+      .items-container-2 {
+        .build-portafolio {
+          .image-container {
+            .image {
+              background: $secondary-50;
+            }
+          }
+          .build-portafolio-text-item {
+            gap: $size-2;
+            .title {
+              font-size: 0.875rem;
+              font-style: normal;
+              font-weight: 400;
+            }
+            .description {
+              font-size: 0.6875rem;
+              font-style: normal;
+              font-weight: 400;
+            }
+          }
+        }
+      }
+    }
+  }
+}

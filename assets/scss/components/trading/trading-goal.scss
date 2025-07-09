@@ -1,0 +1,252 @@
+.trading-goald-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  @include responsive(tablet) {
+    flex-direction: column;
+    align-items: normal;
+  }
+  .trading-goald-text-container {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: $size-8;
+    z-index: 1;
+    @include responsive(mobile) {
+      gap: $size-4;
+      margin-bottom: 0 !important;
+    }
+
+    .trading-goal-title {
+      color: $secondary-900;
+      line-height: 100%;
+      @include responsive(tablet) {
+        font-size: 1.375rem;
+        font-style: normal;
+        font-weight: 600;
+      }
+    }
+
+    .trading-goal-text {
+      color: $secondary-600;
+    }
+
+    button {
+      display: inline-flex;
+      min-width: $size-15;
+      padding: $size-4;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: $size-2;
+      border: 1px solid $secondary-900;
+      color: $secondary-900 !important;
+      background: transparent;
+      width: max-content;
+      animation: fadeIn 0.3s ease-out forwards;
+      animation-delay: 1.5s;
+      opacity: 0;
+    }
+    @include responsive(tablet) {
+      width: 100%;
+      margin-bottom: $size-8;
+      button {
+        display: none;
+      }
+    }
+  }
+
+  .trading-goald-carousel-container {
+    width: 70%;
+    overflow: hidden;
+    padding: 30px;
+    box-sizing: border-box;
+    z-index: 1;
+    @include responsive(tablet) {
+      width: 100%;
+    }
+
+    @include responsive(mobile) {
+      overflow: initial;
+      padding: 0px;
+    }
+    .swiper {
+      width: 100%;
+      display: block;
+      border-radius: 1.1875rem;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      background: linear-gradient(
+        156deg,
+        rgba(255, 255, 255, 0.42) 10.28%,
+        rgba(255, 255, 255, 0) 106.66%
+      );
+      box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(20px);
+      padding: 27px;
+      box-sizing: border-box;
+      // overflow: initial;
+      margin-top: 15px;
+      @include responsive(tablet) {
+        border-radius: 0;
+        border: none;
+        box-shadow: none;
+        background: none;
+        padding: 15px !important;
+        padding-bottom: 60px !important;
+      }
+
+      .swiper-wrapper {
+      }
+
+      .swiper-slide {
+        // overflow: hidden;
+      }
+
+      .content-slide {
+        position: relative;
+        padding: 3.37rem 27px;
+        display: flex;
+        flex-direction: column;
+        gap: $size-6;
+        box-sizing: border-box;
+        border-radius: 1.25rem;
+        height: auto;
+
+        @include responsive(tablet) {
+          border-radius: 21px;
+          border: 1px solid rgba(255, 255, 255, 0.42);
+          background: linear-gradient(156deg, rgba(255, 255, 255, 0.50) 10.28%, rgba(255, 255, 255, 0.00) 106.66%);
+          box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+          backdrop-filter: blur(20px);
+        }
+
+        @include responsive(mobile) {
+          gap: $size-3;
+          padding: 1.5rem;
+          padding-right: 1.5rem;
+        }
+        .title-box {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0.5rem;
+
+          @media (max-width: 375px) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          @include responsive(mobile) {
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 400;
+          }
+          .img-card {
+            width: $size-13;
+            aspect-ratio: 3/0;
+            object-fit: contain;
+
+            @include responsive(mobile) {
+              width: $size-11;
+            }
+          }
+        }
+
+        .text {
+          .desc {
+            color: $secondary-600;
+          }
+        }
+
+        .second-button-small {
+          width: fit-content;
+        }
+      }
+
+      .swiper-button-prev::after {
+        display: flex;
+        font-family: "Material Symbols Outlined";
+        content: "chevron_left";
+        width: $size-11;
+        height: $size-11;
+        font-size: $size-6;
+        border-radius: $size-19;
+        background: $color-white;
+        box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .swiper-button-next::after {
+        display: flex;
+        font-family: "Material Symbols Outlined";
+        content: "chevron_right";
+        width: $size-11;
+        height: $size-11;
+        font-size: $size-6;
+        border-radius: $size-19;
+        background: $color-white;
+        box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        overflow: visible;
+        width: $size-11;
+        height: $size-11;
+        color: $secondary-600;
+        display: inline-block;
+
+        @include responsive(tablet) {
+          display: none;
+        }
+      }
+
+      .swiper-pagination{
+        display: none;
+        @include responsive(tablet) {
+          display: block;
+          text-align: left;
+          padding-left: 20px;
+
+          .swiper-pagination-bullet-active{
+            background: #4F657B;
+          }
+
+          .swiper-pagination-bullet{
+            width: 10px;
+            height: 10px;
+          }
+        }
+      } 
+    }
+    // .second-button-extrasmall{
+    //   display: block;
+    //   @include responsive(mobile) {
+    //     display: none;
+    //   }
+    // }
+
+    button {
+      display: none;
+      margin-top: $size-8;
+
+      @include responsive(mobile) {
+        display: block;
+      }
+    }
+
+    a {
+      text-decoration: none;
+
+      @include responsive(mobile) {
+        padding-left: 20px;
+        display: flex;
+      }
+    }
+  }
+}

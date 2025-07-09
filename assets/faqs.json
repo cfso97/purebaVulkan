@@ -1,0 +1,398 @@
+[
+  {
+    "title": "faq.titles-seccion1",
+    "icon": "contacts",
+    "links": [
+      {
+        "id": "section0-link0",
+        "text": "faq.tab1.title1",
+        "url": "new-user-guide/how-can-i-open-a-live-account-with-tradeview-markets/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section0-link1",
+        "text": "faq.tab2.title1",
+        "url": "new-user-guide/step-by-step-guide-to-opening-a-live-account-with-tradeview-markets/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section0-link2",
+        "text": "faq.tab3.title1",
+        "url": "new-user-guide/common-issues-in-the-id-verification-process/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section0-link3",
+        "text": "faq.tab4.title1",
+        "url": "new-user-guide/which-markets-can-i-trade-with-tradeview-markets/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section0-link4",
+        "text": "faq.tab5.title1",
+        "url": "new-user-guide/where-can-i-manage-my-accounts/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section0-link5",
+        "text": "faq.tab6.title1",
+        "url": "new-user-guide/when-can-i-trade-with-tradeview-markets/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section0-link6",
+        "text": "faq.tab7.title1",
+        "url": "new-user-guide/can-i-open-a-demo-account-with-tradeview-markets/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section0-link7",
+        "text": "faq.tab8.title1",
+        "url": "new-user-guide/what-do-i-need-to-get-started-with-an-account/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section0-link8",
+        "text": "faq.tab9.title1",
+        "url": "new-user-guide/does-tradeview-offer-fix-api-technology/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section0-link9",
+        "text": "faq.tab10.title1",
+        "url": "new-user-guide/can-i-trade-on-the-go-with-a-mobile-app/",
+        "content": {
+          "sections": []
+        }
+      }
+    ]
+  },
+  {
+    "title": "faq.titles-seccion2",
+    "icon": "percent",
+    "links": [
+      {
+        "id": "section1-link0",
+        "text": "faq.tab11.title1",
+        "url": "fees-and-platforms/what-fees-and-commissions-will-i-pay/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section1-link1",
+        "text": "faq.tab12.title1",
+        "url": "fees-and-platforms/what-fees-and-commissions-will-i-pay-in-the-stocks-market/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section1-link2",
+        "text": "faq.tab13.title1",
+        "url": "fees-and-platforms/which-trading-platforms-can-i-use-with-tradeview/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section1-link3",
+        "text": "faq.tab14.title1",
+        "url": "fees-and-platforms/what-are-the-fees-and-characteristics-of-futures-contracts-at-tradeview-markets/",
+        "content": {
+          "sections": []
+        }
+      }
+    ]
+  },
+  {
+    "title": "faq.titles-seccion3",
+    "icon": "feature_search",
+    "links": [
+      {
+        "id": "section2-link0",
+        "text": "faq.tab15.title1",
+        "url": "account-features/what-type-of-accounts-are-available-for-forex-trading-and-what-are-their-characteristics/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section2-link1",
+        "text": "faq.tab16.title1",
+        "url": "account-features/what-exchanges-are-available-for-futures-trading-at-tradeview-markets/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section2-link2",
+        "text": "faq.tab17.title1",
+        "url": "account-features/what-stock-exchanges-are-available-for-trading-at-tradeview/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section2-link3",
+        "text": "faq.tab18.title1",
+        "url": "account-features/does-tradeview-provide-leverage-on-equity-accounts/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section2-link4",
+        "text": "faq.tab19.title1",
+        "url": "account-features/who-are-tradeviews-liquidity-providers/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section2-link5",
+        "text": "faq.tab20.title1",
+        "url": "account-features/do-you-offer-direct-liquidity/",
+        "content": {
+          "sections": []
+        }
+      }
+    ]
+  },
+  {
+    "title": "faq.titles-seccion4",
+    "icon": "settings_account_box",
+    "links": [
+      {
+        "id": "section3-link0",
+        "text": "faq.tab21.title1",
+        "url": "manage-my-account/how-do-i-fund-my-account/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section3-link1",
+        "text": "faq.tab22.title1",
+        "url": "manage-my-account/step-by-step-instructions-for-your-deposits/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section3-link2",
+        "text": "faq.tab23.title1",
+        "url": "manage-my-account/whats-the-process-for-withdrawing-my-funds/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section3-link3",
+        "text": "faq.tab24.title1",
+        "url": "manage-my-account/what-deposit-and-withdrawal-options-do-i-have/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section3-link4",
+        "text": "faq.tab25.title1",
+        "url": "manage-my-account/can-i-transfer-funds-between-my-accounts/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section3-link5",
+        "text": "faq.tab26.title1",
+        "url": "manage-my-account/can-i-deposit-in-multiple-currencies/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section3-link6",
+        "text": "faq.tab27.title1",
+        "url": "manage-my-account/can-i-fund-my-account-using-bitcoin/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section3-link7",
+        "text": "faq.tab28.title1",
+        "url": "manage-my-account/how-do-i-change-or-reset-my-account-password/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section3-link8",
+        "text": "faq.tab29.title1",
+        "url": "manage-my-account/i-already-have-a-cabinet-how-do-i-open-a-new-account/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section3-link9",
+        "text": "faq.tab30.title1",
+        "url": "manage-my-account/can-i-have-multiple-accounts-with-tradeview/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section3-link10",
+        "text": "faq.tab31.title1",
+        "url": "manage-my-account/how-do-i-check-my-balance-and-trading-history/",
+        "content": {
+          "sections": []
+        }
+      }
+    ]
+  },
+  {
+    "title": "faq.titles-seccion5",
+    "icon": "dynamic_feed",
+    "links": [
+      {
+        "id": "section4-link0",
+        "text": "faq.tab32.title1",
+        "url": "services-and-programs/what-is-the-introducing-brokers-program/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section4-link1",
+        "text": "faq.tab33.title1",
+        "url": "services-and-programs/how-can-i-join-the-introducing-brokers-program/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section4-link2",
+        "text": "faq.tab34.title1",
+        "url": "services-and-programs/can-i-partner-with-tradeview-as-an-affiliate/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section4-link3",
+        "text": "faq.tab35.title1",
+        "url": "services-and-programs/what-is-multimam-and-how-can-i-use-it/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section4-link4",
+        "text": "faq.tab36.title1",
+        "url": "services-and-programs/what-is-communitraders/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section4-link5",
+        "text": "faq.tab37.title1",
+        "url": "services-and-programs/step-by-step-guide-to-become-a-follower/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section4-link6",
+        "text": "faq.tab38.title1",
+        "url": "services-and-programs/how-do-i-copy-follow-a-signal-providers-strategy/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section4-link7",
+        "text": "faq.tab39.title1",
+        "url": "services-and-programs/how-do-i-stop-copying-following-a-signal-providers-strategy/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section4-link8",
+        "text": "faq.tab40.title1",
+        "url": "services-and-programs/step-by-step-guide-to-become-a-signal-provider/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section4-link9",
+        "text": "faq.tab41.title1",
+        "url": "services-and-programs/does-tradeview-offer-educational-resources/",
+        "content": {
+          "sections": []
+        }
+      }
+    ]
+  },
+  {
+    "title": "faq.titles-seccion6",
+    "icon": "encrypted",
+    "links": [
+      {
+        "id": "section5-link0",
+        "text": "faq.tab42.title1",
+        "url": "privacy-and-security/how-is-my-personal-and-financial-information-protected/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section5-link1",
+        "text": "faq.tab43.title1",
+        "url": "privacy-and-security/how-do-i-set-up-two-factor-authentication-2fa/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section5-link2",
+        "text": "faq.tab44.title1",
+        "url": "privacy-and-security/are-my-funds-segregated-for-protection/",
+        "content": {
+          "sections": []
+        }
+      },
+      {
+        "id": "section5-link3",
+        "text": "faq.tab45.title1",
+        "url": "privacy-and-security/is-tradeview-markets-regulated/",
+        "content": {
+          "sections": []
+        }
+      }
+    ]
+  }
+]

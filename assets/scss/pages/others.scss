@@ -1,0 +1,19 @@
+.gap-general {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 12.5rem;
+  overflow: hidden;
+  background: $vulkan_background;
+
+  @include responsive(tablet) {
+    gap: 8rem;
+  }
+}
+
+.strange {
+  gap: 5rem !important;
+  @include responsive(mobile) {
+    gap: 1.5rem !important;
+  }
+}

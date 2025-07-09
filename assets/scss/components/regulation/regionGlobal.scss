@@ -1,0 +1,245 @@
+.region-global {
+  .content {
+    display: flex;
+    flex-direction: row;
+    // align-items: center;
+    gap: 55px;
+
+    @include responsive(mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: $size-4;
+    }
+
+    .textMobile {
+      display: none;
+      @include responsive(mobile) {
+        display: block;
+      }
+    }
+    .textDesktop {
+      display: block;
+      @include responsive(mobile) {
+        display: none;
+      }
+    }
+    .img-countries {
+      margin-top: 10%;
+      width: 50%;
+      @include responsive(mobile) {
+        display: none;
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    .img-countries-sm {
+      display: none;
+      @include responsive(mobile) {
+        display: flex;
+        width: 100%;
+      }
+      div {
+        width: 100%;
+          img {
+            width: 100%;
+          }
+      }
+    }
+
+    .content-dropdowns {
+      width: 50%;
+      @include responsive(mobile) {
+        width: 100%;
+      }
+      .descSeccion {
+        margin-top: $size-6;
+      }
+      .buttonsContainer {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: space-around;
+        background-color: $color-white;
+        border-radius: $size-3;
+        gap: $size-6;
+        border: 1px solid $secondary-50;
+        overflow: hidden;
+        margin-top: 35px;
+        margin-bottom: $size-8;
+
+        @include responsive(mobile) {
+          padding: 0;
+          gap: $size-2;
+          align-items: center;
+          margin-top: 0;
+        }
+
+        .buttonItem {
+          position: relative;
+          width: 100%;
+          background: $color-white;
+          border: none;
+          height: 100%;
+          padding: $size-4 $size-6;
+          transition: background-color 0.3s ease, color 0.3s ease;
+
+          @include responsive(mobile) {
+            padding: 1rem 0.5rem;
+            font-size: 0.75rem !important;
+          }
+
+          @extend .body-4;
+
+          &.selected {
+            border-bottom: 2px solid white;
+            @extend .body-4-bold;
+
+            @include responsive(mobile) {
+              font-size: 0.75rem !important;
+            }
+          }
+        }
+
+        .selected-border {
+          position: absolute;
+          width: $size-9;
+          height: $size-1;
+          bottom: 0;
+          background: transparent;
+          transition: width 0.3s ease, left 0.3s ease;
+          display: flex;
+          justify-content: space-evenly;
+
+          .border-style {
+            position: relative;
+            width: 100%;
+            max-width: $size-9;
+            border-radius: $size-1;
+            height: 100%;
+            background-color: $secondary-900;
+          }
+        }
+      }
+
+      .card-content {
+        display: flex;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        gap: 3.9375rem;
+        box-sizing: border-box;
+
+        @include responsive(laptop) {
+          flex-direction: column;
+        }
+
+        @include responsive(mobile) {
+          // padding: $size-8;
+          // gap: $size-6;
+        }
+
+        .box {
+          display: flex;
+          flex-direction: row;
+          padding: $size-8 $size-6;
+          gap: $size-4;
+          width: 100%;
+          box-sizing: border-box;
+          @include responsive(tablet) {
+            padding: 0.9rem $size-6;
+          }
+
+          .box-body {
+            width: 100%;
+            .box-title {
+              cursor: pointer;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              color: $vulkan_primary;
+              img {
+                width: $size-6;
+                transition: transform 0.3s ease-in-out;
+              }
+              @include responsive(tablet) {
+                // margin-bottom: $size-4;
+              }
+
+              .rotated {
+                transform: rotate(180deg);
+              }
+              .title {
+                color: $vulkan_primary;
+                font-size: 1.0625rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                margin: 0;
+                @include responsive(tablet) {
+                  font-size: 0.75rem;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 140%;
+                }
+              }
+            }
+            .box-text {
+              display: flex;
+              flex-direction: column;
+              gap: $size-8;
+              margin-top: 1.25rem;
+
+              @include responsive(tablet) {
+                gap: $size-4;
+              }
+              p {
+                font-size: 0.875rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                @include responsive(tablet) {
+                  font-size: 0.6875rem;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 140%;
+                }
+              }
+
+              .second-button-medium {
+                min-height: auto;
+                text-decoration: none;
+                padding: $size-3;
+              }
+
+              .link-4 {
+                color: $info-700;
+              }
+            }
+          }
+        }
+
+        .active {
+          border-radius: 0.5rem;
+          background: $secondary-50;
+        }
+      }
+
+      img {
+        width: 40%;
+
+        @include responsive(tablet) {
+          width: 70%;
+        }
+
+        @include responsive(mobile) {
+          width: 95%;
+        }
+      }
+    }
+  }
+}

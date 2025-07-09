@@ -1,0 +1,375 @@
+.platform_fav {
+  position: relative;
+
+  .bg- {
+    background-image: url(/images/05.Markets-BG.png);
+    background-size: 100% 100%;
+    background-position: bottom;
+    position: absolute;
+    background-repeat: no-repeat;
+    width: 108%;
+    height: 100%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    border-radius: 1.5rem;
+
+    @include responsive(mobile) {
+      width: 100%;
+      background-size: 109% 100%;
+    }
+  }
+  .buttonsContainer {
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: auto;
+    border-radius: 0.75rem;
+    gap: $size-8;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    @include responsive(mobile) {
+      padding-right: 1rem;
+      gap: 1rem;
+    }
+
+    .buttonItem {
+      position: relative;
+      width: auto;
+      background: transparent;
+      border: none;
+      transition: background-color 0.3s ease, color 0.3s ease;
+      color: $secondary-200;
+
+      @extend .body-6;
+
+      &.selected {
+        // border-bottom: 2px solid white;
+        @extend .body-6-bold;
+        color: $secondary-50;
+      }
+    }
+    h2 {
+      color: $secondary-50;
+    }
+
+    .btn-tabs {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: $size-6;
+    }
+
+    @include responsive(tablet) {
+      h2 {
+        font-size: $size-9;
+      }
+
+      .btn-tabs {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.5rem;
+      }
+    }
+
+    @include responsive(mobile) {
+      h2 {
+        font-size: 1.375rem;
+      }
+
+      .btn-tabs button {
+        font-size: 0.875rem !important;
+      }
+    }
+  }
+
+  .container-slide {
+    padding: 5rem 0;
+    border-radius: 0rem;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 31.64% 67%;
+    gap: $size-4;
+    box-sizing: border-box;
+
+    .swiperTrading {
+      box-sizing: border-box;
+      padding: 19px;
+      width: 100%;
+      overflow: hidden;
+      gap: $size-4;
+
+      .card {
+        display: flex;
+        width: 100%;
+        // max-width: 378px;
+        // min-height: 432px;
+        padding: $size-11;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        gap: $size-6;
+        flex-shrink: 0;
+        border-radius: 1.1875rem;
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        background: linear-gradient(
+          156deg,
+          rgba(255, 255, 255, 0.5) 10.28%,
+          rgba(255, 255, 255, 0) 106.66%
+        );
+        box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(20px);
+        box-sizing: border-box;
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          gap: 1.5rem;
+          min-height: 21.563rem;
+          justify-content: flex-start;
+          @include responsive(mobile) {
+            min-height: initial;
+            gap: 1rem;
+          }
+
+          img {
+            width: 3.5rem;
+            height: 3.5rem;
+          }
+
+          .title {
+            color: $secondary-50;
+            line-height: 140%;
+            font-weight: 200;
+          }
+
+          ul {
+            padding-left: 1.5rem;
+            margin: 0;
+
+            @include responsive(mobile) {
+              padding-left: 1.1rem;
+            }
+
+            li {
+              color: $secondary-50;
+              font-weight: 200;
+            }
+          }
+
+          .desc {
+            display: grid;
+            justify-items: start;
+            gap: $size-3;
+            color: $secondary-50;
+
+            .check {
+              span {
+                display: grid;
+                height: 24px;
+                width: 24px;
+                background: $success-50;
+                border-radius: 19.2px;
+                font-size: $size-4;
+                color: $success-500;
+                align-items: center;
+                justify-content: center;
+              }
+            }
+
+            .item p {
+              color: $secondary-50;
+              font-weight: 200;
+            }
+
+            .value {
+              display: grid;
+              grid-template-rows: repeat(3, 1fr);
+              gap: 0.75rem;
+              width: 100%;
+              p {
+                color: $secondary-50;
+                text-align: right;
+              }
+            }
+          }
+
+          .futures {
+            display: flex !important;
+          }
+
+          @include responsive(mobile) {
+            img {
+              width: 2.75rem;
+              height: 2.75rem;
+            }
+          }
+        }
+
+        @include responsive(tablet) {
+          display: flex;
+          // max-width: 13.25rem;
+          // min-height: 18.75rem;
+          padding: 2rem 1.25rem;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+        }
+
+        &.swiper-slide-next{
+          @include responsive(tablet){
+            opacity: 0.7;
+          }
+        }
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        right: 0 !important;
+      }
+
+      .swiper-button-prev {
+        left: 0 !important;
+      }
+
+      .swiper-button-next {
+        right: -12px !important;
+      }
+
+      .swiper-button-prev::after {
+        display: flex;
+        font-family: "Material Symbols Outlined";
+
+        content: "chevron_left";
+        width: $size-11;
+        height: $size-11;
+        font-size: $size-6;
+        border-radius: $size-19;
+        background: $color-white;
+        box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+        align-items: center;
+        justify-content: center;
+
+        @include responsive(laptop) {
+          width: 2.75rem;
+          height: 2.75rem;
+        }
+      }
+
+      .swiper-button-next::after {
+        display: flex;
+        font-family: "Material Symbols Outlined";
+
+        content: "chevron_right";
+        width: $size-11;
+        height: $size-11;
+        font-size: $size-6;
+        border-radius: $size-19;
+        background: $color-white;
+        box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+        align-items: center;
+        justify-content: center;
+
+        @include responsive(laptop) {
+          width: 2.75rem;
+          height: 2.75rem;
+        }
+      }
+
+      @include responsive(laptop) {
+        padding: 0;
+        padding-bottom: $size-16;
+
+        .swiper-button-prev {
+          left: $size-5 !important;
+        }
+
+        .swiper-button-next {
+          right: auto !important;
+          left: $size-15 !important;
+        }
+      }
+
+      @include responsive(mobile) {
+        gap: 1rem;
+        padding-bottom: 5rem;
+      }
+    }
+    
+    .swiper-button-prev,
+    .swiper-button-next {
+      transform: translatey(-50%);
+      overflow: visible;
+      width: 3.5rem;
+      height: 3.5rem;
+      color: #43586b;
+      display: inline-block;
+      position: absolute;
+      top: 55% !important;
+      bottom: auto;
+
+      @include responsive(laptop) {
+        transform: translatey(0%);
+        bottom: 0 !important;
+        top: auto !important;
+      }
+
+    }
+    .swiper-button-lock, .swiper-button-disabled{
+      display: none;
+
+      @include responsive(laptop){
+        display: inline-block;
+      }
+    }
+    
+    .swiper {
+      .swiper-wrapper {
+        .swiper-slide {
+          // background: $secondary-50;
+        }
+      }
+    }
+
+    @include responsive(laptop) {
+      grid-template-columns: 44.64% 53%;
+    }
+
+    @include responsive(tablet) {
+      grid-template-columns: 1fr;
+      padding: 4.25rem 1.25rem;
+    }
+
+    @include responsive(mobile) {
+      padding: 24px 16px 24px 16px !important;
+      gap: 1rem;
+    }
+  }
+
+  .second-button-small {
+    border-color: $color-white;
+    color: $color-white;
+
+    &:hover {
+      color: $secondary-900;
+    }
+  }
+
+  @include responsive(tablet) {
+    .second-button-small {
+      display: none;
+    }
+  }
+  @include responsive(mobile) {
+    max-width: 100% !important;
+
+    .bg- {
+      border-radius: 0;
+    }
+  }
+}

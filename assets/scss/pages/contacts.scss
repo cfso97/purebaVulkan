@@ -1,0 +1,82 @@
+.banner-contact {
+    background-image: url(/images/contact-gradient.svg);
+    background-size: cover;
+    margin-bottom: $size-25;
+
+    & .container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        padding: 70px 0;
+    }
+
+    & .descript_ {
+        max-width: 450px;
+        width: 100%;
+    }
+
+    & h1 {
+        color: $secondary-50;
+        padding-bottom: $size-8;
+    }
+
+    & p {
+        color: #ECF1F7;
+        font-size: 1.063rem;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    & .img_ {
+        background-image: url(/images/banner-contact.png);
+        padding-top: 83%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    @include responsive(tablet) {
+
+        & .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        & h1 {
+            font-size: $size-12;
+            width: 100%;
+            max-width: 450px;
+        }
+
+        & .img_ {
+            width: 100%;
+        }
+    }
+
+    @include responsive(mobile) {
+        // background-image: url(/images/contact-gradient2.png);
+        background-position: right;
+        margin-bottom: 3.5rem;
+
+        & .container {
+            padding: $size-10 0 ;
+        }
+
+        & h1 {
+            font-size: $size-7;
+            line-height: 110%;
+            padding-bottom: $size-4;
+        }
+
+        & p {
+            font-size: 0.75rem;
+            
+        }
+
+        & .img_ {
+            padding-top: 100%;
+        }
+    
+    }
+}

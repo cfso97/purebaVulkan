@@ -1,0 +1,180 @@
+.banner-mam-content {
+  background-image: url("/images/multi_mam/mam-banner.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  .margin-general {
+    display: flex;
+    flex-direction: row;
+    padding: 7.88rem 0;
+    box-sizing: border-box;
+    @include responsive(tablet) {
+      padding: 2.5rem 1rem;
+      flex-direction: column;
+    }
+
+    @include responsive(mobile) {
+      padding: 5rem 0rem 2rem;
+    }
+    .banner-mam-left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: $size-8;
+      @include responsive(tablet) {
+        width: 100%;
+        gap: $size-4;
+      }
+      h1 {
+        color: white;
+
+        @include responsive(tablet) {
+          font-size: 3rem;
+        }
+
+        @include responsive(mobile) {
+          font-size: 1.75rem;
+          line-height: 110%;
+        }
+      }
+
+      .text-1 {
+        width: 95%;
+        color: white;
+        font-size: 1.0625rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        @include responsive(tablet) {
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+      .text-2 {
+        width: 85%;
+        color: white;
+        font-size: 1.0625rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        @include responsive(tablet) {
+          font-family: Plus Jakarta Sans;
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 140%;
+        }
+      }
+      .btns-container {
+        display: flex;
+        flex-direction: row;
+        gap: $size-4;
+        @include responsive(tablet) {
+          display: none;
+        }
+        button {
+          font-size: 0.875rem;
+        }
+        .second-button-medium{
+          border: 1px solid #fff;
+          background: transparent;
+          color: white;
+
+          &:hover{
+            background-color: white;
+            color: $secondary-900;
+          }
+        }
+      }
+    }
+    .banner-mam-right {
+      position: relative;
+      width: 50%;
+      @include responsive(tablet) {
+        width: 100%;
+        margin-top: 10px;
+      }
+      img {
+        width: 130%;
+      height: auto;
+      position: absolute;
+      left: -80px;
+      top: -71px;
+
+        @include responsive(laptop) {
+          width: 100%;
+          height: auto;
+          position: relative;
+          left: initial;
+          top: initial;
+        }
+      }
+    }
+    .btns-container {
+      display: none;
+      flex-direction: column;
+      gap: $size-3;
+      width: 100%;
+      @include responsive(tablet) {
+        display: flex;
+      }
+
+      button{
+        width: 100%;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 600;
+        padding: $size-4;
+        min-height: initial;
+      }
+
+      .second-button-medium{
+        border: 1px solid #fff;
+        background: transparent;
+        color: white;
+
+        &:hover{
+          background-color: white;
+          color: $secondary-900;
+        }
+      }
+    }
+  }
+}
+
+[lang="ja"] .banner-mam-content .margin-general {
+  align-items: center;
+
+  .banner-mam-left {
+    .text-2 {
+      display: none;
+    }
+    .btns-container {
+      display: none;
+    }
+  }
+
+  .banner-mam-right img {
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+
+  .btns-container {
+    display: none;
+  }
+}
+
+[lang="zh"] .banner-mam-content .margin-general {
+  align-items: center;
+
+  .banner-mam-right img {
+    position: relative;
+    top: 0;
+    width: 100%;
+  }
+}
+
+

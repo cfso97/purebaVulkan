@@ -1,0 +1,193 @@
+.communi-traders-content {
+  position: relative;
+  background-image: url("/images/communi_traders/communi-background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  @include responsive(tablet) {
+    background-image: url("/images/communi_traders/communi-background-mobile.png");
+  }
+  .margin-general {
+    display: flex;
+    flex-direction: row;
+    padding: 70px 0;
+    box-sizing: border-box;
+    @include responsive(tablet) {
+      padding: 2.5rem 1rem;
+      flex-direction: column;
+    }
+
+    @include responsive(mobile) {
+      padding: 5rem 0 2rem;
+    }
+    .communi-traders-left {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      justify-content: center;
+      @include responsive(tablet) {
+        width: 100%;
+        gap: $size-4;
+      }
+      h1 {
+        color: white;
+        width: 100%;
+
+        @include responsive(laptop) {
+          font-size: 3rem;
+          line-height: 110%;
+          padding-bottom: 1rem;
+        }
+
+        @include responsive(mobile) {
+          font-size: 1.75rem;
+          line-height: 110%;
+          padding-bottom: 1rem;
+        }
+      }
+
+      .text-1 {
+        color: white;
+        font-size: 1.0625rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        width: 89% !important;
+        @include responsive(tablet) {
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+      .text-2 {
+        color: white;
+        font-size: 1.0625rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        width: 89%;
+        @include responsive(tablet) {
+          font-family: Plus Jakarta Sans;
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 140%;
+        }
+      }
+      .btns-container {
+        display: flex;
+        flex-direction: row;
+        gap: $size-4;
+        @include responsive(tablet) {
+          display: none;
+        }
+        button {
+          // display: flex;
+          // min-width: $size-15;
+          // padding: $size-4;
+          // justify-content: center;
+          // align-items: center;
+          // border-radius: $size-2;
+          // background: #eb0000;
+          // border: none;
+          // color: white;
+          font-size: 0.875rem;
+        }
+        .second-button-medium {
+          border: 1px solid #fff;
+          background: transparent;
+          color: white;
+
+          &:hover {
+            background-color: white;
+            color: $secondary-900;
+          }
+        }
+      }
+    }
+    .communi-traders-right {
+      width: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include responsive(tablet) {
+        width: 100%;
+        margin-top: 10px;
+      }
+      img {
+        width: 90%;
+        height: fit-content;
+
+        @include responsive(laptop) {
+          width: 100%;
+          height: auto;
+          position: relative;
+          left: initial;
+          top: initial;
+        }
+      }
+    }
+    .btns-container {
+      display: none;
+      flex-direction: column;
+      gap: $size-3;
+      width: 100%;
+
+      a {
+        text-decoration: none;
+        button {
+          width: 100%;
+        }
+      }
+
+      @include responsive(tablet) {
+        display: flex;
+        margin-top: 20px;
+      }
+      .btn-1 {
+        display: flex;
+        min-width: $size-15;
+        padding: $size-4;
+        justify-content: center;
+        align-items: center;
+        border-radius: $size-2;
+        background: #eb0000;
+        border: none;
+        color: white;
+        @include responsive(tablet) {
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%;
+        }
+
+        @include responsive(mobile) {
+          width: 100%;
+        }
+      }
+      .btn-2 {
+        display: flex;
+        min-width: $size-15;
+        padding: $size-4;
+        justify-content: center;
+        align-items: center;
+        border-radius: $size-2;
+        border: 1px solid #fff;
+        background: transparent;
+        color: white;
+        @include responsive(tablet) {
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%;
+        }
+        @include responsive(mobile) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

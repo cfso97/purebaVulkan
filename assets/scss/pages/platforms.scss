@@ -1,0 +1,271 @@
+.platforms-page {
+  display: flex;
+  gap: $size-25;
+  flex-direction: column;
+  overflow: hidden;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    background-image: url(/images/Platforms-Gradient.png);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 105.41719rem;
+    left: 0;
+    z-index: -1;
+    top: 64%;
+  }
+
+  @include responsive(tablet) {
+    gap: 8.5rem;
+
+    .banner-big {
+      .margin-general {
+        .content {
+          
+          .img_ {
+            .group-2 {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &::before {
+      background-size: cover;
+      width: 100%;
+      background-position: center;
+    }
+  }
+
+  .banner-contact {
+    @include responsive(mobile) {
+      background-size: 100% 132%;
+      background-position: bottom;
+      background-image: url(/images/platforms/Platforms-Hero-mobile.png) !important;
+    }
+
+    h1 {
+      width: 90%;
+    }
+
+    p {
+      width: 80%;
+    }
+  }
+
+  .invest {
+    @include responsive(mobile) {
+      background-size: 190% 100%;
+    }
+  }
+
+  .banner-big {
+    padding-top: 2rem;
+
+    @include responsive(laptop) {
+      padding: 8rem 0 5rem;
+    }
+
+    .margin-general {
+      .content {
+        @include responsive(tablet) {
+          flex-direction: column;
+          gap: 2rem;
+        }
+
+        .text_ {
+          .group-1 {
+            @include responsive(mobile) {
+              display: none !important;
+            }
+          }
+          @include responsive(tablet) {
+            width: 100%;
+          }
+          
+        }
+        .img_ {
+          display: flex;
+          justify-content: flex-end;
+
+          @include responsive(laptop) {
+              width: 100%;
+          }
+
+          @include responsive(mobile) {
+            width: 100%;
+          }
+          img {
+          }
+          .group-2 {
+            display: none !important;
+            @include responsive(mobile) {
+              display: flex !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .platform_fav {
+    .container-slide {
+      .swiper {
+        .swiper-wrapper {
+          .swiper-slide {
+            box-shadow: none;
+          }
+        }
+      }
+    }
+  }
+  .platform_fav {
+    .container-slide {
+      padding: 0;
+    }
+  }
+}
+
+.var-accountstailored {
+  .account-tailored {
+    grid-template-columns: 33% 67%;
+    gap: $size-8;
+
+    .items-cont {
+      .item {
+        align-items: flex-start;
+      }
+
+      @include responsive(mobile) {
+        display: flex;
+        padding: $size-8 $size-6;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $size-10;
+
+        .item {
+          flex-direction: row;
+
+          p.body-6-bold {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+
+  @include responsive(laptop) {
+    .account-tailored {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+  }
+}
+
+.var-choose {
+  .why-choose-content {
+    .why-choose-title-container {
+      h2 {
+        text-align: center;
+        width: 100%;
+      }
+
+      @include responsive(mobile) {
+        margin-bottom: $size-4;
+      }
+    }
+
+    .why-choose-subTitle-container {
+      .subTitle {
+        text-align: center;
+      }
+
+      @include responsive(mobile) {
+        margin-bottom: $size-6;
+      }
+    }
+  }
+
+  .why-choose-content {
+    .why-choose-carousel {
+      .what-choose-box {
+        overflow: hidden;
+        padding: 0 2rem 2rem;
+
+        .carousel-container {
+          .swiper {
+            border-radius: 1.3125rem;
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            background: linear-gradient(
+              156deg,
+              rgba(255, 255, 255, 0.5) 10.28%,
+              rgba(255, 255, 255, 0) 106.66%
+            );
+            box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(20px);
+            overflow: visible;
+
+            .swiper-button-prev {
+              left: var(--swiper-navigation-sides-offset, -23px);
+            }
+
+            .swiper-button-next,
+            .swiper-rtl .swiper-button-prev {
+              right: var(--swiper-navigation-sides-offset, -23px);
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
+              top: var(--swiper-navigation-top-offset, 50%);
+            }
+
+            .swiper-slide {
+              .slide {
+                .description {
+                  color: $secondary-900;
+                }
+
+                .link-platforms {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .what-choose-box-responsive {
+    padding: $size-8;
+    gap: $size-8 $size-4;
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    background: linear-gradient(
+      156deg,
+      rgba(255, 255, 255, 0.42) 10.28%,
+      rgba(255, 255, 255, 0) 106.66%
+    );
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(20px);
+
+    .card {
+      .icon-box {
+        width: $size-10;
+        height: $size-10;
+
+        span {
+          font-size: $size-5;
+        }
+      }
+
+      .description {
+        font-size: 0.6875rem;
+        color: $secondary-600;
+      }
+
+      a {
+        font-size: 0.6875rem;
+      }
+    }
+  }
+}

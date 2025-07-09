@@ -1,0 +1,66 @@
+.var-platform {
+
+    .bg- {
+        background: transparent !important;
+    }
+
+    .buttonsContainer {
+
+        h2 {
+            color: $secondary-900;
+        }
+
+        .btn-tabs button {
+            color: $secondary-500;
+
+            &.selected {
+                color: $secondary-900;
+            }
+        }
+
+        .second-button-small {
+            border-color: $secondary-900;
+            color: $secondary-900;
+        }
+    }
+
+    .container-slide {
+
+        .swiperTrading {
+
+            .card {
+                // border: 1px solid rgba(255, 255, 255, 0.42);
+                // background: linear-gradient(156deg, rgba(255, 255, 255, 0.50) 10.28%, rgba(255, 255, 255, 0.00) 106.66%);
+                // box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+                // backdrop-filter: blur(20px);
+                background: #ECF1F7;
+                box-shadow: none;
+
+                .content {
+
+                    .title {
+                        color: $secondary-900;
+                        font-weight: 400;
+                    }
+
+                    ul li {
+                        color: $secondary-600;
+                        font-weight: 400;
+                    }
+
+                    .desc {
+
+                        .item {
+
+                            p {
+                                color: $secondary-600;
+                                font-weight: 400;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+}

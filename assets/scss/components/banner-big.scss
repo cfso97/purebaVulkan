@@ -1,0 +1,77 @@
+.banner-big {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  .margin-general {
+    .content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      @include responsive(tablet) {
+        flex-direction: column;
+        gap: $size-5;
+      }
+      .text_ {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: $size-8;
+        @include responsive(tablet) {
+          width: 100%;
+          gap: $size-5;
+        }
+        h1 {
+          color: $secondary-50;
+
+          @include responsive(mobile) {
+            font-size: 1.75rem;
+            font-style: normal;
+            font-weight: 600;
+            max-width: 327px;
+          }
+
+          @media (max-width: 375px) {
+            font-size: 1.5rem;
+          }
+        }
+        .description-1,
+        .description-2 {
+          color: $secondary-50;
+          font-size: 1.0625rem;
+          font-style: normal;
+          font-weight: 400;
+          @include responsive(mobile) {
+            font-size: 0.6875rem;
+            font-style: normal;
+            font-weight: 400;
+          }
+        }
+
+        .banner-buttons-group {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          @include responsive(mobile) {
+            width: 100%;
+            flex-direction: column;
+            margin: 0;
+          }
+        }
+      }
+      .img_ {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @include responsive(mobile) {
+          width: 100%;
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

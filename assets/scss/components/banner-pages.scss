@@ -1,0 +1,228 @@
+.banner-contact {
+  position: relative;
+  z-index: 1;
+  clip-path: view-box;
+  min-height: 250px;
+  background-size: 100% 100%;
+  
+  .banner-bg-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    // z-index: -1;
+
+    // &.movil {
+    //   display: none;
+    // }
+
+    // @include responsive(mobile) {
+    //   display: none;
+
+    //   &.movil {
+    //     display: block;
+    //   }
+    // }
+
+    // img {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    //   object-fit: cover;
+    //   z-index: -1;
+    // }
+  }
+
+  .margin-general {
+    position: relative;
+    z-index: 1;
+  }
+
+  & .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 70px 0;
+
+    @include responsive(laptop) {
+      padding: 100px 0 70px;
+      gap: 2rem;
+    }
+  }
+
+  & .descript_ {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: $size-6;
+
+    @include responsive(mobile) {
+      gap: $size-4;
+    }
+
+    h1 {
+      padding: 0;
+    }
+
+    @include responsive(mobile) {
+      button {
+        width: 100%;
+      }
+    }
+
+    img {
+      width: fit-content;
+      max-width: 100%;
+    }
+  }
+
+  & h1 {
+    color: $secondary-50;
+  }
+
+  & p {
+    color: #ecf1f7;
+    font-size: 1.063rem;
+    font-weight: 400;
+    line-height: 140%;
+  }
+
+  & .img_ {
+    width: 100%;
+    position: relative;
+
+    img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+
+      @include responsive(tablet) {
+        max-width: 425px;
+      }
+    }
+  }
+
+  .btn-mobil {
+    display: none;
+  }
+
+  .buttons {
+    display: flex;
+    gap: 0.5rem;
+
+    &.btn-mobil {
+      display: none;
+
+      @include responsive(tablet) {
+        display: flex;
+      }
+    }
+  }
+
+  @include responsive(laptop) {
+
+    & h1 {
+      font-size: $size-12;
+      width: 100%;
+    }
+  }
+
+  @include responsive(tablet) {
+    & .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    & .img_ {
+      width: 100%;
+      text-align: center;
+    }
+
+    .buttons {
+      display: none;
+    }
+
+    @include responsive(mobile) {
+      // background-image: url(/images/contact-gradient2.png);
+      background-position: right;
+
+      & .container {
+        padding: 5rem 0 2rem;
+      }
+
+      & h1 {
+        font-size: $size-7;
+        line-height: 110%;
+        padding-bottom: $size-4;
+      }
+
+      & p {
+        font-size: 0.75rem;
+      }
+
+      .btn-mobil {
+        display: flex;
+        width: 100%;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        button {
+          width: 100%;
+        }
+
+        a {
+          width: 100%;
+
+          .primary-button-medium {
+            min-width: 100%;
+            width: 100%;
+            height: fit-content;
+            padding: $size-4;
+            font-size: 0.875rem;
+            min-height: fit-content;
+            min-width: 5rem;
+          }
+
+          .second-button-medium-white {
+            min-width: 100%;
+            width: 100%;
+            height: fit-content;
+            padding: $size-4;
+            font-size: 0.875rem;
+            min-height: fit-content;
+            min-width: 5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+.max-img {
+  .banner-contact {
+    .container {
+      grid-template-columns: 1fr 60%;
+
+      @include responsive(laptop) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}
+
+.max-text {
+  .banner-contact {
+    .container {
+      grid-template-columns: 57% 1fr;
+
+      @include responsive(laptop) {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  }
+}

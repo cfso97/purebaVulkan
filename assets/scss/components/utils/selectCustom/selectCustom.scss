@@ -1,0 +1,73 @@
+@use '../../../core/typography.scss' as *;
+@use '../../../core/mixins.scss' as *;
+@use '../../../core/variables.scss' as *;
+@use '../../../abstracts/colors.scss' as *;
+
+
+.select-custom {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: $size-2;
+  z-index: 2;
+  cursor: pointer;
+
+  label{
+    color: $secondary-700;
+    @extend .body-4;
+  }
+
+  .select-content{
+    .select-toggle{
+      display: flex;
+      max-height: $size-13;
+      padding: $size-4;
+      align-items: center;
+      gap: $size-1;
+      align-self: stretch;
+      border-radius: $size-2;
+      border: 1px solid $secondary-700;
+      @extend .caption-1;
+      justify-content: space-between;
+
+      @include responsive(mobile) {
+        font-size: 0.75rem;
+      }
+    }
+
+    &.active {
+      .select-toggle {
+        border-color: $info-700;
+        color: $secondary-400;
+      }
+    }
+
+    .select-options {
+      position: absolute;
+      width:89%;
+      max-height: 250px;
+      top: 110%;
+      border: none;
+      overflow-y: auto;
+      border-radius: 0.5rem;
+      background: $color-white;
+      box-shadow: 0px 4px 16px 0px rgba(21, 32, 42, 0.20);
+      left: 50%;
+      transform: translateX(-50%);
+
+      div, a {
+        padding: $size-5 $size-4;
+        color: $secondary-900;
+        cursor: pointer;
+        @extend .body-4;
+        transition: all 0.5s;
+        text-decoration: none;
+
+        &.active, &:hover {
+          background: #ecf1f7;
+          border-radius: 0.5rem;
+        }
+      }
+    }
+  }
+}

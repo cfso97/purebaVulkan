@@ -1,0 +1,162 @@
+.page-partners {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 16.5rem;
+  overflow: hidden;
+
+  @include responsive(tablet) {
+    gap: 8.5rem;
+  }
+
+  .banner-contact .descript_ {
+    max-width: 100%;
+  }
+
+  .banner-partners {
+    h1 {
+      color: #ecf1f7;
+      padding-bottom: 1rem;
+      @include responsive(mobile) {
+        width: 100%;
+      }
+    }
+
+    p {
+      @include responsive(mobile) {
+        width: 100%;
+      }
+    }
+
+    .img_ {
+      padding-top: 83%;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 119%;
+      height: 16%;
+      @include responsive(mobile) {
+        padding-top: 40%;
+        height: 300px;
+      }
+    }
+  }
+
+  .content-timetostart {
+    .content {
+      @include responsive(mobile) {
+        gap: 10px;
+      }
+    }
+    &::before {
+      content: " ";
+      position: absolute;
+      background-image: url(/images/Partners-Gradient1.png);
+      background-size: 100% 100%;
+      width: 80%;
+      height: 2369px;
+      left: 0;
+      margin-top: -142px;
+      z-index: -1;
+
+      @include responsive(mobile) {
+        background-size: 200% 100%;
+        background-position-x: 27%;
+        width: 100%;
+        height: 2365px;
+        left: 0;
+        margin-top: 125px;
+      }
+    }
+  }
+
+  .with-icons {
+    &::before {
+      content: " ";
+      position: absolute;
+      background-image: url(/images/Partners-Gradient2.png);
+      background-size: 100% 100%;
+      width: 80%;
+      height: 2069px;
+      right: 0;
+      margin-top: 500px;
+      z-index: -1;
+
+      @include responsive(mobile) {
+        background-size: 242% 100%;
+        background-position-x: 74%;
+        width: 100%;
+        height: 2265px;
+        right: 0;
+        margin-top: -298px;
+      }
+    }
+  }
+  .invest {
+    .margin-general {
+      .box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        .text {
+          color: $secondary-50;
+          font-size: 1.0625rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          padding: 0px 0px $size-6 0px;
+          @include responsive(mobile) {
+            color: $secondary-50;
+            font-size: 0.625rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 120%;
+          }
+        }
+        .buttons {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          gap: $size-5;
+
+          @include responsive(mobile) {
+            flex-direction: column;
+            gap: 0.5rem;
+          }
+          .primary-button-medium {
+            @include responsive(mobile) {
+              min-width: 100%;
+            }
+          }
+          .second-button-medium-white {
+            @include responsive(mobile) {
+              min-width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+  .tools-content {
+    .card-content {
+      .content {
+        .disclaimer {
+          p {
+            color: $secondary-400;
+          }
+        }
+      }
+    }
+  }
+  .discover-benefits {
+    .more-resources {
+      .text-content {
+        width: 30%;
+        @include responsive(mobile) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

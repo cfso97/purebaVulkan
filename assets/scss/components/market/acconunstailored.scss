@@ -1,0 +1,126 @@
+.account-tailored {
+  position: relative;
+  display: grid;
+  grid-template-columns: 40% 57%;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1;
+
+  .buttons-2 {
+    display: none;
+
+    @include responsive(tablet) {
+      display: flex;
+    }
+  }
+
+  & .titel-descript {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: $size-8;
+
+    a {
+      display: flex;
+      min-height: fit-content;
+    }
+
+    @include responsive(tablet) {
+      h3 {
+        font-size: $size-10;
+      }
+      p {
+        font-size: 0.75rem;
+      }
+      .buttons {
+        display: none;
+      }
+    }
+
+    @include responsive(mobile) {
+      gap: $size-4;
+
+      h3 {
+        font-size: $size-3;
+      }
+    }
+  }
+
+  & .items-cont {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: $size-13 $size-10;
+    flex-direction: column;
+    align-items: center;
+    gap: $size-8;
+    border-radius: $size-5;
+    border: 1px solid $secondary-50;
+    background: white;
+
+    .item {
+      display: flex;
+      align-items: center;
+      gap: $size-4;
+      align-self: stretch;
+
+      span {
+        max-width: $size-13;
+        height: $size-13;
+        font-size: $size-6;
+        background: $secondary-50;
+        color: $secondary-900;
+        border-radius: 50%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    @include responsive(mobile) {
+      padding: $size-8 $size-6;
+      gap: $size-7 $size-5;
+
+      .item {
+        align-items: flex-start;
+        flex-direction: column;
+
+        span {
+          height: 2.5rem;
+          max-width: 2.5rem;
+        }
+      }
+    }
+  }
+
+  p.body-4 {
+    color: $secondary-600;
+  }
+
+  p.body-4 {
+    line-height: 140%;
+  }
+
+  .descript-cont {
+    display: flex;
+    flex-direction: column;
+    gap: $size-1;
+  }
+
+  @include responsive(laptop) {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  @include responsive(mobile) {
+    gap: $size-5;
+
+    p.body-4 {
+      font-size: 0.6875rem;
+    }
+  }
+
+  &.buttons-2 {
+    display: none;
+  }
+}

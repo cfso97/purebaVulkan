@@ -1,0 +1,455 @@
+// @import url(~/assets/scss/core/colors.scss);
+// @use '../abstracts/colors.scss' as *;
+// @use '../core/variables.scss' as *;
+// @use '../core/mixins.scss' as *;
+// @use '../core/typography.scss' as *;
+
+button {
+  cursor: pointer;
+}
+
+.primary-button {
+  background-color: $primary-700;
+  color: $color-white;
+  font-size: 1.375rem;
+  font-weight: 400;
+  padding: 25px 35px;
+  border: none;
+  cursor: pointer;
+  border-radius: $size-2;
+  min-width: $size-15;
+  width: auto;
+  border: solid 1px $primary-700;
+  min-height: 72px;
+  height: auto;
+  transition: 0.5s;
+  transition: box-shadow 0.2s ease; /* Agrega una transición suave a la sombra */
+
+  @include responsive(tablet) {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    background-color: $primary-800;
+  }
+
+  &:active {
+    background-color: $primary-800;
+    box-shadow: 0px 0px 0px 4px $primary-100; /* Sompra de color cuando está activo */
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    color: $gray-700;
+    cursor: no-drop;
+  }
+}
+
+.primary-button-medium {
+  background-color: $primary-700;
+  color: $color-white;
+  font-size: 1.0625rem;
+  font-weight: 600;
+  padding: $size-4;
+  border: none;
+  cursor: pointer;
+  border-radius: $size-2;
+  width: auto;
+  border: solid 1px $primary-700;
+  min-width: $size-15;
+  min-height: $size-13;
+  height: fit-content;
+  // min-height: 72px;
+  height: auto;
+  transition: 0.5s;
+  transition: box-shadow 0.2s ease; /* Agrega una transición suave a la sombra */
+
+  @include responsive(tablet) {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    background-color: $primary-800;
+  }
+
+  &:active {
+    background-color: $primary-800;
+    box-shadow: 0px 0px 0px 4px $primary-100; /* Sompra de color cuando está activo */
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    color: $gray-700;
+    cursor: no-drop;
+  }
+}
+
+.primary-button-small {
+  background-color: $primary-700;
+  color: $color-white;
+  font-size: 1.375rem;
+  font-weight: 400;
+  padding: $size-4;
+  border: none;
+  cursor: pointer;
+  border-radius: $size-2;
+  border: solid 1px $primary-700;
+  width: auto;
+  min-width: $size-15;
+  height: fit-content;
+  // min-height: 72px;
+  height: auto;
+  transition: 0.5s;
+  transition: box-shadow 0.2s ease; /* Agrega una transición suave a la sombra */
+
+  @include responsive(tablet) {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    background-color: $primary-800;
+  }
+
+  &:active {
+    background-color: $primary-800;
+    box-shadow: 0px 0px 0px 4px $primary-100; /* Sompra de color cuando está activo */
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    color: $gray-700;
+    cursor: no-drop;
+  }
+}
+
+.second-button {
+  background-color: transparent;
+  color: $secondary-900;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: solid 1px $secondary-900;
+  cursor: pointer;
+  border-radius: $size-2;
+  min-width: $size-15;
+  min-height: 55px;
+  padding: $size-6;
+  transition: 0.5s;
+  transition: box-shadow 0.2s ease; /* Agrega una transición suave a la sombra */
+
+  @include responsive(tablet) {
+    font-size: 1.375rem;
+  }
+
+  &:hover {
+    background-color: $secondary-50;
+  }
+
+  &:active {
+    background-color: $secondary-50;
+    box-shadow: 0px 0px 0px 4px $secondary-100; /* Sompra de color cuando está activo */
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    color: $gray-700;
+    cursor: no-drop;
+  }
+}
+
+.second-button-medium {
+  background-color: transparent;
+  color: $secondary-900;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  padding: $size-4;
+  border: solid 1px $secondary-900;
+  cursor: pointer;
+  border-radius: $size-2;
+  width: fit-content;
+  min-width: $size-15;
+  min-height: $size-13;
+  height: fit-content;
+  // min-height: 72px;
+  height: auto;
+  transition: 0.5s;
+  transition: box-shadow 0.2s ease; /* Agrega una transición suave a la sombra */
+
+  @include responsive(tablet) {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    background-color: $secondary-50;
+  }
+
+  &:active {
+    background-color: $secondary-50;
+    box-shadow: 0px 0px 0px 4px $secondary-100; /* Sompra de color cuando está activo */
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    color: $gray-700;
+    cursor: no-drop;
+  }
+}
+
+.second-button-small {
+  background-color: transparent;
+  color: $secondary-900;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: solid 1px $secondary-900;
+  cursor: pointer;
+  border-radius: $size-2;
+  min-width: $size-15;
+  height: fit-content;
+  padding: $size-3 $size-4;
+  transition: 0.5s;
+  transition: box-shadow 0.2s ease; /* Agrega una transición suave a la sombra */
+  text-decoration: none;
+  text-align: center;
+
+  @include responsive(mobile) {
+    padding: 0.5rem $size-3 !important;
+    min-width: $size-13;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  &:hover {
+    background-color: $secondary-50;
+  }
+
+  &:active {
+    background-color: $secondary-50;
+    box-shadow: 0px 0px 0px 4px $secondary-100; /* Sompra de color cuando está activo */
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    color: $gray-700;
+    cursor: no-drop;
+  }
+}
+
+.second-button-extrasmall {
+  background-color: transparent;
+  color: $secondary-900;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: solid 1px $secondary-900;
+  cursor: pointer;
+  border-radius: $size-2;
+  min-width: $size-15;
+  height: fit-content;
+  padding: $size-3;
+  transition: 0.5s;
+  transition: box-shadow 0.2s ease; /* Agrega una transición suave a la sombra */
+  text-decoration: none;
+
+  @include responsive(tablet) {
+    // font-size: 1.375rem;
+  }
+
+  &:hover {
+    background-color: $secondary-50;
+  }
+
+  &:active {
+    background-color: $secondary-50;
+    box-shadow: 0px 0px 0px 4px $secondary-100; /* Sompra de color cuando está activo */
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    color: $gray-700;
+    cursor: no-drop;
+  }
+}
+
+.transaction-button-green {
+  background-color: transparent;
+  color: $success-400;
+  font-size: 0.875rem;
+  font-weight: 400;
+  border: solid 1px $success-400;
+  cursor: pointer;
+  border-radius: $size-2;
+  width: 100%;
+  padding: $size-4 $size-5;
+  transition: 0.5s;
+  transition: box-shadow 0.2s ease;
+  @extend .body-4;
+
+  @include responsive(tablet) {
+    font-size: 1rem;
+  }
+
+  @include responsive(mobile) {
+    font-size: 0.6875rem !important;
+    font-weight: 600 !important;
+  }
+
+  &:hover {
+    background-color: $success-50;
+  }
+
+  &:active {
+    background-color: $success-50;
+    box-shadow: 0px 0px 0px 4px $success-400;
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    color: $gray-700;
+    cursor: no-drop;
+  }
+}
+
+.transaction-button-red {
+  background-color: transparent;
+  color: $error-400;
+  font-weight: 400;
+  border: solid 1px $error-400;
+  cursor: pointer;
+  border-radius: $size-2;
+  padding: $size-4 $size-5;
+  width: 100%;
+  transition: 0.5s;
+  transition: box-shadow 0.2s ease;
+
+  @extend .body-4;
+
+  @include responsive(tablet) {
+    font-size: 1rem;
+  }
+
+  @include responsive(mobile) {
+    font-size: 0.6875rem !important;
+    font-weight: 600 !important;
+  }
+
+  &:hover {
+    background-color: $error-50;
+  }
+
+  &:active {
+    background-color: $error-50;
+    box-shadow: 0px 0px 0px 4px $error-400;
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    color: $gray-700;
+    cursor: no-drop;
+  }
+}
+
+.second-button-white {
+  background-color: transparent;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: solid 1px white;
+  cursor: pointer;
+  border-radius: $size-2;
+  min-width: $size-15;
+  min-height: 55px;
+  padding: $size-6;
+  transition: 0.5s;
+  transition: box-shadow 0.2s ease; /* Agrega una transición suave a la sombra */
+
+  @include responsive(tablet) {
+    font-size: 1.375rem;
+  }
+
+  &:hover {
+    background-color: rgba($secondary-50, 0.3);
+  }
+
+  &:active {
+    background-color: transparent;
+    box-shadow: 0px 0px 0px 4px $secondary-100; /* Sompra de color cuando está activo */
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    color: $gray-700;
+    cursor: no-drop;
+  }
+}
+
+.second-button-medium-white {
+  background-color: transparent;
+  color: white;
+  font-size: 1.0625rem;
+  font-weight: 400;
+  padding: $size-4;
+  border: solid 1px white;
+  cursor: pointer;
+  border-radius: $size-2;
+  width: fit-content;
+  min-width: $size-15;
+  min-height: $size-13;
+  height: fit-content;
+  // min-height: 72px;
+  height: auto;
+  transition: 0.5s;
+  transition: box-shadow 0.2s ease; /* Agrega una transición suave a la sombra */
+
+  @include responsive(tablet) {
+    font-size: 1rem;
+  }
+
+  &:hover {
+    background-color: #263340;
+  }
+
+  &:active {
+    background-color: transparent;
+    box-shadow: 0px 0px 0px 4px $secondary-100; /* Sompra de color cuando está activo */
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    color: $gray-700;
+    cursor: no-drop;
+  }
+}
+
+.second-button-small-white {
+  background-color: transparent;
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border: solid 1px white;
+  cursor: pointer;
+  border-radius: $size-2;
+  min-width: $size-15;
+  height: fit-content;
+  padding: $size-4;
+  transition: 0.5s;
+  transition: box-shadow 0.2s ease; /* Agrega una transición suave a la sombra */
+  text-decoration: none;
+
+  @include responsive(tablet) {
+    // font-size: 1.375rem;
+  }
+
+  &:hover {
+    background-color: rgba($secondary-50, 0.3);
+  }
+
+  &:active {
+    background-color: transparent;
+    box-shadow: 0px 0px 0px 4px $secondary-100; /* Sompra de color cuando está activo */
+  }
+
+  &:disabled {
+    background-color: $gray-200;
+    color: $gray-700;
+    cursor: no-drop;
+  }
+}

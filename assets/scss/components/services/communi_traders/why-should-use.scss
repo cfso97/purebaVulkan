@@ -1,0 +1,340 @@
+.why-should-use-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: $size-6;
+  z-index: 1;
+  @include responsive(tablet) {
+    flex-direction: column;
+  }
+  .why-should-use-text {
+    max-width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @include responsive(tablet) {
+      max-width: 100%;
+    }
+    .why-should-use-text-content {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: $size-7;
+      @include responsive(tablet) {
+        gap: $size-4;
+      }
+      h3 {
+        color: $secondary-900;
+      }
+      p {
+        color: $secondary-600;
+        width: 90%;
+        @include responsive(mobile) {
+          width: 100%;
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 400;
+        }
+      }
+      button {
+        display: flex;
+        min-width: $size-15;
+        width: fit-content;
+        min-height: 3.5rem;
+        padding: $size-4 $size-6;
+        justify-content: center;
+        align-items: center;
+        border-radius: $size-2;
+        background: #1e1a2d;
+        border: none;
+        color: white;
+        font-size: 1.0625rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+        @include responsive(tablet) {
+          // display: none;
+        }
+      }
+    }
+  }
+  .why-should-use-carousel {
+    max-width: 55%;
+    @include responsive(tablet) {
+      max-width: 100%;
+      // display: none;
+    }
+    @include responsive(mobile) {
+      width: 100%;
+    }
+    .swiper {
+      width: 100%;
+
+      display: block;
+      padding: 0px 20px 0px 20px;
+      box-sizing: border-box;
+
+      @include responsive(mobile) {
+        padding: 3px;
+      }
+
+      .content-slide {
+        position: relative;
+        padding: 2.5rem;
+        display: flex;
+        flex-direction: column;
+        gap: $size-4;
+        box-sizing: border-box;
+        border-radius: 1.25rem;
+        border: 1px solid $secondary-50;
+        background: $color-white;
+        height: auto;
+
+        @include responsive(mobile) {
+          padding: 1.25rem;
+          border: 1px solid rgba(112, 112, 112, 0.4);
+        }
+
+        .img-box {
+          max-width: 3rem;
+          max-height: 3rem;
+          min-width: 3rem;
+          min-height: 3rem;
+          background: $secondary-50;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+        }
+        .title {
+          color: $secondary-900;
+          font-size: 1.0625rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          @include responsive(mobile) {
+            font-size: 0.875rem;
+          }
+        }
+        .description {
+          color: $secondary-600;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+
+          @include responsive(mobile) {
+            font-size: 0.6875rem;
+          }
+        }
+        ul {
+          li {
+            color: $secondary-600;
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+            @include responsive(mobile) {
+              font-size: 0.6875rem;
+            }
+          }
+        }
+
+        &.swiper-slide-next{
+
+        @include responsive(mobile) {
+          opacity: 0.7;
+          }
+        }
+
+        .second-button-small {
+          width: fit-content;
+        }
+      }
+
+      .swiper-button-prev::after {
+        display: flex;
+        font-family: "Material Symbols Outlined";
+        content: "chevron_left";
+        width: $size-13;
+        height: $size-13;
+        font-size: $size-6;
+        border-radius: $size-19;
+        background: $color-white;
+        box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+        align-items: center;
+        justify-content: center;
+        @include responsive(tablet) {
+          display: flex;
+        }
+      }
+
+      .swiper-button-next::after {
+        display: flex;
+        font-family: "Material Symbols Outlined";
+        content: "chevron_right";
+        width: $size-13;
+        height: $size-13;
+        font-size: $size-6;
+        border-radius: $size-19;
+        background: $color-white;
+        box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+        align-items: center;
+        justify-content: center;
+      }
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        overflow: visible;
+        width: $size-11;
+        height: $size-11;
+        color: $secondary-600;
+        display: inline-block;
+      }
+
+      .swiper-button-next {
+      }
+
+      .swiper-slide-visible:nth-child(4) {
+        opacity: 0.6;
+      }
+
+      &.with-icons {
+        gap: 0rem;
+
+        .swiper-button-prev {
+          left: 1px;
+          display: none;
+          @include responsive(tablet) {
+            display: flex;
+          }
+          &::after {
+            font-family: "Material Symbols Outlined";
+            content: "chevron_left";
+            width: $size-11;
+            height: $size-11;
+            font-size: $size-6;
+            border-radius: $size-19;
+            background: $color-white;
+            box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+            align-items: center;
+            justify-content: center;
+            @include responsive(tablet) {
+              display: flex;
+            }
+
+            @include responsive(laptop) {
+              width: 2.75rem;
+              height: 2.75rem;
+            }
+          }
+        }
+        .swiper-button-next {
+          right: -10px;
+
+          &::after {
+            display: flex;
+            font-family: "Material Symbols Outlined";
+            content: "chevron_right";
+            width: $size-11;
+            height: $size-11;
+            font-size: $size-6;
+            border-radius: $size-19;
+            background: $color-white;
+            box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+            align-items: center;
+            justify-content: center;
+
+            @include responsive(laptop) {
+              width: 2.75rem;
+              height: 2.75rem;
+            }
+          }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          overflow: visible;
+          width: $size-13;
+          height: $size-13;
+          color: $secondary-600;
+          display: inline-block;
+
+          @include responsive(tablet) {
+            position: relative;
+            right: initial;
+            margin-top: 30px;
+          }
+
+          @include responsive(mobile) {
+            left: 0px;
+          }
+        }
+      }
+    }
+  }
+  .none-slide {
+    width: 100%;
+    display: none;
+    gap: $size-4;
+
+    @include responsive(mobile) {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-slide {
+      position: relative;
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: $size-3;
+      box-sizing: border-box;
+      border-radius: 1.25rem;
+      border: 1px solid $secondary-50;
+      background: $color-white;
+      height: auto;
+      .img-box {
+        max-width: 3rem;
+        max-height: 3rem;
+        min-width: 3rem;
+        min-height: 3rem;
+        background: $secondary-900;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+      }
+      .title {
+        color: $secondary-900;
+        font-size: 1.0625rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 140%;
+      }
+      .description {
+        color: $secondary-600;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+      }
+      ul {
+        li {
+          color: $secondary-600;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+
+      .second-button-small {
+        width: fit-content;
+      }
+    }
+  }
+}

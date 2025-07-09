@@ -1,0 +1,144 @@
+.offer_ {
+    margin-bottom: $size-25;
+    display: flex;
+    flex-direction: column;
+    gap: $size-8;
+
+    & .title {
+        display: flex;
+        flex-direction: column;
+        gap: $size-6;
+
+        h3 {
+            font-size: 3.188rem;
+            font-weight: 600;
+            line-height: 100%;
+            text-align: center;
+            
+        }
+
+        p {
+            text-align: center;
+            color: $secondary-600;
+            line-height: 140%;
+        }
+    }
+
+    & .card_cont {
+        border: 1px solid $secondary-50;
+        background: white;
+        backdrop-filter: blur(20px);
+        border-radius: $size-5;
+        display: flex;
+        padding: $size-13 5.25rem;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    & .card {
+        display: flex;
+        max-width: $size-26;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $size-6;
+    }
+
+    & .body-3 {
+        color: $secondary-900;
+        font-size: 1.063rem;
+        font-weight: 400;
+        line-height: 140%;
+    }
+
+    & .body-4 { 
+        line-height: 140%;
+        color: $secondary-600;
+    }
+
+    & a {
+        width: fit-content;
+        font-weight: 600;
+        min-width: fit-content;
+        text-decoration: none;
+        line-height: 140%;
+        font-size: 0.875rem;
+    }
+
+    & span {
+        width: 56px;
+        height: 56px;
+        background: $secondary-50;
+        color: $secondary-900;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+    }
+
+    @include responsive(tablet) {
+        & h3 {
+            font-size: $size-10;
+        }
+
+        & .card {
+            gap: 1.2rem;
+            padding: 0;
+        }
+
+        & .card_connect {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 2rem 2rem;
+            gap: 1rem;
+            justify-items: center;
+        }
+    }
+
+    @include responsive(mobile) {
+        
+        & .card_connect {
+            margin-bottom: 7.25rem;
+        }
+
+        & h3 {
+            font-size: 1.375rem;
+        }
+
+        & .card_connect {
+            display: flex;
+            padding: 2rem 3.15rem;
+
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 1.625rem;
+        }
+
+        & .card {
+            gap: 0;
+            align-items: center;
+            text-align: center;
+        }
+
+        & span {
+            width: $size-11;
+            height: $size-11;
+            margin-bottom: $size-4;
+        }
+
+        & .body-3 {
+            font-size: 0.875rem; 
+            margin-bottom: 0.38rem;
+        }
+
+        & .body-4 {
+            font-size: 0.6875rem; 
+            margin-bottom: $size-4;
+        }
+
+        & a  {
+            padding: $size-3;
+            font-size: 0.75rem;
+        }
+    }
+}

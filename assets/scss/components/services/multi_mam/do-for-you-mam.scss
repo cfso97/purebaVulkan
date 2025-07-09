@@ -1,0 +1,294 @@
+.do-for-you-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: $size-10;
+  z-index: 2;
+  gap: 2rem;
+  max-width: 64.4rem;
+  margin: auto;
+
+  .cont-rigth {
+    width: -webkit-fill-available;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    video, img {
+      display: none;
+      width: 100%;
+
+      @include responsive(tablet) {
+        display: block;
+        max-width: 425px;
+        margin: auto;
+      }
+    }
+
+    h2 {
+      @include responsive(tablet) {
+        text-align: center;
+      }
+    }
+  }
+
+  video, img {
+    width: 100%;
+
+    @include responsive(tablet) {
+      display: none;
+    }
+  }
+
+  // &::before {
+  //   content: " ";
+  //   position: absolute;
+  //   background-image: url(/images/multi_mam/MAM-Gradient.png);
+  //   background-size: 100% 100%;
+  //   width: 70%;
+  //   height: 1722px;
+  //   right: 0;
+  //   margin-top: -614px;
+  //   z-index: -1;
+
+  //   @include responsive(mobile) {
+  //     background-size: cover;
+  //     width: 100%;
+  //     background-position: right;
+  //     z-index: -1;
+  //   }
+  // }
+  .do-for-you-left {
+    width: 100%;
+    @include responsive(tablet) {
+      width: 100%;
+      display: none;
+    }
+    .text-box {
+      display: flex;
+      flex-direction: column;
+      gap: $size-8;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+
+      @include responsive(tablet) {
+        gap: $size-5;
+      }
+
+      h2{
+        width: 70%;
+
+        @include responsive(tablet) {
+          width: 100%;
+        }
+      }
+      .description {
+        color: $secondary-600;
+        font-size: 0.875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        max-width: 80%;
+
+        strong {
+          font-weight: bold;
+        }
+
+        @include responsive(tablet) {
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+    }
+  }
+  .do-for-you-right {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    box-sizing: border-box;
+    padding: 1.25rem 2.25rem;
+    border-radius: 1.3125rem;
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    background: linear-gradient(156deg, rgba(255, 255, 255, 0.50) 10.28%, rgba(255, 255, 255, 0.00) 106.66%);
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(20px);
+
+    @include responsive(tablet) {
+      width: 100%;
+      padding: 1rem;
+      gap: 1.5rem;
+      border-radius: 0.75rem;
+    }
+    .card {
+      display: flex;
+      flex-direction: row;
+      gap: $size-4;
+      align-items: center;
+      .img-content {
+        display: flex;
+        flex-direction: row;
+        .img-box {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          background: white;
+          min-height: 3rem;
+          min-width: 3rem;
+          max-height: 3rem;
+          max-width: 3rem;
+          border-radius: 50%;
+
+          @include responsive(tablet) {
+            min-height: 2.5rem;
+            min-width: 2.5rem;
+            max-height: 2.5rem;
+            max-width: 2.5rem;
+          }
+        }
+      }
+      .text-content {
+        display: flex;
+        flex-direction: column;
+        gap: $size-3;
+
+        .subtitle {
+          @include responsive(mobile) {
+            font-size: 0.875rem;
+          }
+        }
+        .title {
+          font-size: 1.0625rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%;
+          @include responsive(tablet) {
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%;
+          }
+        }
+        .description {
+          color: $secondary-600;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+
+          @include responsive(tablet) {
+            font-size: 0.6875rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%;
+          }
+
+          strong {
+            font-weight: bold;
+          }
+        }
+      }
+    }
+  }
+}
+
+.margin-top {
+
+  .do-for-you-content {
+    margin-top: -110px;
+    z-index: 1;
+    position: relative;
+  
+    @include responsive(tablet) {
+      margin-top: -55px;
+      flex-direction: column;
+    }
+
+    @include responsive(mobile) {
+      margin-top: -65px;
+    }
+  }
+  
+  @include responsive(tablet) {
+    flex-direction: column;
+    gap: $size-5;
+  }
+}
+
+.img-rigth {
+  .do-for-you-content {
+    flex-direction: row-reverse;
+  }
+}
+
+.var-style-do-you {
+  .do-for-you-content {
+    max-width: 70rem;
+
+    .do-for-you-left {
+      @include responsive(tablet) {
+        display: none;
+      }
+    }
+
+    .do-for-you-right {
+      background: transparent;
+      box-shadow: none;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      padding: 0;
+      border: 0;
+
+      @include responsive(mobile) {
+        gap: 1.25rem;
+      }
+  
+      .card {
+        display: flex;
+        padding: 1.5rem;
+        align-items: center;
+        gap: 1rem;
+        border-radius: 0.75rem;
+        border: 1px solid $secondary-50;
+        background: white;
+  
+        @include responsive(mobile) {
+          padding: 1rem;
+        }
+  
+        .text-content {
+          gap: 1rem;
+  
+          @include responsive(mobile) {
+            gap: 0.75rem;
+          }
+        }
+  
+        .img-content .img-box {
+          background: $secondary-50;
+        }
+      }
+    }
+  } 
+}
+
+.var-style-cont {
+  .do-for-you-content {
+    max-width: 100%;
+
+    .do-for-you-right {
+      box-shadow: none;
+      padding: 0;
+
+      .card .img-content .img-box {
+        background: $secondary-50;
+      }
+    }
+  }
+}

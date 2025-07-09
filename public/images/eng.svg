@@ -1,0 +1,39 @@
+<svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Mask group">
+<mask id="mask0_12017_168707" style="mask-type:alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="21" height="20">
+<circle id="Ellipse 52" cx="10.5" cy="10" r="10" fill="#D9D9D9"/>
+</mask>
+<g mask="url(#mask0_12017_168707)">
+<g id="Element">
+<g id="Element_2">
+<path id="Element_3" d="M-4.5 0V20H25.568V0H-4.5Z" fill="#012169"/>
+<g id="Element_4">
+<path d="M-4.5 0L25.568 20L-4.5 0ZM25.568 0L-4.5 20L25.568 0Z" fill="#000008"/>
+<path d="M-4.5 0L25.568 20M25.568 0L-4.5 20" stroke="white" stroke-width="3.20039"/>
+</g>
+<g id="Element_5">
+<mask id="mask1_12017_168707" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="-5" y="0" width="31" height="20">
+<g id="Element_6">
+<path id="Element_7" d="M10.534 10H25.568V20L10.534 10ZM10.534 10V20H-4.5L10.534 10ZM10.534 10H-4.5V0L10.534 10ZM10.534 10V0H25.568L10.534 10Z" fill="white"/>
+</g>
+</mask>
+<g mask="url(#mask1_12017_168707)">
+<g id="Element_8">
+<path d="M-4.5 0L25.568 20L-4.5 0ZM25.568 0L-4.5 20L25.568 0Z" fill="#000008"/>
+<path d="M-4.5 0L25.568 20M25.568 0L-4.5 20" stroke="#C8102E" stroke-width="2.1336"/>
+</g>
+</g>
+</g>
+<g id="Element_9">
+<path d="M10.534 0V20V0ZM-4.5 10H25.568H-4.5Z" fill="#000008"/>
+<path d="M10.534 0V20M-4.5 10H25.568" stroke="white" stroke-width="5.33399"/>
+</g>
+<g id="Element_10">
+<path d="M10.534 0V20V0ZM-4.5 10H25.568H-4.5Z" fill="#000008"/>
+<path d="M10.534 0V20M-4.5 10H25.568" stroke="#C8102E" stroke-width="3.20039"/>
+</g>
+</g>
+</g>
+</g>
+</g>
+</svg>

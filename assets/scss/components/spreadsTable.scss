@@ -1,0 +1,348 @@
+.spreadsTable {
+  overflow: hidden;
+
+  @include responsive(mobile) {
+    padding-bottom: 56px;
+  }
+
+  &-title {
+    margin: 0;
+    text-align: center;
+    margin-bottom: $size-6;
+  }
+
+  &-description {
+    text-align: center;
+    margin: 0 0 $size-8;
+    @extend .subtitle-4;
+  }
+
+  .selectItem {
+    display: none;
+
+    @include responsive(mobile) {
+      display: flex;
+    }
+  }
+
+  .buttonsContainer {
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: $color-white;
+    border-radius: $size-3;
+    gap: $size-6;
+    border: 1px solid $secondary-50;
+    overflow: hidden;
+
+    @include responsive(mobile) {
+      display: none;
+    }
+
+    .buttonItem {
+      position: relative;
+      width: 100%;
+      background: $color-white;
+      border: none;
+      height: 100%;
+      padding: 1.075rem $size-6;
+      transition: background-color 0.3s ease, color 0.3s ease;
+
+      @extend .body-4;
+
+      &.selected {
+        border-bottom: 2px solid white;
+        @extend .body-4-bold;
+      }
+    }
+
+    .selected-border {
+      position: absolute;
+      width: $size-9;
+      height: $size-1;
+      bottom: 0;
+      background: transparent;
+      transition: width 0.3s ease, left 0.3s ease;
+      display: flex;
+      justify-content: space-evenly;
+
+      .border-style {
+        position: relative;
+        width: 100%;
+        max-width: $size-9;
+        border-radius: $size-1;
+        height: 100%;
+        background-color: $secondary-900;
+      }
+    }
+  }
+
+  .card-content {
+    position: relative;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: $size-4;
+    margin-top: $size-7;
+
+    @include responsive(tablet) {
+      display: none;
+    }
+
+    .card {
+      display: flex;
+      width: auto;
+      width: 100%;
+      flex: 1;
+      background: $color-white;
+      padding: $size-6 $size-4;
+      border-radius: $size-2;
+      border: 1px solid $secondary-50;
+      gap: $size-5;
+      flex-direction: column;
+
+      .content {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        align-items: center;
+
+        &.line-gray {
+          border-bottom: 1px solid $secondary-50;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        span {
+          display: block;
+        }
+
+        .column-right {
+          text-align: right;
+
+          .leverage {
+            font-size: 0.75rem;
+            font-weight: 700;
+          }
+        }
+
+        .name-spread {
+          padding-bottom: $size-2;
+          @extend .body-6-bold;
+        }
+
+        .material-symbols-outlined {
+          font-size: $size-6;
+          font-weight: normal;
+        }
+
+        div .name-column {
+          color: $secondary-600;
+          padding-bottom: $size-2;
+          @extend .caption-2;
+        }
+
+        .bid-ask {
+          letter-spacing: -2px;
+          font-size: 1rem;
+          font-weight: 600;
+
+          span {
+            display: inline;
+            letter-spacing: 0px;
+            @extend .body-1-bold;
+          }
+        }
+
+        .spreads-text {
+          font-size: 0.75rem;
+          font-weight: 700;
+        }
+      }
+
+      &.up {
+        .color-spread,
+        .name-spread,
+        .bid-ask span {
+          color: $success-400 !important;
+        }
+      }
+
+      &.down {
+        .color-spread,
+        .name-spread,
+        .bid-ask span {
+          color: $error-300 !important;
+        }
+      }
+
+      .buttons-SellBuy {
+        display: flex;
+        gap: $size-2;
+        justify-content: center;
+        width: 100%;
+
+        a {
+          display: flex;
+          width: 100%;
+          text-decoration: none;
+        }
+
+        button {
+          width: 100%;
+          padding: 0.8rem .25rem;
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  .mySwiper {
+    width: 100%;
+    height: auto;
+    min-height: 300px;
+    margin-bottom: $size-6;
+    margin-top: $size-6;
+    overflow: initial;
+    display: none;
+    @include responsive(tablet) {
+      display: block;
+    }
+
+    .swiper-wrapper {
+      // overflow: hidden;
+    }
+    .card {
+      display: flex;
+      width: 100%;
+      min-width: 140px;
+      background: $color-white;
+      padding: $size-6 $size-4;
+      border-radius: $size-2;
+      border: 1px solid $secondary-50;
+      gap: $size-5;
+      flex-direction: column;
+      box-sizing: border-box;
+
+      .content {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        align-items: center;
+
+        &.line-gray {
+          border-bottom: 1px solid $secondary-50;
+        }
+
+        p {
+          margin: 0;
+        }
+
+        span {
+          display: block;
+        }
+
+        .column-right {
+          text-align: right;
+
+          .leverage {
+            font-size: 0.625rem;
+            font-weight: 700;
+          }
+        }
+
+        .name-spread {
+          padding-bottom: $size-2;
+          font-size: 0.875rem;
+          font-weight: 600;
+        }
+
+        .material-symbols-outlined {
+          font-size: $size-5;
+          font-weight: normal;
+        }
+
+        div .name-column {
+          color: $secondary-600;
+          padding-bottom: $size-2;
+          font-size: 0.5rem;
+          font-weight: 400;
+        }
+
+        .bid-ask {
+          letter-spacing: -2px;
+          font-size: 0.6875rem;
+          font-weight: 600;
+
+          span {
+            display: inline;
+            letter-spacing: 0px;
+            @extend .body-1-bold;
+          }
+        }
+
+        .spreads-text {
+          font-size: 0.75rem;
+          font-weight: 700;
+        }
+      }
+
+      &.up {
+        .color-spread,
+        .name-spread,
+        .bid-ask span {
+          color: $success-400 !important;
+        }
+      }
+
+      &.down {
+        .color-spread,
+        .name-spread,
+        .bid-ask span {
+          color: $error-300 !important;
+        }
+      }
+
+      .buttons-SellBuy {
+        display: flex;
+        gap: $size-2;
+        justify-content: center;
+
+        button {
+          min-width: initial;
+          @include responsive(tablet) {
+            padding: 10px 17px;
+          }
+        }
+      }
+    }
+
+    .swiper-pagination {
+      width: auto;
+      .swiper-pagination-bullet {
+        position: relative;
+        width: 14px;
+        height: 14px;
+        bottom: -70px;
+        margin: auto 6px;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #4f657b;
+      }
+    }
+  }
+}
+
+[lang="ja"] .spreadsTable .spreadsTable-title {
+  font-size: 2.5rem;
+
+  @include responsive(mobile) {
+    font-size: 1.0625rem;
+  }
+}

@@ -1,0 +1,66 @@
+.surfup {
+    margin-top: $size-23;
+    margin-bottom: $size-23;
+    display: flex;
+    width: 100%;
+    min-width: auto;
+    align-items: center;
+    gap: $size-15;
+
+    &-cards {
+        display: flex;
+        align-items: center;
+        gap: $size-10;
+        width: 50%;
+        justify-content: center;
+    }
+
+    &-card {
+        display: flex;
+        width: auto;
+        height: 500px;
+        padding: $size-10 $size-8;
+        flex-direction: column;
+        align-items: center;
+        gap: $size-8;
+        border-radius: $size-5;
+        background: $secondary-50;
+    }
+
+    &-ilustrations {
+        display: flex;
+        width: 250px;
+        height: 212px;
+        padding: 30px 0px 30.428px 0px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &-portafolio {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $size-6;
+        align-self: stretch;
+        border-radius: $size-2;
+    }
+
+    &-link {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+
+        :hover {
+            color: blue;
+            cursor: pointer;
+        }
+    }
+
+    &-info {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $size-8;
+        flex: 1 0 0;
+    }
+}

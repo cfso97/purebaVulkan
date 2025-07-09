@@ -1,0 +1,373 @@
+.var-style {
+  @include responsive(mobile) {
+    .subTabContainer {
+      grid-template-columns: 1fr;
+    }
+
+    .tabsPlatform-content {
+      .card-content {
+        margin-top: 1rem;
+        box-shadow: none;
+      }
+    }
+
+    .select-custom {
+      .select-content {
+        .select-options {
+          left: 50%;
+          transform: translateX(-50%);
+          max-width: 100%;
+          width: 100%;
+
+          div {
+            padding: 0.8rem 1rem;
+          }
+
+          .active {
+            background: $secondary-50;
+            border-radius: 0.5rem; 
+          }
+        }
+      }
+    }
+
+    background: white;
+  }
+
+  .tabsPlatform-content {
+    .buttonsContainer {
+      @include responsive(tablet) {
+        gap: 0;
+      }
+
+      .buttonItem {
+        padding: 1.05rem 1.5rem;
+
+        @include responsive(tablet) {
+          padding: 1.05rem 1rem;
+        }
+      }
+    }
+  }
+
+  &.forex-page {
+    .select-custom {
+      .select-content {
+        .select-toggle {
+          padding: 0.6rem;
+        }
+      }
+    }
+  }
+}
+
+.var-tables {
+  iframe {
+    min-height: 72rem;
+    width: 100%;
+    border: 0px solid;
+  }
+}
+
+.var-invest {
+  border: 1px solid $secondary-100;
+  border-left: 0;
+  border-right: 0;
+
+  h3 {
+    color: $secondary-900;
+  }
+}
+
+.margin-less {
+  margin-top: -8.25rem;
+
+  @include responsive(tablet) {
+    margin-top: -4rem !important;
+
+    .d-sm {
+      display: none;
+    }
+  }
+
+  @include responsive(mobile) {
+    margin-top: -6rem !important;
+  }
+}
+
+.var-table {
+  &.tabsPlatform-content {
+    .card-content {
+      padding: 0;
+      border: 0;
+      overflow: hidden;
+      margin-top: $size-4;
+      background: transparent;
+      border-radius: 1.3125rem;
+
+      @include responsive(mobile) {
+        border-radius: 0.5rem;
+        width: 100%;
+        margin: auto;
+        margin-top: 1rem;
+
+        .content-table {
+          border-radius: 0.5rem;
+        }
+      }
+    }
+  }
+
+  .content-table {
+    padding: 0;
+    overflow: hidden;
+  }
+
+  .content-table {
+    .flex-table {
+      .flex-row {
+        border-bottom: 1px solid #ecf1f7;
+      }
+      .table-header {
+        .flex-cell {
+          flex-direction: column;
+
+          &:first-of-type {
+            span:first-of-type {
+              color: $secondary-900 !important;
+              margin-top: 0;
+            }
+          }
+          span {
+            display: flex;
+            padding: 0 1.5rem;
+            align-items: flex-start;
+            gap: 0.25rem;
+            align-self: stretch;
+            flex-direction: column;
+            min-height: 4.125rem;
+            border-right: 0.094rem solid #f9f9f9;
+            background: #ecf1f7;
+            justify-content: center;
+            max-width: -webkit-fill-available;
+            font-size: 0.75rem;
+            font-weight: 700;
+
+            @include responsive(tablet) {
+              padding: 0 0.5rem;
+            }
+
+            @include responsive(mobile) {
+              font-size: 0.5rem;
+              min-height: 3.125rem;
+            }
+            @media (max-width: 375px) {
+              letter-spacing: -0.5px;
+            }
+          }
+          div {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            width: 100%;
+            height: 100%;
+
+            span {
+              color: $secondary-900 !important;
+              min-height: fit-content;
+              padding: 0;
+              font-size: 0.6875rem;
+              font-weight: 400;
+            }
+            @media (max-width: 375px) {
+              letter-spacing: -0.5px;
+            }
+          }
+
+          &.more-item {
+            span {
+              min-height: fit-content;
+              padding: $size-2 $size-6;
+            }
+            div {
+              span {
+                padding: $size-1 $size-6;
+                border-top: 0.094rem solid #f9f9f9;
+                border-right: 0.094rem solid #f9f9f9;
+
+                &:last-child {
+                  border-right: 0;
+                }
+              }
+            }
+
+            @include responsive(tablet) {
+              span {
+                padding: 0rem 0.5rem;
+                height: 98%;
+              }
+              div {
+                span {
+                  padding: 0rem 0.5rem;
+                  letter-spacing: -0.5px;
+                  font-size: 0.5rem;
+                }
+              }
+            }
+          }
+        }
+
+        div {
+          div:last-child span {
+            border: none;
+          }
+        }
+      }
+      .table-body {
+        .flex-row {
+          .flex-cell {
+            min-height: fit-content;
+
+            &.more-item {
+              display: grid;
+              grid-template-columns: 1fr 1fr;
+
+              span {
+                width: 50%;
+
+                @include responsive(laptop) {
+                  width: 100%;
+                  padding: 1.5rem 0%;
+                  text-align: center;
+                }
+                @include responsive(tablet) {
+                  width: 100%;
+                  padding: 0rem 0%;
+                  justify-content: center;
+                }
+                @media (max-width: 375px) {
+                  letter-spacing: -0.5px;
+                }
+              }
+            }
+            span {
+              padding: $size-6 $size-6;
+              font-size: 0.75rem;
+              font-weight: 400;
+              color: $secondary-900;
+
+              @include responsive(tablet) {
+                padding: 1rem 0.5rem;
+                border: none;
+              }
+
+              @include responsive(mobile) {
+                font-size: 0.5rem;
+                padding: 1rem 0.5rem;
+              }
+
+              @media (max-width: 375px) {
+                letter-spacing: -0.5px;
+                padding: 0.5rem 0.2rem;
+              }
+            }
+          }
+          @include responsive(tablet) {
+            flex-direction: row;
+            gap: 0;
+          }
+        }
+
+        @include responsive(tablet) {
+          flex-direction: column;
+          gap: 0;
+        }
+      }
+
+      @include responsive(tablet) {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        .cont-head {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  @include responsive(mobile) {
+    &.var-special {
+      .cont-head {
+        display: grid !important;
+        grid-template-columns: 16% 29% 19% 36%;
+      }
+      .table-body {
+        .flex-row {
+          grid-template-columns: 16% 29% 19% 36%;
+          display: grid;
+        }
+      }
+    }
+  }
+
+  &.tabsPlatform-content {
+    .selectItem{
+      @include responsive(mobile) {
+        padding: 0;
+      }
+    }
+  }
+
+  @media (max-width: 375px) {
+    &.var-special {
+      .cont-head {
+        display: grid !important;
+        grid-template-columns: 20% 25% 19% 36%;
+      }
+      .table-body {
+        .flex-row {
+          grid-template-columns: 20% 25% 19% 36%;
+          display: grid;
+        }
+      }
+    }
+  }
+}
+
+.load-more-button {
+    width: auto;
+    text-align: center;
+    margin: 20px auto;
+    background: transparent;
+    color: $secondary-900;
+    border: none;
+    display: flex;
+    padding: $size-4;
+    justify-content: center;
+    align-items: center;
+    gap: $size-1;
+    font-size: 0.875rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    
+    &.no-more-elements {
+        opacity: 0.5;
+        cursor: none;
+        display: none;
+
+  &.no-more-elements {
+    opacity: 0.5;
+    cursor: none;
+
+    span {
+      display: none;
+    }
+  }
+
+  @include responsive(mobile) {
+    font-size: 0.5rem;
+    padding: $size-1;
+  }
+}
+}

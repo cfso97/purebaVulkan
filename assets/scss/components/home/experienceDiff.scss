@@ -1,0 +1,197 @@
+.experience-diff-container {
+  display: flex;
+  flex-direction: column;
+  gap: $size-8;
+  width: 100%;
+  margin-top: -140px;
+
+  @include responsive(tablet) {
+    margin-top: 0px;
+  }
+
+  .text-container-md {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: $size-6;
+    width: 100%;
+    .title{
+      text-align: center;
+
+      @include responsive(mobile) {
+        margin-top: 0px;
+      }
+    }
+
+    .sub-title {
+      color: $secondary-600;
+    }
+  }
+  .text-container-sm {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    color: $secondary-600;
+    gap: $size-4;
+  }
+  .icons-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    .icons-row {
+      align-items: flex-start;
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 1.45rem;
+      justify-content: space-between;
+      
+      .card {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        max-width: 9rem;
+        
+
+        @include responsive(tablet) {
+          justify-content: center;
+          align-items: center;
+          .text-container-2 {
+            text-align: left;
+          }
+        }
+        .image-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          .image {
+            border-radius: 100%;
+            background: $secondary-50;
+            height: $size-13;
+            width: $size-13;
+            font-size: $size-7;
+            color: $secondary-900;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include responsive(mobile) {
+              font-size: $size-5 !important;
+            }
+          }
+        }
+        .text-container-2 {
+          .title,
+          .sub-title {
+            color: $secondary-900;
+          }
+        }
+      }
+      @include responsive(laptop) {
+        gap: 5rem;
+        justify-content: center;
+      }
+    }
+  }
+  @include responsive(mobile) {
+    .text-container-md {
+      display: none;
+    }
+    .text-container-sm {
+      display: flex;
+    }
+    .icons-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 80%;
+      margin: auto;
+      margin-left: 10%;
+
+      .icons-row {
+        display: grid;
+        grid-template-columns: repeat( 3, 1fr); // Distribuye los elementos en 3 columnas
+        gap: $size-8 $size-10; // Primer valor para el gap de las filas, segundo valor para el gap de las columnas
+
+        @media (max-width: 375px) {
+          gap: 1rem;
+          grid-template-columns: 1fr 1fr;
+        }
+        .card {
+          display: flex;
+          flex-direction: column;
+          gap: $size-5;
+          align-items: flex-start;
+
+          .image-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+
+            .image {
+              font-size: $size-6;
+              width: $size-12;
+              height: $size-12;
+            }
+          }
+
+          .text-container-2 {
+            .title,
+            .sub-title {
+              color: $secondary-900;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+[lang="ja"] .experience-diff-container {
+  .icons-container {
+    @include responsive(mobile) {
+      display: flex;
+      max-width: 100%;
+      width: 100%;
+      margin: 0;
+    }
+
+    @media (max-width: 375px) {
+      width: 80%;
+      margin: auto;
+    }
+
+    .icons-row {
+  
+      @include responsive(laptop-l) {
+        gap: 1.5rem;
+      }
+
+      @include responsive(mobile) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media (max-width: 375px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+  
+      .card {
+        max-width: -webkit-fill-available;
+        align-items: center;
+      }
+    }
+  }
+
+  .text-container-md .title {
+    font-size: 2.5rem;
+  
+    @include responsive(mobile) {
+      font-size: 1.0625rem;
+    }
+  }
+} 

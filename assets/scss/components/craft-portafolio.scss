@@ -1,0 +1,552 @@
+.craft-portafolio {
+  max-width: 100%;
+  z-index: 10;
+
+  @include responsive(mobile) {
+    overflow: hidden;
+  }
+
+  .content {
+    display: grid;
+    grid-template-columns: repeat(13, 1fr);
+
+    @include responsive(laptop) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    .portafolio-items {
+      grid-column: span 4;
+      display: flex;
+      flex-direction: column;
+      gap: $size-6;
+      justify-content: center;
+      z-index: 10;
+      background-color: #f9f9f9;
+
+      @include responsive(mobile) {
+        gap: $size-4;
+      }
+
+      h2 {
+        color: $secondary-900;
+      }
+
+      .desc {
+        color: $secondary-600;
+        width: 80%;
+        @extend .body-4;
+
+        @include responsive(laptop) {
+          margin-bottom: $size-6;
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 400;
+        }
+
+        @include responsive(tablet) {
+          width: 100%;
+        }
+      }
+
+      .linksText {
+        cursor: pointer;
+        @include responsive(laptop) {
+          display: none;
+        }
+      }
+
+      p.body-6-bold {
+        color: $secondary-500;
+      }
+
+      p.body-6 {
+        color: $secondary-900;
+      }
+    }
+    .carousel-container {
+      grid-column: span 9;
+      display: flex;
+      align-items: center;
+
+      a {
+        margin-top: 30px;
+        display: block;
+
+        @include responsive(laptop) {
+          display: inline-block;
+          float: inline-end;
+
+          button {
+            margin: 0 !important;
+          }
+        }
+
+        @media (max-width: 500px) {
+          float: none;
+          display: flex;
+          margin-top: -1rem;
+          width: 100%;
+          justify-content: flex-start;
+        }
+      }
+
+      @include responsive(laptop-l) {
+        height: 100%;
+      }
+
+      .swiper {
+        width: 100%;
+        height: auto;
+        min-height: 300px;
+        padding: 30px;
+        box-sizing: border-box;
+        overflow: visible;
+
+        @media (max-width: 1771px) {
+          width: 100% !important;
+        }
+  
+        @include responsive(laptop-l) {
+          width: 100% !important;        
+        }
+
+        @include responsive(tablet) {
+          width: 100% !important;  
+          padding: 0;      
+        }
+
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          border-radius: $size-5;
+          background: $secondary-900;
+          display: grid;
+          padding: $size-8;
+          box-sizing: border-box;
+          gap: $size-4;
+          justify-items: center;
+          height: auto;
+          background-size: cover;
+          background-repeat: no-repeat;
+          transition: all 0s;
+          // width: 100% !important;
+          // max-width: 40%;
+          opacity: 0;
+
+
+          .cont_ {
+            width: 100%;
+            max-width: 250px;
+          }
+
+          @include responsive(laptop-l){
+            grid-template-rows: auto auto auto;
+          }
+          @include responsive(laptop) {
+            grid-template-rows: minmax(auto, 220px) auto auto;
+          }
+          @include responsive(tablet) {
+            grid-template-rows: minmax(auto, 230px) auto auto;
+          }
+
+          @include responsive(mobile){
+            gap: $size-3;
+            padding: $size-5;
+            grid-template-rows: minmax(auto, 120px) auto auto;
+          }
+
+          &.swiper-slide-next{
+            @include responsive(tablet){
+              opacity: 0.7;
+            }
+          }
+
+          .img-card {
+            display: block;
+            width: 100%;
+            height: auto;
+            max-width: 315px;
+            max-height: 250px;
+            object-fit: cover;
+          }
+
+          div {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            gap: 1.2rem;
+            margin-top: -35px;
+
+            @include responsive(mobile) {
+              gap: 0.5rem;
+              margin-top: 0px;
+            }
+          }
+
+          h4 {
+            color: $color-white;
+            text-align: left;
+            margin: 0;
+            width: 100%;
+
+            @extend .subtitle-4;
+
+            @include responsive(mobile) {
+              font-size: 14px !important;
+              font-weight: 400;
+            }
+          }
+
+          p {
+            color: $color-white;
+            text-align: left;
+            width: 100%;
+
+            @extend .body-4;
+
+            @include responsive(mobile){
+              font-size: 11px !important;
+            }
+          }
+        }
+
+        .swiper-slide-active {
+          opacity: 1;
+          transition: all 0.3s;
+        } 
+        
+        .swiper-slide-next {
+          opacity: 0.7;
+          transition: all 0.3s;
+        }
+
+        .swiper-slide-next + * {
+          opacity: 0.5;
+          transition: all 0.3s;
+        }
+
+        .swiper-button-prev::after{
+          display: flex;
+          font-family: "Material Symbols Outlined";
+          content: "chevron_left";
+          width: $size-13;
+          height: $size-13;
+          font-size: $size-6;
+          border-radius: $size-19;
+          background: $color-white;
+          box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+          align-items: center;
+          justify-content: center;
+
+          @include responsive(laptop) {
+            width: 2.75rem;
+            height: 2.75rem;
+          }
+        }
+
+        .swiper-button-next::after {
+          display: flex;
+          font-family: "Material Symbols Outlined";
+          content: "chevron_right";
+          width: $size-13;
+          height: $size-13;
+          font-size: $size-6;
+          border-radius: $size-19;
+          background: $color-white;
+          box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+          align-items: center;
+          justify-content: center;
+
+          @include responsive(laptop) {
+            width: 2.75rem;
+            height: 2.75rem;
+          }
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+          overflow: visible;
+          width: $size-13;
+          height: $size-13;
+          color: $secondary-600;
+          top: 50%;
+          transform: translateY(-50%);
+          margin-top: -2rem;
+
+          @include responsive(laptop) {
+            position: relative;
+            right: initial;
+            margin-top: 3rem;
+            display: inline-block !important;
+          }
+
+        }
+
+        .swiper-button-next {
+
+          @include responsive(laptop) {
+            position: relative;
+            right: initial;
+            margin-left: 1rem;
+          }
+
+          @include responsive(mobile) {
+            margin-left: 6px;
+          }
+        }
+      }
+
+      @include responsive(tablet) {
+        padding: 0;
+      }
+    }
+    a {
+      width: fit-content;
+    }
+  }
+
+  .second-button-small {
+    position: relative;
+    display: inline-block;
+    bottom: 0px;
+
+    @include responsive(laptop-l) {
+      position: relative;
+      right: 0;
+      margin-top: initial !important;
+    }
+
+    @include responsive(laptop) {
+      position: relative;
+      left: 0px;
+      right: 0;
+      bottom: initial;
+      float: right;
+      margin-top: -90px;
+    }
+
+    @include responsive(tablet) {
+      margin-top: -25px !important;
+      left: 0px;
+      margin-bottom: 25px;
+    }
+
+  }
+
+  // .craftPlatforms{
+
+  //   .swiper {
+  //     width: 100%;
+  //     height: 500px !important;
+  //     min-height: 300px;
+  //     margin-bottom: $size-6;
+  //     padding: 40px;
+
+  //     @include responsive(laptop-l){
+  //       position: absolute;
+  //       right: 80px !important;
+  //       width: 50% !important;
+  //     }
+
+  //     @include responsive(tablet){
+  //       height: auto !important;
+  //       right: 0px !important;
+  //       width: 160% !important;
+  //     }
+
+  //     .swiper-button-next::after{
+  //       @include responsive(laptop-l){
+  //         position: relative;
+  //         left: 150px;
+  //       }
+
+  //       @include responsive(tablet){
+  //         position: relative;
+  //         left: 0;
+  //       }
+  //     }
+
+  //     .swiper-slide {
+
+  //       padding: $size-11 !important;
+
+  //       @include responsive(tablet){
+  //         padding: $size-5 !important;
+  //       }
+
+  //       h4{
+  //         position: relative;
+  //         top: $size-7;
+
+  //         @include responsive(tablet){
+  //           position: relative;
+  //           top: 0px;
+  //           font-size: 0.875rem;
+  //         }
+  //       }
+
+  //       p{
+  //         margin-top: $size-5;
+  //         font-size: 0.875rem;
+  //         color: #ECF1F7;
+
+  //         @include responsive(tablet){
+  //           margin-top: 0px;
+  //           font-size: 0.625rem;
+  //         }
+  //       }
+
+  //       .icon{
+  //         width: 100%;
+  //         display: flex;
+  //         justify-content:space-between;
+  //         position: relative;
+  //         margin-top: $size-19;
+
+          
+  //         @media (min-width: 1440px) {
+  //           margin-top: $size-16;
+  //         }
+
+  //         @include responsive(laptop-l){
+  //           margin-top: $size-19;
+  //         }
+
+  //         @include responsive(tablet){
+  //           margin-top: $size-15;
+  //         }
+
+  //         img{
+  //           height: $size-18;
+  //           position: relative;
+  //           left: -25px;
+
+  //           @include responsive(tablet){
+  //             height: $size-15;
+  //           }
+  //         }
+
+  //       }
+  //     }
+  //   }
+
+  //   button{
+  //     display: none;
+  //   }
+  // }
+
+  // .slideNone{
+
+  //   @include responsive(tablet){
+  //     display: none !important;
+  //   }
+    
+  //   .swiper-button-prev, .swiper-button-next{
+  //     display: none !important;
+  //   }
+
+  //   .swiper {
+  //     width: 100%;
+  //     height: auto;
+  //     min-height: 300px;
+  //     margin-bottom: $size-6;
+  //     padding: 29px;
+
+  //     @include responsive(laptop-l){
+  //       position: relative !important;
+  //       right: 30px !important;
+  //       width: 90% !important;
+  //       padding: 0px !important;
+  //     }
+
+  //     .icon{
+  //       width: 100%;
+  //       display: flex;
+  //       justify-content:space-between;
+  //       position: relative;
+  //       margin-top: $size-19;
+
+        
+  //       @media (min-width: 1440px) {
+  //         margin-top: $size-15;
+  //       }
+
+  //       @include responsive(laptop-l){
+  //         margin-top: $size-17;
+  //       }
+
+  //       @include responsive(tablet){
+  //         margin-top: $size-15;
+  //       }
+
+  //       img{
+  //         height: $size-18;
+  //         position: relative;
+  //         left: -25px;
+
+  //         @include responsive(tablet){
+  //           height: $size-15;
+  //         }
+  //       }
+
+  //     }
+  //   }
+  // }
+
+
+  // .noSliderMobile{
+  //   display: none;
+
+  //   @include responsive(tablet){
+  //    display: flex;
+  //    flex-direction: column;
+  //    gap: $size-5;
+  //   }
+
+  //    .cardMobile{
+  //       background-size: cover;
+  //       background-repeat: no-repeat;
+  //       background-position: center;
+  //       border-radius: $size-5;
+  //       padding: $size-6 $size-5;
+
+  //       .icon{
+
+  //         position: relative;
+  //         top: 30px;
+  //         left: -20px;
+
+  //         @include responsive(mobile){
+  //           top: 40px;
+  //           left: -20px;
+  //         }
+          
+  //         img{
+  //           height: 5rem;
+  //         }
+  //       }
+
+  //       h4{
+  //         color: $color-white;
+  //         font-size: 0.875rem;
+  //         font-weight: 600;
+  //       }
+
+  //       p{
+  //         color: $color-white;
+  //         font-size: 0.625rem;
+  //       }
+  //   }
+  // }
+}
+
+[lang="ja"] .craft-portafolio .content .carousel-container {
+  .swiper .swiper-button-prev,
+  .swiper .swiper-button-next {
+    margin: 0;
+  }
+  
+  a {
+    display: none;
+  }
+} 

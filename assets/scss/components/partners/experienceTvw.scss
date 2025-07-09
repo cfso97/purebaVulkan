@@ -1,0 +1,102 @@
+.experience-tvw{
+  width: 100%;
+  padding: 4.75rem;
+  border-radius: 1.3125rem;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  background: linear-gradient(156deg, rgba(255, 255, 255, 0.29) 10.3%, rgba(255, 255, 255, 0) 86.35%);
+  box-shadow: 0px 4px 24px -1px rgba(0, 0, 0, 0.08);
+  backdrop-filter: blur(20px);
+  box-sizing: border-box;
+
+  @include responsive(mobile) {
+    padding: 1.5rem 1rem;
+  }
+
+  .desc{
+    h2{
+      margin-bottom: $size-6;
+      text-align: center;
+    }
+
+    p{
+      text-align: center;
+
+      @include responsive(mobile) {
+        font-size: 0.6875rem;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%; 
+      }
+    }
+  }
+
+  .card{
+    padding: 2.94rem 2.94rem;
+    border-radius: $size-5;
+    background: $secondary-50;
+    display: flex;
+    gap: 3rem;
+    margin-top: 2.81rem;
+    
+
+    @include responsive(laptop) {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+
+    @include responsive(tablet) {
+      gap: 50px;
+    }
+
+    @include responsive(mobile) {
+      padding: 1.5rem 1.2rem;
+    }
+
+    .content-card{
+      width: -webkit-fill-available;
+      
+      @include responsive(mobile) {
+        display: grid;
+        grid-template-columns: 50px auto;
+        gap: $size-2;
+      }
+      .material-symbols-outlined{
+        display: flex;
+        width: $size-10;
+        height: $size-10;
+        background: white;
+        border-radius: 50%;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: $size-6;
+        font-size: $size-6;
+
+        @include responsive(mobile) {
+          font-size: 1.07144rem;
+        }
+      }
+
+      .body-parag{
+        width: 100%;
+      }
+
+      p{
+        margin-bottom: $size-5;
+
+        @include responsive(mobile) {
+          font-size: 0.875rem;
+          margin-bottom: 0.5rem;
+          font-weight: 600;
+          line-height: 140%;
+        }
+      }
+      span{
+        @include responsive(mobile) {
+          font-size: 0.6875rem;
+          font-weight: 400;
+          line-height: 140%;  
+        }
+      }
+    }
+  }
+}

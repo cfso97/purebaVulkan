@@ -1,0 +1,171 @@
+.vulkan-banner-content {
+  position: relative;
+  z-index: 1;
+  clip-path: border-box;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  @include responsive(tablet) {
+    background-size: 100% 80%;
+  }
+
+  .banner-bg-img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    @include responsive(mobile) {
+      height: 75%;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  };
+
+  @include responsive(laptop) {
+    padding-top: 50px;
+  }
+
+  @include responsive(mobile) {
+    padding-bottom: 28%;
+  }
+  .margin-general {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+
+    @include responsive(tablet) {
+      flex-direction: column;
+    }
+
+    @include responsive(mobile) {
+      padding-bottom: 50%;
+      padding-top: 15px;
+    }
+    .vulkan-banner-text {
+      max-width: 50%;
+      display: flex;
+      flex-direction: column;
+      padding: 45px 0px;
+
+      @include responsive(tablet) {
+        max-width: 100%;
+      }
+      .logo {
+        margin-bottom: 3.12rem;
+        width: 60%;
+        height: auto;
+        
+        @include responsive(tablet) {
+          margin-bottom: 1.63rem;
+          width: 60%;
+        }
+      }
+      .title {
+        color: white;
+        margin-bottom: $size-6;
+        @include responsive(tablet) {
+          margin-bottom: $size-3;
+        }
+        @include responsive(mobile) {
+          font-size: 1.375rem;
+        }
+      }
+      .description {
+        color: white;
+        margin-bottom: $size-8;
+        @include responsive(tablet) {
+          margin-bottom: $size-5;
+          font-size: 0.75rem;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+        }
+      }
+      .button {
+        display: flex;
+        min-width: $size-15;
+        min-height: 3.5rem;
+        padding: $size-4 $size-6;
+        justify-content: center;
+        align-items: center;
+        border-radius: $size-2;
+        background: white;
+        border: none;
+        width: fit-content;
+        @include responsive(tablet) {
+          padding: $size-4 $size-4;
+          font-size: 0.875rem;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%;
+        }
+      }
+    }
+    .vulkan-banner-image {
+      max-width: 100%;
+      width: 100%;
+      padding: 45px 0px;
+      text-align: center;
+
+      @include responsive(tablet) {
+        max-width: 100%;
+        padding: 0px 0px;
+      }
+      picture {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+        padding: 0px 0px;
+        height: auto;
+
+        @include responsive(tablet) {
+          max-width: 425px;
+        }
+
+        @include responsive(mobile) {
+          position: absolute;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
+    }
+  }
+
+  &.max-img {
+    .margin-general {
+      display: grid;
+      grid-template-columns: 1fr 60%;
+
+      .vulkan-banner-text {
+        max-width: 100%;
+      }
+
+      .vulkan-banner-image {
+        max-width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        @include responsive(tablet) {
+          justify-content: center;
+        }
+      }
+
+      @include responsive(laptop) {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      @include responsive(tablet) {
+        display: flex;
+      }
+    }
+  }
+}

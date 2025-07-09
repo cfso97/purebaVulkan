@@ -1,0 +1,11 @@
+#START nuxt-robots (indexable)
+
+User-agent: *
+Allow: 
+
+Sitemap: https://www.vulkanbrokersolutions.com/__sitemap__/es.xml
+Sitemap: https://www.vulkanbrokersolutions.com/__sitemap__/en.xml
+Sitemap: https://www.vulkanbrokersolutions.com/__sitemap__/ar.xml
+Sitemap: https://www.vulkanbrokersolutions.com/sitemap_index.xml
+
+#END nuxt-robots

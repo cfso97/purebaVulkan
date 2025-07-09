@@ -1,0 +1,186 @@
+.contact-page {
+
+    .banner-contact {
+        background-image: var(--back);
+    
+        @include responsive(tablet) {
+            background-image: var(--back2);
+        }
+    }
+
+    .section-form::before{
+        content: " ";
+        position: absolute;
+        background-image: var(--degrade);
+        background-size: 100% 100%;
+        width: 90%;
+        height: 1750px;
+        right: 0;
+        z-index: -1;
+    
+        @include responsive(mobile) {
+            width: 200%;
+            height: 1350px;
+            margin-top: 650px;
+            background-position: center;
+        }
+    }
+
+    .forex_tradeview::before{
+        content: "";
+        background-image: var(--degrade2);
+        position: absolute;
+        background-size: 100% 100%;
+        width: 50%;
+        height: 1350px;
+        left: 0;
+        z-index: -1;
+        margin-top: -700px;
+    
+        @include responsive(tablet) {
+          width: 100%;
+          height: 1650px;
+          left: 0;
+          margin-top: -580px;
+        }
+    
+        @include responsive(mobile) {
+          width: 150%;
+          height: 1150px;
+          left: 0;
+        }
+      }
+
+    .forex_tradeview {
+        z-index: 1;
+    }
+
+    .forex_tradeview {
+        display: grid;
+        grid-template-columns: 1fr 55%;
+        gap: 4.75rem;
+        max-width: 70rem;
+        margin: auto;
+
+        @include responsive(tablet) {
+            grid-template-columns: 1fr;
+        }
+
+        @include responsive(mobile) {
+            gap: 1.5rem;
+        }
+
+        .accordeon .accordeon-box  {
+            .box .box-content {
+                align-items: flex-start;  
+
+                .box-icon .icon {
+                    background: $secondary-50;
+                }
+            }
+            .activeOption {
+                background: white;
+            }
+        }
+    }
+
+    .section-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+
+        @include responsive(mobile) {
+            gap: 8.5rem;
+        }
+
+        .direct-contact-info {
+            max-width: 59.875rem;
+            display: flex;
+            padding: 2rem;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            border-radius: 1.3125rem;
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            background: linear-gradient(156deg, rgba(255, 255, 255, 0.50) 10.28%, rgba(255, 255, 255, 0.00) 106.66%);
+            box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(20px);
+            margin: auto;
+
+            @include responsive(tablet) {
+                flex-direction: column;
+            }
+
+            @include responsive(mobile) {
+                padding: 1.5rem 1.25rem;
+                gap: 1.25rem;
+                border-radius: 0.75rem;
+            }
+
+            .info-card {
+                display: flex;
+                padding: 1.5rem;
+                align-items: center;
+                gap: 1rem;
+                border-radius: 0.75rem;
+                border: 1px solid $secondary-50;
+                background: white;
+                width: -webkit-fill-available;
+
+                @include responsive(mobile) {
+                    display: flex;
+                    padding: 1.5rem;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: flex-start;
+                    gap: 1rem;
+                    align-self: stretch;
+                }
+
+                span {
+                    width: 3.5rem;
+                    height: 3.5rem;
+                    aspect-ratio: 1/1;
+                    align-items: center;
+                    justify-content: center;
+                    background: $secondary-50;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 50%;
+                    font-size: 22px;
+
+                    @include responsive(mobile)  {
+                        width: 2.25rem;
+                        height: 2.25rem;
+                        font-size: 18px;
+                    }
+                }
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    gap: 1rem;
+                    width: -webkit-fill-available;
+
+                    @include responsive(mobile) {
+                        gap: 0.75rem;
+
+                        .body-6-bold  {
+                            font-size: 0.875rem;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 140%;
+                        }
+                    }
+
+                    .body-4 {
+                        word-break: break-all;
+                    }
+                }
+            }
+        }
+    }
+}

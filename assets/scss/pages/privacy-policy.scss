@@ -1,0 +1,151 @@
+.privacy-policy {
+
+    p, li, span {
+        color: $secondary-600;
+
+        &.black {
+            color: $secondary-800;
+        }
+    }
+
+    h3 {
+        color: $secondary-700;
+    }
+
+    .logo-tvm {
+        padding: $size-4 $size-7;
+        background: white;
+        box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+        backdrop-filter: blur(10px); 
+        display: flex;
+        justify-content: center;  
+        
+        img {
+            max-width: 14.76613rem;
+            width: 100%;
+        }
+    }
+
+    .cont-general {
+        padding: 3.75rem;
+        margin: 3.75rem 0;
+        background: white;
+        display: flex;
+        flex-direction: column;
+        gap: 3.38rem;
+        border-radius: 1rem;
+        border: 1px solid $secondary-50;
+        background: white;
+        box-shadow: -3px 4px 35px 0px rgba(21, 32, 42, 0.05);
+
+        @include responsive(mobile) {
+            border: 0;
+            border-radius: 0;
+            margin: 1.5rem 0;
+            padding: 1.5rem 1.25rem;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 375px) {
+            padding: 1.5rem 0.75rem;
+        }
+
+        .line {
+            width: 4.125rem;
+            height: 0.0625rem;
+            background: $secondary-600;
+        }
+
+        .table {
+            div {
+                display: grid;
+                grid-template-columns: 33.33% 33.33% 33.33%;
+                width: -webkit-fill-available;
+                
+                span {
+                    padding: 1.5rem 1.25rem;
+                    border-right: 1px solid $secondary-200;
+                    border-bottom: 1px solid $secondary-200;
+
+                    &:first-child {
+                        border-left: 1px solid $secondary-200;
+                    }
+
+                    @include responsive(mobile) {
+                        font-size: 0.59375rem;
+                        padding: 1.25rem 0.5rem;
+                    }
+                }
+            }
+
+            .title {
+                padding: 1.5rem 0;
+                align-items: center;
+                text-align: center;
+                background-image: url(/images/privay-policy/Table-BG-Desktop.jpg);
+                background-size: 100% 100%;
+
+                @include responsive(mobile) {
+                    background-image: url(/images/privay-policy/Table-BG-Desktop.jpg);
+                    padding: 0.5rem;
+                }
+                
+                span {
+                    border: none;
+                    padding: 0 0.25rem;
+                    color: white;
+
+                    &:first-child {
+                        border: none;
+                    }
+                }
+            }
+        }
+
+        .table-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 2.75rem;
+            max-width: 785px;
+            margin: auto;
+
+            @include responsive(tablet) {
+                grid-template-columns: 1fr;
+                gap: 0.7rem;
+            }
+
+            ul {
+                margin: 0;
+                padding-left: 17px;
+            }
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+
+            @include responsive(mobile) {
+                gap: 0.75rem;
+            }
+        }
+    }
+
+    .logo-tvm-white {
+        padding: $size-4 $size-7;
+        background: $secondary-900; 
+        display: flex;
+        justify-content: center;   
+
+        img {
+            max-width: 14.76613rem;
+            width: 100%;
+        }
+    }
+
+    .margin-general {
+        @include responsive(mobile) {
+            max-width: 100% !important;
+        }
+    }
+}

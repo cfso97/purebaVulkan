@@ -1,0 +1,113 @@
+$background-color-even: #f2f2f2; // Color de fondo para filas pares
+$background-color-odd: #fff; // Color de fondo para filas impares
+
+.forex-rollover-rates-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  border-radius: $size-5;
+  border: 1px solid $secondary-50;
+  background: #fff;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: auto;
+  }
+  th,
+  td {
+    padding: $size-2;
+    text-align: center;
+    border-top: 1px solid $secondary-50;
+    border-bottom: 1px solid $secondary-50;
+    @include responsive(mobile) {
+      font-size: 12px;
+    }
+  }
+  tr {
+    &:nth-child(even) {
+      background-color: $background-color-even;
+    }
+    &:nth-child(odd) {
+      background-color: $background-color-odd;
+    }
+  }
+  th {
+    font-weight: bold;
+  }
+  .whit-flag {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    @include responsive(mobile) {
+      gap: 5px;
+    }
+  }
+  .flag-image {
+    height: 30px;
+    @include responsive(mobile) {
+      height: 15px;
+    }
+  }
+  .search-container {
+    position: relative;
+    .search-input {
+      display: flex;
+      width: 277px;
+      padding: $size-4 $size-4 $size-4 $size-12;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: $size-2;
+      border: 1px solid $secondary-400;
+      background: $gray-50;
+      color: $secondary-600;
+      @include responsive(mobile) {
+        width: 177px;
+      }
+    }
+    .icon-container {
+      position: absolute;
+      top: 14px;
+      left: 15px;
+      @include responsive(mobile) {
+        top: 19px;
+        left: 19px;
+      }
+      .material-symbols-outlined {
+        color: $secondary-600;
+        cursor: default;
+      }
+    }
+  }
+}
+
+.disclaimer-content {
+  width: 100%;
+  margin: 24px 0px 0px 24px;
+  p {
+    color: $secondary-700;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    @include responsive(mobile) {
+      font-size: 10px;
+    }
+  }
+  ul {
+    li {
+      color: $secondary-700;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      @include responsive(mobile) {
+        font-size: 10px;
+      }
+    }
+  }
+}

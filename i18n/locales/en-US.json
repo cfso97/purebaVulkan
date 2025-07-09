@@ -1,0 +1,369 @@
+{
+  "seo": {
+    "home": {
+      "title": "Boost your brokerage with cutting-edge technology - Vulkan Broker Solutions",
+      "description": "Optimize your brokerage with advanced tools that enhance efficiency and profitability."
+    },
+    "vulkan-bridge": {
+      "title": "High-Level Connectivity and Tier-One Liquidity with Vulkan Bridge – Vulkan Broker Solutions",
+      "description": "Access global markets with Vulkan Bridge, offering top-tier connectivity and optimized liquidity for your brokerage."
+    },
+    "communitraders": {
+      "title": "Social and Copy Trading: Boost Your Brokerage with Communitrader – Vulkan Broker Solutions",
+      "description": "Attract more clients with social and copy trading strategies on CommuniTrader, enhancing both experience and success."
+    },
+    "multimam": {
+      "title": "Manage Multiple Accounts Efficiently with MultiMan – Vulkan Broker Solutions",
+      "description": "Simplify your trading operations by managing multiple accounts from a single interface. MultiMan offers seamless control, real-time execution, and efficiency for professional traders and brokers."
+    },
+    "risk-monitors": {
+      "title": "Risk Monitoring Platform for Brokers - Vulkan Broker Solutions",
+      "description": "Optimize your risk management with Vulkan Risk Monitor. Real-time alerts, position monitoring, and an intuitive dashboard for modern brokers."
+    },
+    "about": {
+      "title": "About Us – Vulkan Broker Solutions",
+      "description": "Discover the history, mission, and values of Vulkan Broker Solutions — your trusted partner in trading"
+    },
+    "blog": {
+      "title": "Vulkan Broker Solutions Blog: News and Analysis | Vulkan Broker Solutions",
+      "description": "Discover market trends, strategies, and insights in the Vulkan Broker Solutions blog."
+    },
+    "contact": {
+      "title": "Contact - Vulkan Broker Solutions",
+      "description": "Get in touch with our support team at Vulkan Broker Solutions and resolve your questions."
+    }
+  },
+  "menu": {
+    "home": "Home",
+    "services": "Services",
+    "vulkanBridge": "Vulkan Prime",
+    "communiTraders": "CommuniTraders",
+    "MultiMAA": "MultiMAM",
+    "riskmonitor": "Risk Monitor",
+    "about": "About Us",
+    "blog": "Blogs and resources",
+    "contact": "Contact Us",
+    "selectlenguage": "Select your language",
+    "altlogo": "Vulkan Broker Solutions logo with upward arrow icon representing growth, strategy, and broker services."
+  },
+  "home": {
+    "banner": {
+      "title": "Empower Your Brokerage with Advanced Technology",
+      "description": "Optimize your brokerage with the latest solutions in liquidity, connectivity, and multi-account management.",
+      "button-1": "Contact Us",
+      "altimg": "Confident broker presenting broker platform logos with a smile and open hand on white background."
+    },
+    "yourOpp": {
+      "title": "Introduction to Vulkan Broker Solutions",
+      "button-1": "Request a demo today",
+      "desc": "We are leaders in technology solutions for brokerages, offering scalable and secure platforms to maximize performance and operational efficiency. Our focus is on automation, advanced connectivity, and robust account management to ensure success in the financial markets.",
+      "item1": "Fully scalable and customizable solutions",
+      "item2": "Cutting-edge technology for brokerages",
+      "item3": "Security and regulatory compliance",
+      "item4": "Fast and seamless integration"
+    },
+    "advantages": {
+      "title_general": "Our Services",
+      "title1": "CommuniTraders",
+      "tab1text1": "[strong]Community Traders – Social & Copy Trading[/strong]",
+      "tab1text2": "Enable your clients to mirror successful strategies and increase profitability with advanced social trading.",
+      "altimg1": "CommuniTraders signal provider interface on mobile screen with trader profile and global icons.",
+      "title2": "Vulkan Prime",
+      "tab2text1": "[strong]Vulkan Bridge – Liquidity and Connectivity[/strong]",
+      "tab2text2": "Connect to top-tier liquidity providers and optimize trade execution with low latency.",
+      "altimg2": "Vulkan analytics dashboard on laptop showing charts, filters, trade logs, and real-time broker tools.",
+      "title3": "MultiMAM",
+      "tab3text1": "[strong]MultiMAM – Multi-Account Management[/strong]",
+      "tab3text2": "Manage multiple trading accounts with complete efficiency and security.",
+      "altimg3": "MultiMAM side-by-side comparison showing simplified trading with MAM vs. complex interface without MAM.",
+      "title4": "Risk Monitor",
+      "tab4text1":"[strong]Effective Risk Management[/strong]",
+      "tab4text2":"Optimize your risk exposure and make smart decisions in managing your trading accounts.",
+      "altimg4": "Panel de risk monitor avanzado con alertas y visión en tiempo real del riesgo en el trading.",
+      "btn": "Learn more",
+      "disclaimertextbtn": "Request a free consultation",
+      "disclaimertext": "and discover how to enhance your brokerage."
+    },
+    "timeStart": {
+      "title": "Success Stories & Key Benefits",
+      "desc1": "Brokerages around the world trust Vulkan Broker Solutions to power their platforms and enhance their client experience.",
+      "desc2": "[strong]Discover how our solutions have optimized their performance:[/strong]",
+      "item1": "30% increase in client retention",
+      "item2": "Faster order execution speed",
+      "item3": "Higher profitability and resource optimization",
+      "altimg": "Two smiling brokers using tablets with a 30% growth indicator, showcasing success and digital trading."
+    },
+    "vulkan_form": {
+      "title": "Are you ready to enhance your broker experience?",
+      "descript-title": "Leave us your information and take the next step toward a more efficient trading experience.",
+      "subtitle": "Fill out the form and we will contact you soon."
+    },
+    "invest": {
+      "title": "Get in touch for more information",
+      "textdescriprtInvest": "Transform your brokerage today.",
+      "textdescriprtInvest2": "Write to us at {emailvulkan}."
+    }
+  },
+  "footer": {
+    "text1": "Copyright © 2025. All rights reserved.",
+    "text2": "[strong]Address[/strong]: Los Mirtos 239 Urb. San Eugenio, Lince, Lima, Peru. [br] [strong]Email[/strong]: {emailvulkan}",
+    "text3": "The services and products above are not being offered within the United States (US) and not being offered to US Persons, as defined under US law. [br] The information on this website is not directed to residents of any country where FX and/or CFD trading is restricted or prohibited by local laws or regulations.",
+    "contactUsTitle": "Contact Us"
+  },
+  "vulkan": {
+    "banner": {
+      "title": "Vulkan Bridge: Tier-One Connectivity and Liquidity",
+      "description": "Optimize order execution with advanced technology and low latency.",
+      "imgalt": "Vulkan analytics dashboard on laptop showing charts, filters, trade logs, and real-time broker tools."
+    },
+    "do-for-you": {
+      "title": "Key Benefits:",
+      "description-1": "Access to leading liquidity providers",
+      "description-2": "Reduced operational costs and tighter spreads",
+      "description-3": "Ultra-fast execution with cutting-edge infrastructure",
+      "description-4": "Support for multiple asset classes",
+      "altimg": "Two laptops displaying Vulkan platform for advanced trading and liquidity provider access."
+    },
+    "invest": {
+      "title": "Schedule a consultation with our liquidity specialists.",
+      "textdescriprtInvest2": "Write to us at {emailvulkan}."
+    }
+  },
+  "communitraders": {
+    "banner": {
+      "title": "Social Trading and Copy Trading for Brokers with CommuniTrader",
+      "description": "Turn your clients into successful traders with a cutting-edge social trading platform.",
+      "altimg": "Broker trading dashboard on laptop and mobile with strategy data, performance chart, and trade stats.",
+      "alticon": "CommuniTraders logo representing a social and copy trading platform for modern brokers."
+    },
+    "do-for-you": {
+      "title": "Key Benefits:",
+      "description-1": "Allow traders to replicate winning strategies",
+      "description-2": "Boost engagement and client loyalty",
+      "description-3": "Optimize operations through automation",
+      "description-4": "Quick integration with trading platforms",
+      "altimg": "Smiling broker using a laptop while monitoring real-time copy trading performance and growth stats."
+    },
+    "invest": {
+      "title": "Contact us for more information",
+      "textdescriprtInvest": "Transform your broker today!",
+      "textdescriprtInvest2": "Write to us at {emailvulkan}."
+    }
+  },
+  "multiman": {
+    "banner": {
+      "title": "Multiple Account Management for Brokers with MultiMan",
+      "description": "Manage investors' accounts with total control and operational efficiency.",
+      "altimg": "Vulkan MultiMAM platform on laptop showing advanced trade management tools and account operations view.",
+      "alticon": "MultiMAM logo representing a platform for multi-account management for professional brokers."
+    },
+    "do-for-you": {
+      "title": "Key Benefits:",
+      "description-1": "Assign strategies to multiple trading accounts",
+      "description-2": "Real-time monitoring with advanced reporting",
+      "description-3": "Automated fund allocation",
+      "description-4": "Regulatory compliance and robust security",
+      "altimg": "Vulkan MultiMAM interface showing master user account info, balance, equity, and trading operations."
+    },
+    "invest": {
+      "title": "Discover how MultiMAM can improve your brokerage's account management.",
+      "textdescriprtInvest2": "Write to us at {emailvulkan}."
+    }
+  },
+  "about": {
+    "banner": {
+      "title": "Innovation and Technology at the Service of Brokerages",
+      "description": "At Vulkan Broker Solutions, we specialize in delivering advanced tech solutions for brokerages of all sizes. Our mission is to provide efficient and scalable tools that optimize operations and enhance the trader experience.",
+      "altimg": "Broker platform showing trading tools, analytics, and copy trading interface on a modern laptop screen."
+    },
+    "do-for-you": {
+      "title": "Key Benefits:",
+      "subtitle-1": "Our vision:",
+      "description-1": "To be the global leader in brokerage technology solutions.",
+      "subtitle-2": "Our commitment:",
+      "description-2": "Innovation, security, and peak performance.",
+      "altimg": "Smiling broker pointing at trading app on phone with chart showing 2.12% growth and secure investing."
+    },
+    "accordeon": {
+      "title": "Have questions? Here are the answers",
+      "accordeonTitle1": "How can I integrate Vulkan Broker Solutions into my platform?",
+      "accordeonDesc1": "Our technical team will guide you every step of the way for a fast and effective integration.",
+      "accordeonTitle2": "Are your solutions compatible with my current brokerage?",
+      "accordeonDesc2": "Yes, our tools are adaptable to multiple trading platforms.",
+      "accordeonTitle3": "Do you offer technical support?",
+      "accordeonDesc3": "Yes, we provide specialized assistance to address any concerns. [br] [br] If you have more questions, feel free to contact us at {emailvulkan}"
+    },
+    "invest": {
+      "title": "Contact us for more information",
+      "textdescriprtInvest": "Transform your broker today!",
+      "textdescriprtInvest2": "Write to us at {emailvulkan}."
+    }
+  },
+  "risk-monitors": {
+    "banner": {
+      "title": "Vulkan Risk Monitor: The ultimate risk monitoring solution for brokers",
+      "description": "In the trading world, effective risk monitoring is not optional, it's essential. Vulkan Risk Monitor allows you to manage risk, optimize exposure, and make smart decisions in real-time.",
+      "altimg": "Vulkan Risk Monitor on multiple screens for brokers to analyze and control trading risk exposure."
+    },
+    "what-is": {
+      "title": "What is a Risk Monitor and Why Do You Need It?",
+      "text": "Risk Monitor is essential for managing client exposure and liquidity in real time.",
+      "text1": "Risk Monitor:",
+      "text2": "Optimizes risk control",
+      "text3": "Prevents operational imbalances",
+      "text4": "Protects the broker and market maker",
+      "text5": "Without this tool, you risk compromising the stability and profitability of your business."
+    },
+    "advantages": {
+      "title": "Key Benefits of Vulkan Risk Monitor",
+      "subtitle": "Specialized Filters",
+      "text": "Customize your reports with advanced filters that let you exclude specific accounts or groups to obtain precise and relevant information.",
+      "subtitle1": "Position Monitor",
+      "text1": "Monitor all your open positions across multiple servers with a single click. View exposure across different trading environments.",
+      "subtitle2": "Modular Design",
+      "text2": "Conveniently organize your work windows across different monitors. The system remembers the size and position to maximize efficiency.",
+      "subtitle3": "Spread Monitor",
+      "text3": "Integrate price feeds from competitor brokers and adjust your spreads in real time to stay competitive.",
+      "subtitle4": "Segregated Positions",
+      "text4": "Easily and accurately analyze the volume distribution of specific symbols across all your trading servers.",
+      "subtitle5": "Real-Time Alerts",
+      "text5": "Receive customizable alerts on risk patterns using advanced filters. Stay instantly informed.",
+      "subtitle6": "General Dashboard",
+      "text6": "(Añade el contenido correspondiente aquí si lo tienes. El título está, pero falta el texto explicativo.)"
+    },
+    "simplify-trading": {
+      "title": "Competitive Advantages of Vulkan Risk Monitor",
+      "description-1": "Designed for brokers with multiple servers.",
+      "description-2": "Operational agility and risk control to strengthen your broker's competitiveness.",
+      "description-3": "Ideal for brokers seeking efficiency, transparency, and security."
+    },
+    "toStart": {
+      "title": "Common Use Cases",
+      "item1": "Brokers expanding with new servers who need a solid and scalable infrastructure.",
+      "item2": "Firms requiring centralized and real-time monitoring to make faster and safer decisions.",
+      "item3": "Companies wanting to optimize spreads and reduce risk exposure without compromising operational efficiency.",
+      "altimg": "Laptop with Vulkan risk monitor showing trading dashboards for real-time risk management."
+    },
+    "invest": {
+      "title": "Ready to take your broker's risk management to the next level?",
+      "textdescriprtInvest": "Contact us today and request a personalized demo of Vulkan Risk Monitor.",
+      "btn": "Request Your Demo"
+    }
+  },
+  "contacts": {
+    "banner": {
+      "title": "Contact Vulkan Broker Solutions",
+      "description": "Have questions, need assistance, or want to learn more about our services for brokers? Our team is ready to help you.",
+      "altimg": "Vulkan login and forms interface on laptop with icons, inviting brokers to contact us for access."
+    },
+    "vulkan_form": {
+      "title": "Contact Form",
+      "descript-title": "Fast, safe and efficient",
+      "subtitle": "Complete the form and we’ll contact you soon."
+    },
+    "direct_contact": {
+      "title": "Direct Contact Information",
+      "text": "Prefer to reach us through other channels?",
+      "text2": "Includes: {emailvulkan}"
+    },
+    "do-for-you": {
+      "title": "Why contact Vulkan Broker Solutions?",
+      "description-1": "Expert advisory in broker solutions.",
+      "description-2": "Personalized and multilingual support.",
+      "altimg": "Fast and professional attention."
+    },
+    "accordeon": {
+      "title": "Contact FAQs",
+      "accordeonTitle1": "How long will it take to receive a response after submitting the form?",
+      "accordeonDesc1": "Our team is committed to responding to all inquiries within the first 24 business hours. In most cases, you’ll receive a reply even sooner. We prioritize fast and efficient support so you can move forward without delays.",
+      "accordeonTitle2": "What kind of inquiries does the Vulkan team handle?",
+      "accordeonDesc2": "We handle all types of inquiries related to our services — from commercial requests and technical support to strategic collaborations and personalized consulting to help you launch or scale your brokerage. No matter what stage you’re in, we’re ready to assist you.",
+      "accordeonTitle3": "How do I access technical support if I’m already a client?",
+      "accordeonDesc3": "You can reach us directly by email at {emailvulkan} or through the form on this page. Our technical team will respond promptly to resolve any issues or operational questions."
+    },
+    "findus": {
+      "title": "Map or Location",
+      "description": "Our international presence",
+      "Headquartersstrong": "Headquarters:",
+      "websitestrong": "Website:",
+      "titlecard1": "Global",
+      "country1": "Tradeview Financial Markets S.A.C Lima",
+      "Headquarters1": "Calle Los Alcanfores No. 495 Int. 505 Urb. Leuro Lima. Lima, Miraflores.",
+      "linkstext": "www.tradeviewlatam.com"
+    },
+    "invest": {
+      "title": "Contact us for more information",
+      "textdescriprtInvest": "Transform your broker today!",
+      "textdescriprtInvest2": "Write to us at {emailvulkan}."
+    }
+  },
+  "blog": {
+    "banner": {
+      "title": "Vulkan Blog: Stay updated with the latest financial trends",
+      "description": "Explore our guides, market analysis, and educational articles on technology applied to trading and broker management.",
+      "altimg": "Two laptops showing financial charts from the Vulkan Broker Solutions trading blog"
+    },
+    "tabs": {
+      "title": "Recent articles:",
+      "btn": "See more"
+    },
+    "vulkan_form": {
+      "title": "Subscribe to our newsletter and receive exclusive content.",
+      "descript-title": "Leave us your information and get advanced guides, market analysis, and technology updates straight to your inbox — all designed to help you maximize your broker’s performance."
+    },
+    "accordeon": {
+      "title": "Frequently asked questions (FAQ)",
+      "accordeonTitle1": "How can I integrate Vulkan Broker Solutions into my platform?",
+      "accordeonDesc1": "Our technical team will guide you through every step for a fast and effective integration.",
+      "accordeonTitle2": "Are your solutions compatible with my current broker platform?",
+      "accordeonDesc2": "Yes, our tools adapt to multiple trading platforms.",
+      "accordeonTitle3": "Do you offer technical support?",
+      "accordeonDesc3": "Yes, we provide specialized support to address any concerns. [br] [br] If you have more questions, [nuxtlink url=\"/contact/\"]contact us[/nuxtlink] and we’ll assist you."
+    }
+  },
+  "error": {
+    "title": "Sorry! We couldn't find this page",
+    "descript": "The link might be broken or the page might have been removed. Don't worry, we invite you to return to Home and continue exploring.",
+    "home": "Return to Home"
+  },
+  "organization": {
+    "name": "Vulkan Broker Solutions",
+    "description": "Specialized services for brokers: technological solutions, strategic advice, risk management, and more."
+  },
+  "address": {
+    "city": "City",
+    "region": "Region/State",
+    "countryCode": "Country"
+  },
+  "contact": {
+    "type": "customer support",
+    "areaServed": "Worldwide"
+  },
+  "language": {
+    "spanish": "Spanish",
+    "english": "English"
+  },
+  "webpage": {
+    "name": "Vulkan Broker Solutions",
+    "description": "Vulkan Broker Solutions offers specialized services for brokers: technology, strategic consulting, financial solutions, and technical support."
+  },
+  "services": {
+    "itemListTitle": "Services for Brokers",
+    "platformDevelopment": {
+      "name": "Trading Platform Development",
+      "description": "We create custom platforms for brokers, including API integration, security, and scalability."
+    },
+    "strategicConsulting": {
+      "name": "Strategic Consulting for Brokers",
+      "description": "Professional advice for growing brokers on regulation, marketing, and international expansion."
+    },
+    "technicalSupport": {
+      "name": "24/7 Technical Support",
+      "description": "Our technical team is available 24 hours a day to ensure the operation and continuity of your platform."
+    },
+    "riskManagement": {
+      "name": "Risk Management and Compliance",
+      "description": "Comprehensive solutions for risk management, regulatory compliance, and audits."
+    }
+  }
+} 

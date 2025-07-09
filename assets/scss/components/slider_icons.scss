@@ -1,0 +1,286 @@
+.slider_icons {
+  display: flex;
+  flex-direction: column;
+
+  .why-choose-title-container {
+    margin-bottom: $size-6;
+    h2 {
+      width: 100%;
+      color: $secondary-900;
+      text-align: center;
+    }
+  }
+  .why-choose-subTitle-container {
+    margin-bottom: $size-8;
+    .subTitle {
+      color: $secondary-600;
+      text-align: center;
+    }
+
+    @include responsive(tablet) {
+      width: 80%;
+      margin: auto;
+    }
+  }
+
+  .why-choose-carousel {
+    .what-choose-box {
+      max-width: 100%;
+      width: 90%;
+      margin: auto;
+
+      @include responsive(tablet) {
+        display: none;
+      }
+
+      .carousel-container {
+        width: 100%;
+        height: auto;
+
+        .swiper {
+          background: $secondary-50;
+          border-radius: $size-5;
+          box-sizing: border-box;
+          padding: 3.9375rem 0rem 2.1875rem 8.75rem;
+          display: grid;
+
+          @include responsive(laptop) {
+            position: relative;
+            right: initial;
+            width: 100%;
+            padding: 1.563rem 4.063rem;
+          }
+
+          .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            gap: $size-4;
+            box-sizing: border-box;
+            opacity: 0;
+            min-height: 220px;
+            transition: opacity 0.001s;
+
+            .slide {
+              display: flex;
+              flex-direction: column;
+              gap: $size-4;
+              padding: 0rem 0px;
+
+              .icon-box {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 3rem;
+                height: 3rem;
+                background: white;
+                border-radius: 50%;
+
+                @include responsive(mobile) {
+                  width: 2.75rem;
+                  height: 2.75rem;
+                }
+              }
+              .title {
+                font-size: 1.0625rem;
+                color: $secondary-900;
+                font-weight: 600;
+                width: 60%;
+                @include responsive(laptop) {
+                  width: 100%;
+                }
+                @include responsive(mobile) {
+                  font-size: 0.875rem;
+                }
+              }
+              .description {
+                color: $secondary-900;
+                width: 60%;
+                
+                @include responsive(laptop) {
+                  width: 100%;
+                }
+                @include responsive(mobile) {
+                  font-size: 0.6875rem;
+                }
+              }
+              .find-more {
+                color: $info-700;
+              }
+            }
+
+            &.swiper-slide-active, &.swiper-slide-next, &.swiper-slide-next + .swiper-slide {
+              opacity: 1;
+              transition: opacity 2s;
+            }
+
+            @media (max-width: 991px) {
+              &.swiper-slide-next + .swiper-slide {
+                opacity: 0;
+                transition: opacity 0.001s;
+              }
+              
+            }
+
+            @include responsive(tablet) {
+              grid-template-rows: minmax(auto, 220px) auto auto;
+            }
+            @include responsive(laptop) {
+              grid-template-rows: minmax(auto, 220px) auto auto;
+            }
+            @include responsive(tablet) {
+              grid-template-rows: minmax(auto, 230px) auto auto;
+            }
+
+            @include responsive(mobile) {
+              grid-template-rows: minmax(auto, 130px) auto auto;
+            }
+
+            .img-card {
+              display: block;
+              width: 100%;
+              height: auto;
+              max-width: 315px;
+              max-height: 250px;
+              object-fit: cover;
+            }
+
+            h4 {
+              color: $color-white;
+              text-align: left;
+              margin: 0;
+              width: 100%;
+
+              @extend .subtitle-4;
+            }
+
+            p {
+              color: $color-white;
+              text-align: left;
+              width: 100%;
+
+              @extend .body-4;
+            }
+          }
+
+          .swiper-button-prev::after {
+            display: flex;
+            font-family: "Material Symbols Outlined";
+            content: "chevron_left";
+            width: $size-11;
+            height: $size-11;
+            font-size: $size-6;
+            border-radius: $size-19;
+            background: $color-white;
+            box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+            align-items: center;
+            justify-content: center;
+
+            @include responsive(laptop) {
+              width: 2.75rem;
+              height: 2.75rem;
+            }
+          }
+
+          .swiper-button-next::after {
+            display: flex;
+            font-family: "Material Symbols Outlined";
+            content: "chevron_right";
+            width: $size-11;
+            height: $size-11;
+            font-size: $size-6;
+            border-radius: $size-19;
+            background: $color-white;
+            box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+            align-items: center;
+            justify-content: center;
+
+            @include responsive(laptop) {
+              width: 2.75rem;
+              height: 2.75rem;
+            }
+          }
+
+          .swiper-button-prev,
+          .swiper-button-next {
+            overflow: visible;
+            width: $size-11;
+            height: $size-11;
+            color: $secondary-600;
+            display: inline-block;
+          }
+
+          .swiper-button-lock {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+.slider-icons-responsive {
+  display: none;
+  padding: 1.5rem 1.875rem;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: $size-7;
+  align-self: stretch;
+  background: $secondary-50;
+  margin-top: $size-5;
+
+  @include responsive(tablet) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: $size-7;
+  }
+
+  @include responsive(mobile) {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: $size-7;
+  }
+
+  .card {
+    display: flex;
+    gap: $size-3;
+
+    .icon-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      max-width: 2.5rem;
+      height: 2.5rem;
+      background: white;
+      border-radius: 50%;
+      width: 100%;
+
+      span {
+        font-size: 1.1rem;
+      }
+    }
+
+    .title {
+      padding: 0px;
+      margin-top: 0px !important;
+      font-size: 0.75rem;
+    }
+
+    .description {
+      padding: 0px;
+      margin-top: 0px !important;
+      font-size: 0.625rem;
+      margin-top: $size-2;
+    }
+    .find-more {
+      color: $info-700 !important;
+      font-size: 0.6875rem;
+    }
+    @include responsive(mobile) {
+      display: grid;
+      gap: 0.75rem;
+      grid-template-columns: 3rem auto;
+    }
+  }
+}

@@ -1,0 +1,212 @@
+.influencers {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 11.25rem;
+    overflow: hidden;
+
+    &::before {
+        content: " ";
+        position: absolute;
+        background-image: url(/images/influencers/Affiliates_Gradient-1.png);
+        background-size: 100% 100%;
+        width: 100%;
+        height: 117.41719rem;
+        left: 0;
+        z-index: -1;
+        top: 5%;
+
+        @include responsive(mobile) {
+            background-size: cover;
+            background-position: center;
+            height: 97.41719rem;
+            top: 9%;
+        }
+    }
+
+    @include responsive(tablet) {
+        gap: 7.94rem;
+    }
+
+    .banner-contact {
+        @include responsive(mobile) {
+            background-image: url(/images/influencers/01.png) !important;
+        }
+
+        .img_ {
+            padding-top: 100%;
+        }
+    }
+
+    .advantages-container .items-container {
+        max-width: 58.8rem;
+        margin: auto;
+
+        .title-container {
+            max-width: 290.84px;
+        }
+
+        .items-container-2 .advantage .image-container .icon {
+            background: white;
+        }
+    } 
+
+    &.futures-page {
+        .forex_tradeview{
+            max-width: 62.9rem;
+            margin: auto;
+            grid-template-columns: 41% 55%;
+            align-items: center;
+
+            &::before {
+                background-image: url(/images/influencers/Affiliates_Gradient-2.png);
+                margin-top: 31%;
+
+                @include responsive(mobile) {
+                    background-position: center;
+                    height: 305.41719rem;
+                }
+            }
+
+            @media (max-width: 991px) {
+                grid-template-columns: 39% 56%;
+            }
+
+            @include responsive(tablet) {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .tradingCond {
+            @include responsive(tablet) {
+                max-width: 100% !important;
+            }
+    
+            h2 {
+                max-width: 41.65rem;
+                margin: auto;
+            }
+    
+            p.desc1 {
+                margin: auto;
+                margin-top: $size-5;
+                width: 95%;
+                color: $secondary-300;
+                max-width: 35.875rem;
+            }
+    
+            .containerOpt {
+                display: flex;
+                padding: 3.65rem;
+                margin-top: 2.25rem;
+                background-image: url(/images/influencers/Affiliates-Gradient-box.png);
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-position: center;
+    
+                @include responsive(tablet) {
+                    background-image: url(/images/influencers/Benefits-BG-Mobile.png);
+                }
+    
+                @include responsive(mobile) {
+                    padding: $size-8;
+                }
+        
+                .cont_opt {
+                    display: flex;
+                    gap: 2.5rem;
+                    flex-wrap: nowrap;
+    
+                    @media (max-width: 991px) {
+                        display: grid;
+                        flex-wrap: wrap;
+                        grid-template-columns: 1fr 1fr 1fr;
+                    }
+    
+                    @include responsive(tablet) {
+                        grid-template-columns: 1fr 1fr;
+                    }
+    
+                    @include responsive(mobile) {
+                        display: flex;
+                        gap: $size-8;
+                    }
+        
+                    .opt {
+                        width: -webkit-fill-available;
+                        display: flex;
+                        gap: $size-6;
+                        flex-direction: column;
+    
+                        @include responsive(mobile) {
+                            flex-direction: row;
+                        }
+        
+                        .desc-opt {
+                            width: auto;
+                            height: auto;
+                            margin: 0;
+                            color: white;
+                        }
+                    }
+                }
+            }
+        }
+    } 
+
+    .simplify-trading-content {
+        h2 {
+            color: $secondary-900;
+        }
+
+        .simplify-trading-steps {
+            border-radius: 1.1875rem;
+            border: 1px solid rgba(255, 255, 255, 0.42);
+            background: linear-gradient(156deg, rgba(255, 255, 255, 0.42) 10.28%, rgba(255, 255, 255, 0.00) 106.66%);
+            box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+            backdrop-filter: blur(20px); 
+    
+            .step {
+                .title-step {
+                    p {
+                        color: $secondary-900;
+                    }
+        
+                    .box-img {
+                        background: white;
+            
+                        .material-symbols-outlined {
+                            color: $secondary-900;
+                        }
+                    }
+                } 
+    
+                .text-step {
+                    color: $secondary-600;
+                }
+            } 
+        }
+    }
+
+    .forms {
+        display: flex;
+        margin-bottom: 11.25rem;
+        position: relative;
+
+        &::after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 100%;
+            height: 1px;
+            color: $secondary-100;
+            bottom: 0;
+            left: 0;
+        }
+
+        @include responsive(tablet) {
+            gap: 7.94rem;
+        }
+    }
+}

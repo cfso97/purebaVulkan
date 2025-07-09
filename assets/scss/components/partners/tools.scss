@@ -1,0 +1,267 @@
+@use "@/assets/scss/core/typography" as *;
+@use "@/assets/scss/core/mixins" as *;
+@use "@/assets/scss/abstracts/colors" as *;
+@use "@/assets/scss/core/variables" as *;
+
+.tools-content{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .selectItem{
+    display: none;
+
+    @include responsive(mobile) {
+        display: flex;
+    }
+  }
+
+  .buttonsContainer{
+    position: relative;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-around;
+    background-color: $color-white;
+    border-radius: $size-3;
+    gap: $size-6;
+    border: 1px solid $secondary-50;
+    overflow: hidden;
+
+    @include responsive(mobile) {
+        display: none;
+    }
+
+    .buttonItem{
+        position: relative;
+        width: 100%;
+        background: $color-white;
+        border: none;
+        height: 100%;
+        padding: calc($size-4 + $size-3)  $size-6;
+        transition: background-color 0.3s ease, color 0.3s ease ;
+
+        @extend .body-4;
+
+        &.selected {
+            border-bottom: 2px solid white;
+            @extend .body-4-bold;
+        }
+    }
+
+    .selected-border {
+        position: absolute;
+        width: $size-9;
+        height: $size-1;
+        bottom: 0;
+        background: transparent;
+        transition: width 0.3s ease, left 0.3s ease;
+        display: flex;
+        justify-content: space-evenly;
+
+        .border-style{
+            position: relative;
+            width: 100%;
+            max-width: $size-9;
+            border-radius: $size-1;
+            height: 100%;
+            background-color: $secondary-900;
+        }
+    }
+  }
+
+  .card-content{
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding: $size-14;
+    align-items: center;
+    gap: 3.9375rem;
+    border-radius: 1.3125rem;
+    border: 1px solid rgba(255, 255, 255, 0.42);
+    background: linear-gradient(156deg, rgba(255, 255, 255, 0.50) 10.28%, rgba(255, 255, 255, 0.00) 106.66%);
+    box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+    backdrop-filter: blur(20px);
+    box-sizing: border-box;
+
+    @include responsive(laptop) {
+      flex-direction: column;
+    }
+
+    @include responsive(mobile) {
+      padding: $size-8;
+      gap: $size-6;
+    }
+
+    .mobile{
+      display: none;
+
+      @include responsive(tablet) {
+        display: flex;
+      }
+    }
+
+    .content{
+      
+      h3{
+        margin-bottom: $size-11;
+
+        &.title {
+          display: flex;
+
+          @include responsive(tablet) {
+            display: none;
+          }
+        }
+      }
+
+      .texts {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        p {
+          color: $secondary-600;
+        }
+      }
+
+      ul{
+        display: flex;
+        flex-direction: column;
+        gap: $size-5;
+        padding-left: 25px;
+        margin: 0;
+      }
+
+      .disclaimer{
+        margin-top: 1.875rem;;
+      }
+
+      button{
+        @include responsive(mobile) {
+          padding: $size-3;
+          font-size: 0.75rem;
+        }
+      }
+    }
+
+    img{
+      width: 40%;
+
+      @include responsive(tablet) {
+        width: 70%;
+      }
+
+      @include responsive(mobile) {
+        width: 95%;
+      }
+    }
+  }
+
+  .footer-global {
+    text-align: center;
+  }
+}
+
+.tools-content{
+
+  // Nuevo wrapper para el contenedor de botones y los indicadores de scroll
+  .tabs-wrapper {
+    position: relative; // Establecer el contexto para el posicionamiento absoluto
+    width: 100%;
+    
+    @include responsive(desktop) {
+        // En escritorio, si el selectItem no se muestra, los buttonsContainer se alinean normalmente
+        display: flex;
+        justify-content: space-around;
+    }
+
+    @include responsive(mobile) {
+        display: block; // Permitir que el buttonsContainer y los indicadores se posicionen correctamente
+    }
+  }
+
+  .buttonsContainer{
+    overflow-x: hidden; // Por defecto para escritorio
+    width: -webkit-fill-available;
+
+    @include responsive(mobile) {
+        display: flex; // Mostrar en móvil
+        overflow-x: auto; // Habilitar desplazamiento horizontal
+        white-space: nowrap; // Evitar que los botones se envuelvan
+        justify-content: flex-start;
+        // Ocultar barra de desplazamiento para diferentes navegadores
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        padding-right: 1.5rem; // Espacio para el indicador de desplazamiento derecho
+        padding-left: 1.5rem; // Espacio para el indicador de desplazamiento izquierdo
+    }
+
+    .buttonItem{
+        width: auto; // Cambiado a auto para los botones desplazables
+        flex-shrink: 0; // Prevenir que los botones se encojan
+        padding: calc($size-4 + $size-3)  $size-6;
+        transition: background-color 0.3s ease, color 0.3s ease ;
+
+        &:last-child {
+          @include responsive(tablet) {
+            padding-right: calc($size-6 + 50px); // Ajustar el padding para el último botón en móvil
+          }
+        }
+        &:first-child { // Nuevo: Ajustar el padding para el primer botón en móvil
+          @include responsive(tablet) {
+            padding-left: calc($size-6 + 50px);
+          }
+        }
+    }
+  }
+
+  // Estilos base para el indicador de desplazamiento
+  .scroll-indicator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: $size-7; // Ancho del indicador
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    pointer-events: all; // Permitir clics en el indicador
+    transition: opacity 0.3s ease;
+    z-index: 2; // Asegurar que esté por encima de los botones y el contenedor
+    cursor: pointer; // Indicar que es clickeable
+    height: 100%; // Ajustar la altura al 100% del contenedor padre
+
+    // &.fade-out {
+    //   opacity: 0;
+    //   pointer-events: none; // Deshabilitar clics cuando no es visible
+    // }
+
+    .material-symbols-outlined {
+      font-size: $size-4;
+      color: $secondary-900;
+      background-color: $color-white;
+      border-radius: 50%;
+      padding: 0.3rem;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.08); // Sombra más sutil
+    }
+
+    @include responsive(desktop) { // Ocultar en escritorio
+      display: none;
+    }
+  }
+
+  // Estilos específicos para el indicador de desplazamiento derecho
+  .scroll-indicator-right {
+    right: -7px;
+    // background: linear-gradient(to left, $color-white 50%, transparent 100%); 
+  }
+
+  .scroll-indicator-left {
+    left: -7px;
+    // background: linear-gradient(to right, $color-white 50%, transparent 100%); 
+  }
+}

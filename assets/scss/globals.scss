@@ -1,0 +1,13 @@
+// @forward 'abstracts/colors.scss';
+
+// @forward 'core/mixins';
+// @forward 'core/variables';
+// @forward 'core/buttons';
+// @forward 'core/functions';
+// @forward 'core/typography';
+// @forward 'core/inputs';
+
+@forward 'abstracts/colors.scss';
+@forward 'core/variables';
+@forward 'core/mixins'; 
+@forward 'core/functions';

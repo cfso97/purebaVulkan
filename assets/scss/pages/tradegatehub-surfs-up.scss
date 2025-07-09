@@ -1,0 +1,505 @@
+.hub-surfs {
+  display: flex;
+  gap: $size-25;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+
+  &::before {
+    content: " ";
+    position: absolute;
+    background-image: url(/images/TGH-Gradient-surf.png);
+    background-size: 100% 100%;
+    width: 100%;
+    height: 1762px;
+    right: 0;
+    margin-top: 51%;
+    z-index: -1;
+  }
+
+  @include responsive(mobile) {
+    &::before {
+      height: 1466px;
+        width: 194%;
+        background-position: bottom;
+        background-size: cover;
+        margin-top: 358%;
+    }
+  }
+
+  @include responsive(tablet) {
+    gap: 8.5rem;
+  }
+
+  .banner-contact {
+    @include responsive(mobile) {
+      background-image: url(/images/tgh/01.png) !important;
+    }
+  }
+
+  .invest {
+    @include responsive(mobile) {
+      background-size: 233% 100%;
+    }
+  }
+
+  .var-columns {
+    .account-tailored {
+      .buttons-2 {
+        display: none;
+      }
+
+      .items-cont {
+        border-radius: 1.3125rem;
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        background: linear-gradient(156deg, rgba(255, 255, 255, 0.50) 10.28%, rgba(255, 255, 255, 0.00) 106.66%);
+        box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(20px);
+
+        .item span {
+          background: white;
+        }
+
+        .descript-cont {
+          gap: $size-6;
+
+          .body-6-bold {
+            font-weight: 400;
+          }
+        }
+      }
+
+      @include responsive(mobile) {
+        .buttons-2 {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          text-align: center;
+          margin-top: $size-5;
+          .primary-button-medium {
+            min-height: 0px;
+            text-decoration: none;
+            padding: 0.75rem;
+          }
+        }
+      }
+    }
+  }
+
+  .sec-var {
+    display: flex;
+    flex-direction: column;
+    gap: 6.69rem;
+    max-width: 62.2rem;
+    margin: auto;
+
+    @include responsive(mobile) {
+      gap: 3.75rem;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    .cont {
+      display: flex;
+      flex-direction: column;
+      gap: $size-14;
+
+      @include responsive(mobile) {
+        gap: 3.75rem;
+      }
+
+      .content-text {
+        display: flex;
+        flex-direction: column;
+        gap: $size-5;
+
+        @include responsive(mobile) {
+          gap: 0;
+        }
+
+        h3 {
+          @include responsive(tablet) {
+            display: none;
+          }
+        }
+      }
+
+      .content-img {
+        h3 {
+          display: none;
+
+          @include responsive(mobile) {
+            display: block;
+          }
+        }
+
+        img {
+          margin: 0;
+        }
+      }
+
+      .to-start {
+        &.rigth_position .content {
+          grid-template-areas: "imagen contenido";
+          grid-template-columns: 40% 1fr;
+
+          .commo-indices-page .rigth_position .content .content-text {
+            grid-area: contenido;
+          }
+
+          .content-img {
+            grid-area: imagen;
+          }
+        }
+      } 
+      .content {
+        grid-template-columns: 1fr 40%;
+        gap: $size-12;
+
+        @include responsive(tablet) {
+          gap: 20px;
+        }
+
+        .content-text p {
+          display: block;
+          margin: 0;
+        }
+      }
+    }
+  }
+
+  .forms {
+    .cont-general .cont_general_form .cont_form {
+      .hs-button {
+        display: flex;
+        padding: 1.125rem 2.50rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+        border-radius: 3.125rem;
+        background: #4660A9;
+        border: none;
+        color: #FFF;
+        text-align: center;
+        font-size: 1.0625rem;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 120%;
+      }
+
+      .hs-form-field.hs-fieldtype-text label span {
+        font-size: 0.875rem !important;
+
+        @include responsive(mobile) {
+          font-size: 0.625rem !important;
+        }
+      }
+
+      .hs-form-field label span {
+        color: $secondary-700;
+      }
+
+      .hs-richtext p {
+        color: $secondary-700 !important;
+      }
+  
+      p {
+        color: #374770;
+        letter-spacing: 0.00938rem;
+
+        @include responsive(mobile) {
+          font-size: 0.875rem;
+        }
+      }
+
+      .submitted-message {
+        div {
+          display: none;
+        }
+
+        p:first-child::before {
+          margin-bottom: 1.69rem;
+        }
+      }
+    }
+
+    &.center_items .cont-general .cont_general_form .cont_form .descript-cont {
+      display: block;
+
+      p {
+        display: none;
+      }
+    }
+  }
+}
+
+.var-columns {
+  .account-tailored {
+    .titel-descript {
+      p {
+        max-width: 24rem;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      @include responsive(tablet) {
+        .buttons {
+          display: none;
+        }
+      }
+    }
+
+    .items-cont {
+      display: flex;
+      padding: 3rem;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+
+      .item {
+        display: flex;
+        align-items: flex-start;
+        gap: $size-6;
+        align-self: stretch;
+        flex-direction: row;
+      }
+
+      @include responsive(mobile) {
+        display: flex;
+        padding: $size-8 $size-6;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $size-6;
+
+        .item {
+          display: grid;
+          grid-template-columns: 3rem auto;
+          align-items: flex-start;
+          gap: $size-3;
+          align-self: stretch;
+
+          p.body-6-bold {
+            font-size: 0.875rem;
+          }
+        }
+      }
+    }
+  }
+  .buttons-2 {
+    display: none;
+  }
+  @include responsive(mobile) {
+    .buttons-2 {
+      display: block;
+      text-align: center;
+      margin-top: $size-5;
+    }
+  }
+}
+
+.var-slide {
+  .slider_icons {
+    .why-choose-title-container h2 {
+      max-width: 58rem;
+      margin: auto;
+    }
+    .why-choose-subTitle-container {
+      margin: 0 auto $size-8;
+      display: flex;
+      flex-direction: column;
+      gap: $size-8;
+
+      h2 {
+        max-width: 57.1rem;
+      }
+
+      .subTitle {
+        display: flex;
+        flex-direction: column;
+        gap: $size-8;
+        max-width: 41.875rem;
+
+        &.extra {
+          font-weight: 600;
+        }
+      }
+    }
+    @include responsive(mobile) {
+      .why-choose-title-container {
+        margin-bottom: $size-4;
+
+        h2 {
+          text-align: left;
+          width: 100%;
+        }
+      }
+      .why-choose-subTitle-container {
+        gap: $size-4;
+        margin-bottom: $size-5;
+        width: 100%;
+
+        .subTitle {
+          text-align: left;
+        }
+      }
+    }
+  }
+  .slider_icons {
+    .why-choose-carousel {
+      position: relative;
+
+      .what-choose-box {
+        width: 100%;
+        display: block;
+
+        .carousel-container {
+          .swiper {
+            padding: $size-12;
+            border-radius: 1.3125rem;
+            background: white;
+
+            .swiper-slide {
+              opacity: 0;
+              transition: opacity 0.01s;
+
+              .slide .icon-box {
+                background: $secondary-50;
+              }
+
+              &.swiper-slide-active, &.swiper-slide-next, &.swiper-slide-next + .swiper-slide,
+              &.swiper-slide-next + .swiper-slide + .swiper-slide {
+                opacity: 1;
+                transition: opacity 2s;
+              }
+
+              &.swiper-slide-next + .swiper-slide + .swiper-slide {
+                @include responsive(laptop) {
+                  opacity: 0;
+                }
+              }
+
+              @media (max-width: 991px) {
+                &.swiper-slide-next + .swiper-slide {
+                  opacity: 0;
+                }
+              }
+
+              @include responsive(tablet) {
+                &.swiper-slide-next {
+                  opacity: 0;
+                }
+              }
+
+              @include responsive(tablet) {
+                &.swiper-slide-next {
+                  opacity: 0.5;
+                }
+              }
+
+              @include responsive(mobile) {
+
+                padding: 2rem 1rem;
+                border-radius: 1.3125rem;
+                border: 1px solid rgba(255, 255, 255, 0.42);
+                background: white;
+              }
+
+              .slide {
+                min-height: fit-content;
+                padding: 0;
+                margin: 0 !important;
+
+                .description {
+                  width: 100%;
+                  height: fit-content;
+                  color: $secondary-600;
+                }
+
+                .title {
+                  width: 100%;
+                  font-weight: 400;
+                  color: $secondary-900;
+                }
+              }
+            }
+
+            @include responsive(mobile) {
+              padding: 1rem 0;
+              border: none;
+              background: transparent;
+              box-shadow: none;
+              backdrop-filter: none;
+
+              .swiper-button-prev,
+              .swiper-button-next {
+                position: relative;
+                top: 40px;
+
+                @media (max-width: 375px) {
+                  &::after {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                    font-size: 1.2rem;
+                  }
+                }
+              }
+
+              .swiper-button-next {
+                top: 7px;
+                left: 80px;
+
+                @media (max-width: 375px) {
+                  left: 62px;
+                }
+              }
+            }
+          }
+        }
+
+        .buttons {
+          padding-top: $size-8;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          z-index: 1;
+
+          @include responsive(mobile) {
+            position: absolute;
+            bottom: 16px;
+            left: 167px;
+
+            .primary-button-medium {
+              min-height: fit-content;
+              font-size: 12px;
+              padding: 15px;
+            }
+          }
+          @media (max-width: 375px) {
+            position: absolute;
+            bottom: 18px;
+            left: 122px;
+          }
+        }
+      }
+    }
+  }
+  @include responsive(tablet) {
+    .slider-icons-responsive {
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      background: linear-gradient(
+        156deg,
+        rgba(255, 255, 255, 0.5) 10.28%,
+        rgba(255, 255, 255, 0) 106.66%
+      );
+      box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+      backdrop-filter: blur(20px);
+      margin: 0;
+      display: none;
+    }
+  }
+}

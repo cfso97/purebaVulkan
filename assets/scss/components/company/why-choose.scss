@@ -1,0 +1,270 @@
+.why-choose-content {
+  display: flex;
+  flex-direction: column;
+  .why-choose-title-container {
+    margin-bottom: $size-6;
+    h2 {
+      // width: 45%;
+      color: $secondary-900;
+
+      @include responsive(tablet) {
+        width: 80%;
+      }
+
+      @include responsive(mobile) {
+        width: 90%;
+      }
+    }
+  }
+  .why-choose-subTitle-container {
+    margin-bottom: $size-8;
+    .subTitle {
+      color: $secondary-600;
+    }
+  }
+
+  .why-choose-carousel {
+    .what-choose-box {
+      max-width: 100%;
+      @include responsive(tablet) {
+        display: none;
+      }
+      .carousel-container {
+        width: 100%;
+        height: auto;
+        .swiper {
+          background-image: url("/images/company/banner-3.png");
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          padding: 0px 2rem;
+          border-radius: $size-5;
+          box-sizing: border-box;
+          @include responsive(laptop-l) {
+            // position: absolute;
+            // right: -165px;
+            // width: 75%;
+          }
+
+          @include responsive(laptop) {
+            position: relative;
+            right: initial;
+            width: 100%;
+          }
+
+          @include responsive(mobile) {
+          }
+          padding: 2.56rem 5rem 2rem;
+
+          .swiper-slide {
+            display: flex;
+            flex-direction: column;
+            gap: $size-5;
+            box-sizing: border-box;
+            opacity: 0;
+            // max-width: 11.5rem;
+            // max-height: 13.5rem;
+            min-height: 220px;
+
+            .slide {
+              display: flex;
+              flex-direction: column;
+              gap: $size-6;
+              padding: 2rem 0px;
+              .icon-box {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                width: 3rem;
+                height: 3rem;
+                background: white;
+                border-radius: 50%;
+              }
+              .description {
+                color: $secondary-50;
+              }
+              .find-more {
+                color: $info-400;
+              }
+            }
+
+            &.swiper-slide-visible {
+              opacity: 1;
+            }
+
+            @include responsive(laptop-l) {
+              grid-template-rows: minmax(auto, 220px) auto auto;
+            }
+            @include responsive(laptop) {
+              grid-template-rows: minmax(auto, 220px) auto auto;
+            }
+            @include responsive(tablet) {
+              grid-template-rows: minmax(auto, 230px) auto auto;
+            }
+
+            @include responsive(mobile) {
+              grid-template-rows: minmax(auto, 130px) auto auto;
+            }
+
+            .img-card {
+              display: block;
+              width: 100%;
+              height: auto;
+              max-width: 315px;
+              max-height: 250px;
+              object-fit: cover;
+            }
+
+            h4 {
+              color: $color-white;
+              text-align: left;
+              margin: 0;
+              width: 100%;
+
+              @extend .subtitle-4;
+            }
+
+            p {
+              color: $color-white;
+              text-align: left;
+              width: 100%;
+
+              @extend .body-4;
+            }
+          }
+
+          .swiper-slide-visible:nth-child(3) {
+            // padding-left: 80px !important;
+          }
+
+          .swiper-slide-visible:nth-child(4) {
+            // padding-right: 80px !important;
+            @include responsive(tablet) {
+            }
+          }
+
+          .swiper-slide-visible:nth-child(2) {
+            @include responsive(laptop) {
+              // padding-right: 80px !important;
+              // padding-left: 80px !important;
+            }
+          }
+
+          .swiper-slide-visible:nth-child(6) {
+          }
+
+          .swiper-button-prev::after {
+            display: flex;
+            font-family: "Material Symbols Outlined";
+            content: "chevron_left";
+            width: $size-11;
+            height: $size-11;
+            font-size: $size-6;
+            border-radius: $size-19;
+            background: $color-white;
+            box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+            align-items: center;
+            justify-content: center;
+
+            @include responsive(laptop) {
+              width: 2.75rem;
+              height: 2.75rem;
+            }
+          }
+
+          .swiper-button-next::after {
+            display: flex;
+            font-family: "Material Symbols Outlined";
+            content: "chevron_right";
+            width: $size-11;
+            height: $size-11;
+            font-size: $size-6;
+            border-radius: $size-19;
+            background: $color-white;
+            box-shadow: 0px 18px 32px 0px rgba(21, 32, 42, 0.05);
+            align-items: center;
+            justify-content: center;
+
+            @include responsive(laptop) {
+              width: 2.75rem;
+              height: 2.75rem;
+            }
+          }
+
+          .swiper-button-prev,
+          .swiper-button-next {
+            overflow: visible;
+            width: $size-11;
+            height: $size-11;
+            color: $secondary-600;
+            display: inline-block;
+
+            @include responsive(laptop) {
+              // position: relative;
+              // right: initial;
+              // margin-top: 30px;
+            }
+          }
+
+          .swiper-button-next {
+            // @include responsive(laptop-l) {
+            //   right: 20%;
+            // }
+
+            // @include responsive(laptop) {
+            //   position: relative;
+            //   right: initial;
+            //   margin-left: 1rem;
+            // }
+          }
+        }
+      }
+    }
+  }
+}
+.what-choose-box-responsive {
+  display: none;
+  background-image: url("/images/company/banner-3-mobile.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 118% 108%;
+  @include responsive(tablet) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: $size-4;
+    column-gap: $size-8;
+    padding: 2rem;
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: $size-3;
+    .icon-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      width: 3rem;
+      height: 3rem;
+      background: white;
+      border-radius: 50%;
+    }
+    .description {
+      color: $secondary-50;
+      @include responsive(mobile) {
+        font-size: 0.6875rem;
+      }
+    }
+    .find-more {
+      color: $info-400 !important;
+      @include responsive(mobile) {
+        font-size: 0.6875rem;
+      }
+    }
+  }
+}
+
+[lang="ja"] .why-choose-content .why-choose-carousel .what-choose-box .carousel-container .swiper .swiper-slide .slide .find-more.ja {
+  display: none;
+}

@@ -1,0 +1,151 @@
+.market-page {
+  display: flex;
+  gap: $size-25;
+  flex-direction: column;
+
+  @include responsive(tablet) {
+    gap: 8.5rem;
+  }
+
+  .banner-market {
+    & .banner-contact {
+      .container {
+        display: grid;
+        grid-template-columns: 42% 58%;
+        align-items: center;
+        padding: 4.375rem 0 0;
+      }
+
+      .img_ {
+        background-image: url(/images/banner-market.png);
+        padding-top: 97%;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+      }
+
+      .descript_ {
+        max-width: 500px;
+        width: 100%;
+
+        p {
+          max-width: 380px;
+        }
+      }
+
+      @include responsive(tablet) {
+        & .container {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        & h1 {
+          font-size: $size-12;
+          width: 100%;
+          max-width: 450px;
+        }
+
+        & .img_ {
+          width: 100%;
+        }
+      }
+
+      @include responsive(mobile) {
+        background-image: url(/images/market-gradient-mobile.png) !important;
+        background-position: bottom;
+        background-size: 100% 200%;
+
+        & .container {
+          padding: 5rem 0 0;
+          gap: $size-3;
+        }
+
+        & h1 {
+          font-size: $size-7;
+          line-height: 110%;
+          padding-bottom: $size-4;
+        }
+
+        & p {
+          font-size: 0.75rem;
+        }
+
+        & .img_ {
+          padding-top: 100%;
+        }
+      }
+    }
+
+    .platform_fav {
+
+        .slideX3{
+
+            &.swiper {     
+        
+              .swiper-button-prev, .swiper-button-next {
+                display: none !important;
+        
+                @media (max-width: 1200px) {
+                  display: inline-block !important;       
+                }
+              }
+            }
+        }
+    }
+  }
+
+  .discover_ {
+    // z-index: 1;
+    overflow: hidden;
+    &::before {
+      content: " ";
+      position: absolute;
+      background-image: url(/images/Markets-Gradient.png);
+      background-size: 100% 100%;
+      width: 70%;
+      height: 1838px;
+      left: 0;
+      margin-top: 113px;
+      z-index: -1;
+
+      @include responsive(laptop) {
+        width: 70%;
+        height: 1538px;
+        right: 0;
+        margin-top: -513px;
+      }
+
+      @include responsive(tablet) {
+        width: 80%;
+        height: 1538px;
+        right: 0;
+        margin-top: -513px;
+      }
+
+      @include responsive(mobile) {
+        width: 100%;
+        height: 1538px;
+        right: 0;
+        margin-top: -513px;
+      }
+    }
+  }
+
+  .discover-benefits {
+    overflow: hidden;
+  }
+
+  .platform_fav {
+    .container-slide {
+      .swiper {
+        .swiper-wrapper {
+          .swiper-slide {
+            // background-color: transparent;
+            backdrop-filter: blur(20px) !important;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,94 @@
+.to-start{
+  .content{
+    display: grid;
+    grid-template-columns: 1fr 50%;
+    gap: 50px;
+    align-items: center;
+
+    @include responsive(tablet) {
+      display: flex;
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+
+    .content-text{
+      h2{
+        margin-bottom: $size-6;
+        display: block;
+
+        @include responsive(tablet) {
+          display: none
+        }
+      }
+
+      p{
+        display: block;
+        margin-bottom: $size-8;
+        @include responsive(tablet) {
+          display: none
+        }
+      }
+
+      .card{
+        display: flex;
+        padding: $size-10 $size-11;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: $size-5;
+
+        border-radius: $size-5;
+        border: 1px solid $secondary-50;
+        background: white;
+
+        @include responsive(mobile) {
+          padding: $size-6 $size-5;
+        }
+
+        ul {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: $size-5;
+          margin: 0;
+          padding-left: 19px;
+
+          li{
+            @include responsive(mobile) {
+              font-size: 0.6875rem;
+            }
+
+          }
+
+
+        }
+      }
+    }
+
+    .content-img{
+      h2{
+        margin-bottom: $size-4;
+        display: none;
+
+        @include responsive(tablet) {
+          display: block;
+        }
+      }
+
+      p{
+        margin-bottom: $size-6;
+        display: none;
+        @include responsive(mobile) {
+          display: block;
+        }
+      }
+
+      img{
+        width: 100%;
+
+        @include responsive(tablet) {
+          margin: 0;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,20 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        - echo "🧹 Cleaning output directory"
+        - rm -rf .output/public
+        - rm -rf .output
+    build:
+      commands:
+        - echo "🏗 Building project"
+        - npm install
+        - npm run build
+  artifacts:
+    baseDirectory: .output/public
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - node_modules/**/*

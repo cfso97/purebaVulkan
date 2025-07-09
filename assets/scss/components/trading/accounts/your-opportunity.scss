@@ -1,0 +1,99 @@
+.your-opportunity{
+  .container{
+    display: grid;
+    grid-template-columns: 1fr 55%;
+    align-items: center;
+
+    @include responsive(tablet) {
+      grid-template-columns: 1fr;
+    }
+
+    @include responsive(mobile) {
+      grid-template-columns: 1fr;
+    }
+
+    .text-content{
+      display: flex;
+      flex-direction: column;
+      gap: $size-8;
+
+      .buttons {
+        button {
+          background: #1E1A2D;
+          border-color: #1E1A2D;
+
+          &:active {
+            box-shadow: 0px 0px 0px 4px #c7b8ff;
+          }
+        }
+      }
+
+      @include responsive(tablet) {
+        gap: $size-4;
+      }
+    }
+    
+    .card-desc{
+      display: flex;
+      padding: 1.5rem;
+      flex-direction: column;
+      gap: $size-6;
+      border-radius: $size-5;
+      border: 1px solid $secondary-50;
+      background: white;
+
+      @include responsive(tablet) {
+        padding: $size-8 $size-6;
+      }
+
+      @include responsive(mobile) {
+        padding: $size-8 $size-5;
+      }
+
+      .card{
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        margin: 0;
+
+        @include responsive(mobile) {
+          padding-left: 20px;
+          gap: $size-5;
+        }
+
+        li{
+
+          @include responsive(mobile) {
+            font-size: 0.6875rem;
+          }
+
+          a{
+            color: $info-700,
+          }
+        }
+      }
+    }
+
+    .btn-movil {
+      display: none;
+
+      @include responsive(tablet) {
+        display: block;
+      }
+    }
+
+    .buttons {
+      @include responsive(tablet) {
+        display: none;
+
+        &.btn-movil {
+          display: block;
+          
+          button {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,95 @@
+.careers {
+    position: relative;
+
+    .banner-contact {
+        @include responsive(mobile) {
+            background-image: url(/images/careers/Careers-Hero-BG-mobile.jpg) !important;
+        } 
+    }
+
+    .awards-component {
+        &::before {
+            content: "";
+            position: absolute;
+            background-image: url(/images/careers/Careers-Gradient-3.png);
+            background-size: 100% 100%;
+            width: 100%;
+            height: 1629px;
+            margin-top: -167px;
+            left: 0;
+    
+            @include responsive(mobile) {
+                background-size: cover;
+                width: 100%;
+                background-position: center;
+                z-index: -1;
+                margin-top: 58px;
+            }
+        }
+    }
+    .invest {
+        z-index: 1;
+    }    
+
+}
+
+.open-positions {
+    padding: 6rem 3rem;
+    display: flex;
+    justify-content: center;
+    background-image: url(/images/careers/Careers-OpenPositions-BG.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    border-radius: 1rem;
+    width: -webkit-fill-available;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url(/images/careers/Careers-Gradient-1.png);
+        background-size: 100% 100%;
+        width: 100%;
+        height: 1738px;
+        margin-top: -1447px;
+
+        @include responsive(mobile) {
+            background-size: cover;
+            width: 100%;
+            height: 750px;
+            margin-top: -1256px;
+            background-position: right;
+        }
+    }
+
+    @include responsive(mobile) {
+        padding: 2rem 0;
+        background-image: url(/images/careers/Careers-OpenPositions-BG-mobile.jpg);
+    }
+
+    .cont {
+        display: inline-flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+        max-width: 52.9rem;
+        text-align: center;
+        color: white;
+        z-index: 1;
+
+        a {
+            color: $info-300;
+        }
+
+        @include responsive(mobile) {
+            padding: 0 1rem;
+            width: -webkit-fill-available;
+            text-align: left;
+            align-items: flex-start;
+            gap: 1.25rem;
+
+            button {
+                font-size: 0.875rem;
+            }
+        }
+    }
+}

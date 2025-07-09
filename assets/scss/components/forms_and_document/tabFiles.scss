@@ -1,0 +1,165 @@
+.ourDocument {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include responsive(laptop) {
+    grid-template-columns: 1fr;
+    margin-top: 0px;
+  }
+
+  .text-container-md {
+    max-width: 448px;
+  }
+
+  .sub-title {
+    margin-top: $size-8;
+
+    a {
+      color: $info-700;
+    }
+
+    @include responsive(laptop) {
+      margin-top: $size-6;
+    }
+  }
+
+  .forms-files {
+    margin-top: $size-6;
+
+    .form {
+      display: flex;
+      padding: $size-3 $size-8;
+      align-items: center;
+      gap: $size-4;
+      border-radius: $size-3;
+      background: $secondary-50;
+      margin-bottom: $size-3;
+      justify-content: space-between;
+
+      p {
+        color: $secondary-600;
+      }
+
+      @include responsive(mobile) {
+        padding: $size-3 $size-5;
+
+        p {
+          font-size: 0.6875rem;
+          word-break: break-word;
+        }
+      }
+
+      a {
+        text-decoration: none;
+
+        @include responsive(mobile) {
+          display: block;
+        }
+
+        p {
+          @include responsive(mobile) {
+            font-size: 0.6875rem;
+          }
+        }
+      }
+
+      .btn-downd {
+        display: flex;
+        align-items: flex-start;
+        gap: $size-2;
+      }
+
+      .icon {
+        padding: 0rem $size-2;
+        align-items: center;
+        gap: $size-2;
+        max-height: $size-9;
+        min-height: $size-9;
+        background: $color-white;
+        border-radius: 2.375rem;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        transition: box-shadow 0.5s;
+
+        a {
+          text-align: center;
+          display: flex;
+        }
+        span {
+          color: $info-700;
+        }
+
+        &:hover {
+          box-shadow: 3px 3px 12px 0px rgba(21, 32, 42, 0.13);
+        }
+      }
+    }
+  }
+
+  .btn_download {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: $size-3;
+    align-self: stretch;
+    flex-wrap: wrap;
+    margin-top: $size-9;
+
+    button:disabled {
+      opacity: 0.3;
+      background: transparent;
+    }
+  }
+}
+
+[lang="es"] .ourDocument .forms-files .form .icon {
+  min-width: 2.25rem;
+  padding: 0;
+}
+
+[lang="en"] .ourDocument .forms-files .form .icon {
+  min-width: 2.25rem;
+  padding: 0;
+}
+
+[lang="zh"] .ourDocument {
+  .btn_download button:last-child {
+    display: none;
+  }
+
+  .forms-files .form {
+    .btn-downd div:last-child {
+      display: none;
+    }
+
+    a img {
+      display: none;
+    }
+
+    .icon {
+      padding: 0rem 0.4rem;
+    }
+  }
+} 
+
+[lang="ko"] .ourDocument {
+  .btn_download button:last-child {
+    display: none;
+  }
+
+  .forms-files .form {
+    .btn-downd div:last-child {
+      display: none;
+    }
+
+    a img {
+      display: none;
+    }
+
+    .icon {
+      padding: 0rem 0.4rem;
+    }
+  }
+} 
+

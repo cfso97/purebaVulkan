@@ -1,0 +1,59 @@
+.subTabContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: $size-6;
+   
+    button {
+        width: 100%;
+        display: flex;
+        padding: $size-4;
+        justify-content: center;
+        align-items: center;
+        border-radius: $size-2;
+        border: 1px solid $secondary-900;
+        background: white;
+        font-weight: 600;
+        font-size: 0.875rem;
+        transition: all 0.2s, border 0s;
+
+        &.selected {
+            border: 2px solid $secondary-400;
+            background: $secondary-50;
+        }
+    }
+}
+
+.subTabContent {
+    .accordeon {
+        .accordeon-box {
+            .box {
+                .box-content {
+                    .box-text {
+                        width: 100%;
+                        gap: $size-4;
+
+                        .body-4 {
+                            max-width: 80%;
+                        }
+                    }    
+                    .icon-buy {
+                        .icon {
+                            span {
+                                transform: rotate(90deg);
+                            }
+                        }
+                    }
+                    .icon-sell {
+                        .icon {
+                            span {
+                                transform: rotate(270deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+

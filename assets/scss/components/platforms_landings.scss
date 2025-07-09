@@ -1,0 +1,515 @@
+.platforms_landings {
+    // &::before {
+    //     content: " ";
+    //     position: absolute;
+    //     background-image: url(/images/platforms/3.MT4_Gradient.png);
+    //     background-size: 100% 100%;
+    //     width: 100%;
+    //     height: 1722px;
+    //     right: 0;
+    //     margin-top: 25%;
+    // }
+
+    @include responsive(mobile) {
+        &::before {
+            background-size: cover;
+            width: 100%;
+            background-position: -94%;
+            margin-top: 165%;
+        }
+    }
+
+    .banner-contact {
+        position: relative;
+        z-index: 10;
+
+        .container {
+            grid-template-columns: 55% 45%;
+
+            @include responsive(laptop) {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            @media (max-width: 991px) {
+                padding: 110px 0 70px;
+            }
+
+            @include responsive(mobile) {
+                padding: 100px 0 50px;
+                gap: 1rem;
+            }
+
+            .descript_ {
+                max-width: 100%;
+
+                h1 {
+                    @media (max-width: 991px) {
+                        font-size: 3rem;
+                    }
+
+                    @include responsive(mobile) {
+                        font-size: $size-7;
+                    }
+                }
+
+                p {
+                    max-width: 550px;
+                }
+            }
+
+            .buttons {
+                @include responsive(mobile) {
+                    margin-top: 1rem;
+                }
+            }
+
+            .img_ {
+                padding-top: 110%;
+                width: 115%;
+                margin-left: -10%;
+
+                @include responsive(laptop) {
+                    padding-top: 100%;
+                    width: 100%;
+                    margin-left: 0%;
+                }
+            }
+        }
+    }
+
+    .what-is-content {
+        position: relative;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        gap: 2%;
+
+        @include responsive(mobile) {
+            grid-template-columns: 1fr;
+            margin-top: -2.5rem;
+        }
+
+        .what-is-rigth {
+            p {
+                line-height: 140%;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+        }
+    }
+
+    .do-for-you-content {
+
+        &.content {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            width: 100%;
+            align-items: flex-start;
+            height: 100%;
+            justify-content: center;
+
+            h3 {
+                margin: 0 !important;
+            }
+
+            .do-for-you-right {
+                backdrop-filter: none;
+            }
+        }
+
+        gap: 3.25rem;
+        max-width: 60.2rem;
+        margin: auto;
+        position: relative;
+
+        &::before {
+            display: none;
+        }
+
+        @include responsive(mobile) {
+            gap: 1.75rem;
+        }
+
+        .do-for-you-left {
+            width: 100%;
+            display: flex;
+            max-width: 26.875rem;
+
+            @include responsive(tablet)  {
+                max-width: 100%;
+            }
+
+            .text-box {
+                h2 {
+                    width: 100%;
+                }
+            }
+        }
+        
+        .do-for-you-right {
+            width: 100%;
+            padding: 0;
+            gap: 1.5rem;
+            box-shadow: none;
+            background: transparent;
+            border: none;
+
+            .card {
+                .img-content {
+                    .img-box {
+                        background: white;
+
+                        @include responsive(mobile) {
+                            width: 100%;
+                            min-width: 2.25rem;
+                            min-height: 2.25rem;
+                        }
+
+                        span {
+                            @include responsive(mobile) {
+                                font-size: 20px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .areYouReady-MAM {
+        padding: 4.625rem 0rem; 
+
+        @include responsive(mobile) {
+            padding: $size-8 0rem;
+        }
+        
+        .margin-general {
+            gap: $size-6;
+
+            @include responsive(mobile) {
+                gap: $size-3;
+
+                h3 {
+                    margin-bottom: 0;
+                }
+
+                .content-btn {
+                    margin-top: $size-3;
+                }
+            }
+        }
+
+        h3 {
+            margin-bottom: $size-2;
+        }
+    }
+
+    .tools-content {
+        position: relative;
+
+        h2 {
+            max-width: 54.875rem;
+            text-align: center;
+            margin: auto;
+        }
+
+        .selectItem {
+            display: none;
+        }
+
+        .buttonsContainer {
+
+            @include responsive(mobile) {
+                display: flex;
+                border-radius: 0.5rem;
+                gap: 0.5rem;
+            }
+
+            .buttonItem, .buttonItem.selected {
+                padding: 0 1.5rem;
+                height: $size-13;
+
+                @include responsive(mobile) {
+                    height: $size-12;
+                    font-size: 0.75rem !important;
+                    padding: 0 0.5rem;
+                }
+            }
+        }
+
+        .card-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            border-radius: 1.3125rem;
+
+            @include responsive(tablet) {
+                grid-template-columns: 1fr;
+            }
+
+            img {
+                width: 100%;
+                max-width: 25.43844rem;
+                margin: auto;
+                height: auto;
+
+                @include responsive(tablet) {
+                    max-width: 400px;
+                    margin: auto;
+                }
+            }
+        }
+    }
+
+    .message_ctrader {
+        display: flex;
+        align-items: center;
+        gap: 2rem;
+        max-width: 60rem;
+
+        @media (max-width: 991px) {
+            flex-direction: column;
+        }
+
+        h3 {
+            width: 100%;
+
+            span {
+                font-size: 2.25rem;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 100%;
+                margin: 0;
+            }
+
+            @media (max-width: 991px) {
+                text-align: center;
+
+                span {
+                    display: none;
+                }
+            }
+        }
+
+        p {
+            position: relative;
+            display: flex;
+            max-width: 340px;
+            padding: $size-10 $size-11;
+            border-radius: $size-5;
+            border: 1px solid $secondary-50;
+            background: white;
+            display: flex;
+            align-items: center;
+            width: 100%;
+            height: fit-content;
+
+            @include responsive(tablet) {
+                padding: 1.5rem 1.25rem;
+                font-size: 0.6875rem;
+                border-radius: 0.75rem;
+                max-width: 84%;
+            }
+        }
+    }
+
+    .link-ctrader-copy {
+        max-width: 57.875rem;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: $size-6;
+        padding: $size-13 $size-10;
+        border-radius: 1.3125rem;
+        border: 1px solid rgba(255, 255, 255, 0.42);
+        background: linear-gradient(156deg, rgba(255, 255, 255, 0.50) 10.28%, rgba(255, 255, 255, 0.00) 106.66%);
+        box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.08);
+        backdrop-filter: blur(20px);
+        margin: auto;
+
+        @include responsive(mobile) {
+            padding: 2.66rem 1rem;
+            border-radius: 1.3125rem;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        p {
+            text-align: center;
+            
+            @include responsive(mobile) {
+                text-align: center;
+                font-size: 0.6875rem;
+            }
+        }
+    }
+    
+    &.gap-general {
+
+        @include responsive(mobile) {
+            background-size: 202% 102%;
+            background-position-x: 0;
+            gap: 5.25rem;
+        }  
+    }
+
+    &.landing_mt4 {
+        @include responsive(mobile) {
+            .banner-contact {
+                background-image: url(/images/platforms/bk_small_mt4.png) !important;
+            }
+        }
+    }
+
+    &.landing_mt5 {
+        @include responsive(mobile) {
+            .banner-contact {
+                background-image: url(/images/platforms/bk_small_mt5.png) !important;
+            }
+        }
+
+        &::before {
+            background-image: url(/images/platforms/3.MT5_Gradient.png);
+
+            @include responsive(mobile) {
+                background-position: -74%;
+            }
+        }
+    }
+
+    &.landing_sterling {
+        @include responsive(mobile) {
+            .banner-contact {
+                background-image: url(/images/platforms/bk_small_sterling.png) !important;
+            }
+        }
+
+        &::before {
+            background-image: url(/images/platforms/3.Sterling_Gradient.png);
+
+            @include responsive(mobile) {
+                background-position: -109%;
+            }
+        }
+    }
+
+    &.landing_takion {
+        @include responsive(mobile) {
+            .banner-contact {
+                background-image: url(/images/platforms/bk_small_takion.png) !important;
+            }
+            .areYouReady-MAM {
+                background-position-x: 0;
+            }
+        }
+
+        &::before {
+            background-image: url(/images/platforms/3.Takion_Gradient.png);
+
+            @include responsive(mobile) {
+                background-position: -109%;
+            }
+        }
+    }
+
+    &.landing_lighspeed {
+        @include responsive(mobile) {
+            .banner-contact {
+                background-image: url(/images/platforms/bk_small_lighspeed.png) !important;
+            }
+        }
+
+        &::before {
+            background-image: url(/images/platforms/3.Lightspeed_Gradient.png);
+
+            @include responsive(mobile) {
+                background-position: -109%;
+            }
+        }
+    }
+
+    &.landing_cqg {
+        @include responsive(mobile) {
+            .banner-contact {
+                background-image: url(/images/platforms/bk_small_cqg.png) !important;
+            }
+        }
+
+        &::before {
+            background-image: url(/images/platforms/3.CQG_Gradient.png);
+
+            @include responsive(mobile) {
+                background-position: -88%;
+                margin-top: 131%;
+            }
+        }
+    }
+
+    &.landing_das {
+        @include responsive(mobile) {
+            .banner-contact {
+                background-image: url(/images/platforms/bk_small_das.png) !important;
+            }
+        }
+
+        &::before {
+            background-image: url(/images/platforms/3.DAS_Gradient.png);
+
+            @include responsive(mobile) {
+                background-position: -128%;
+                margin-top: 169%;
+                height: 1152px;
+            }
+        }
+    }
+
+    &.landing_cTrader {
+        @include responsive(mobile) {
+            .banner-contact {
+                background-image: url(/images/platforms/bk_small_ctrader.png) !important;
+            }
+            .areYouReady-MAM {
+                background-position-x: 0;
+            }
+        }
+
+        &::before {
+            background-image: url(/images/platforms/1.cTrader_Gradient.png);
+            height: 2288px;
+
+            @include responsive(mobile) {
+                background-position: -128%;
+                margin-top: 146%;
+                height: 2170px;
+            }
+        }
+    }
+
+    &.landing_cTrader_copy {
+        @include responsive(mobile) {
+            .banner-contact {
+                background-image: url(/images/platforms/bk_small_ctrader_copy.png) !important;
+            }
+        }
+
+        &::before {
+            background-image: url(/images/platforms/4.cTraderCopy_Gradient.png);
+            height: 2288px;
+
+            @include responsive(mobile) {
+                background-position: -128%;
+                margin-top: 146%;
+                height: 2170px;
+            }
+        }
+    }
+}
+
+[lang="ja"] .platforms_landings  .areYouReady-MAM .content-btn a:last-child {
+    display: none;
+}

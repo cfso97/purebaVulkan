@@ -1,0 +1,114 @@
+.stocks-trading-hours-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: $size-6;
+  .subTitle {
+    color: $secondary-600;
+    font-size: 1.375rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    @include responsive(mobile) {
+      font-size: 0.875rem;
+    }
+  }
+  .table {
+    border-radius: $size-4;
+    background: $secondary-50;
+    width: 100%;
+
+    table {
+      width: 100%;
+    }
+
+    @include responsive(mobile) {
+      border-radius: $size-3;
+    }
+    th {
+      padding: $size-4 $size-10;
+      text-align: left;
+      width: 50%;
+      @include responsive(mobile) {
+        padding: $size-4 $size-6;
+      }
+    }
+    td {
+      padding: $size-6 $size-10;
+      text-align: left;
+      width: 50%;
+      @include responsive(mobile) {
+        padding: $size-4 $size-6;
+      }
+    }
+    th {
+      color: $secondary-700;
+      font-size: 1.0625rem;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 140%;
+      @include responsive(mobile) {
+        font-size: 0.75rem;
+      }
+    }
+    td {
+      background: white;
+    }
+
+    tr:last-child {
+      border-bottom-left-radius: $size-4;
+      border-bottom-right-radius: $size-4;
+      @include responsive(mobile) {
+        border-bottom-left-radius: $size-3;
+        border-bottom-right-radius: $size-3;
+      }
+      td:first-child {
+        border-bottom-left-radius: $size-4;
+        @include responsive(mobile) {
+          border-bottom-left-radius: $size-3;
+        }
+      }
+      td:last-child {
+        border-bottom-right-radius: $size-4;
+        @include responsive(mobile) {
+          border-bottom-right-radius: $size-3;
+        }
+      }
+    }
+
+    .product {
+      color: $secondary-700;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%;
+      @include responsive(mobile) {
+        font-size: 0.625rem;
+      }
+    }
+    .hour {
+      color: $secondary-700;
+      font-size: 0.75rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 140%;
+      @include responsive(mobile) {
+        font-size: 0.625rem;
+      }
+    }
+    .red {
+      color: $error-400;
+    }
+  }
+  .disclaimer {
+    color: $secondary-700;
+    font-size: 0.75rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    @include responsive(mobile) {
+      font-size: 0.625rem;
+    }
+  }
+}

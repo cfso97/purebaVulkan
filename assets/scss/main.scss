@@ -1,0 +1,169 @@
+@use 'globals' as *;
+
+@import 'primeflex/primeflex.scss';
+
+@import 'abstracts/colors'; // Si necesitas que los colores se procesen aquí (aunque ya están en tools)
+                            // Es mejor que colors.scss solo declare variables y sea parte de 'tools'.
+                            // Si colors.scss SOLO tiene variables, no necesita estar aquí.
+
+// Estilos base y tipografía
+// Puedes mover el selector universal '*' de typography.scss aquí o a un _base.scss
+// * {
+//   font-family: "Plus Jakarta Sans", sans-serif;
+//   color: $secondary-900; // Necesita que $secondary-900 esté disponible
+//   a {
+//     color: $info-700; // Necesita que $info-700 esté disponible
+//   }
+// }
+// body {
+//   margin: 0; // Ejemplo de un reset básico
+// }
+
+@import 'core/typography'; // Contiene h1, p, .body-4, etc.
+@import 'core/buttons';    // Contiene .primary-button, etc. (y usa @extend .body-4)
+@import 'core/inputs'; 
+
+@font-face {
+  font-family: 'Material Symbols Outlined';
+  font-style: normal;
+  font-weight: 100 700;
+  src: 
+  url('/fonts/MaterialSymbolsOutlined_28pt-Regular.woff2') format('woff2');
+  font-display: swap;
+  font-weight: 300;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px; 
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+  font-feature-settings: 'liga'; 
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+// // @import "abstracts/colors.scss";
+
+// @import "core/mixins.scss";
+// // @import "core/variables.scss";
+// // @import "core/buttons.scss";
+// // @import "core/functions.scss";
+// // @import "core/typography.scss";
+// // @import "core/inputs.scss";
+
+// // UTILS component styles
+// @import "components/utils/Dropdown/Dropdown.scss";
+// @import "components/utils/ModalCustom/ModalCustom.scss";
+// @import "components/utils/selectCustom/selectCustom.scss";
+
+// // Import SCSS pages here
+// @import "pages/home";
+// @import "pages/vulkan_bridge.scss";
+// @import "pages/multi_mam.scss";
+// @import "pages/communi_traders.scss";
+// @import "pages/about.scss";
+// @import "pages/risk-monitor.scss";
+
+// // Import SCSS components here
+// @import "components/navbar.scss";
+// @import "components/footer.scss";
+// @import "components/invest.scss";
+// @import "components/navbar-mobile.scss";
+// @import "components/banner-pages.scss";
+// @import "components/accordeon.scss";
+// @import "components/platforms_landings.scss";
+// @import "components/form.scss";
+// @import "components/home/advantages.scss";
+// @import "components/error.scss";
+
+// // TRADING component styles
+// @import "components/trading/accounts/your-opportunity.scss";
+// @import "components/trading/accounts/toStart.scss";
+
+
+// // PARTNERS component styles
+// @import "components/partners/timeToStart.scss";
+// @import "components/partners/tools.scss";
+
+// // SERVICES component styles
+// @import "components/services/vulkan_bridge/banner.scss";
+// @import "components/services/vulkan_bridge/unlock-power.scss";
+// @import "components/services/vulkan_bridge/simplify-trading.scss";
+// @import "components/services/vulkan_bridge/tailored-solution.scss";
+// @import "components/services/multi_mam/banner-mam.scss";
+// @import "components/services/multi_mam/benefits-mam.scss";
+// @import "components/services/multi_mam/do-for-you-mam.scss";
+// @import "components/services/multi_mam/what-is-mam.scss";
+// @import "components/services/multi_mam/areYouReady.scss";
+
+// // UTILS component styles
+// @import "components/utils/Dropdown/Dropdown.scss";
+// @import "components/utils/ModalCustom/ModalCustom.scss";
+// @import "components/utils/selectCustom/selectCustom.scss";
+html {
+    font-size: 16px;
+    
+    @include responsive(mobile) {
+      font-size: 20px;
+    }
+}
+
+* {
+    // font-weight: 400;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: $secondary-900;
+
+    a {
+    color: $info-700;
+    }
+}
+
+body {
+  margin: 0;
+  background-color: #f9f9f9;
+}
+
+.margin-general {
+  width: 100%;
+  max-width: 1184px;
+  margin-right: auto;
+  margin-left: auto;
+  
+  @include responsive(laptop-l) {
+      max-width: 1184px !important;
+  }
+  
+  @include responsive(laptop) {
+      max-width: 90% !important;
+  }
+  
+  @include responsive(tablet) {
+      max-width: 90% !important;
+  }
+  
+  @include responsive(mobile) {
+      max-width: 90% !important;
+  }
+}
+
+.gap-general {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 16.5rem;
+    overflow: hidden;
+  
+    @include responsive(tablet) {
+      gap: 8.5rem;
+    }
+}

@@ -1,0 +1,136 @@
+.unlock-power-content {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -140px;
+  gap: 40px;
+  @include responsive(tablet) {
+    flex-direction: column;
+  }
+  @include responsive(mobile) {
+    margin-top: 0;
+  }
+  .unlock-power-text {
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: $size-8;
+    @include responsive(tablet) {
+      max-width: 100%;
+      gap: $size-4;
+    }
+    .unlock-power-title {
+      color: $vulkan_primary;
+    }
+    .unlock-power-description {
+      color: $vulkan_secondary;
+    }
+    .unlock-power-video {
+      display: none;
+      max-width: 100%;
+      @include responsive(tablet) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .unlock-power-box {
+      .box {
+        padding: $size-6 $size-4;
+        display: flex;
+        flex-direction: row;
+        gap: $size-4;
+        @include responsive(tablet) {
+          padding: 1.25rem $size-6;
+        }
+        .box-img {
+          border-radius: 50%;
+          min-width: 3rem;
+          min-height: 3rem;
+          max-width: 3rem;
+          max-height: 3rem;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $vulkan_primary;
+          margin-top: 10px;
+          .material-symbols-outlined {
+            color: white;
+          }
+        }
+        .box-body {
+          width: 100%;
+          .box-title {
+            cursor: pointer;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: $size-5;
+            color: $vulkan_primary;
+            img {
+              transition: transform 0.3s ease-in-out;
+            }
+            @include responsive(tablet) {
+              margin-bottom: $size-4;
+            }
+
+            .rotated {
+              transform: rotate(180deg);
+            }
+            .title {
+              color: $vulkan_primary;
+              font-size: 1.0625rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+              @include responsive(tablet) {
+                font-size: 0.75rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+              }
+            }
+          }
+          .box-text {
+            display: flex;
+            flex-direction: column;
+            gap: $size-6;
+
+            @include responsive(tablet) {
+              gap: $size-4;
+            }
+            p {
+              color: $vulkan_secondary;
+              font-size: 0.875rem;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+              @include responsive(tablet) {
+                font-size: 0.6875rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+              }
+            }
+          }
+        }
+      }
+
+      .active {
+        border-radius: $size-2;
+        background: white;
+      }
+    }
+  }
+  .unlock-power-video {
+    max-width: 50%;
+    @include responsive(tablet) {
+      display: none;
+    }
+    video {
+      max-width: 100%;
+    }
+  }
+}
