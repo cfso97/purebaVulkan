@@ -4,7 +4,7 @@ import { visualizer } from 'rollup-plugin-visualizer';
 import Aura from '@primeuix/themes/aura';
 
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
 
   app: {
     head: {},
